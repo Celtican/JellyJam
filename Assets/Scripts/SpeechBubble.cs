@@ -8,11 +8,13 @@ public class SpeechBubble : MonoBehaviour
 	public float charactersPerSecond = 40f;
 	public float timeDelayAfterTextComplete = 1f;
 	public UnityEvent onComplete;
+	public UnityEvent onStopTalking;
 
 	private TMP_Text textContainer;
 	private string targetText = string.Empty;
 	private float startTime;
-	private bool isSpeaking = false;
+	private bool complete;
+	private bool talking;
 
 	private void Awake() {
 		textContainer = GetComponentInChildren<TMP_Text>();
@@ -20,7 +22,7 @@ public class SpeechBubble : MonoBehaviour
 
 	private void Update()
 	{
-		if (!isSpeaking) return;
+		if (complete) return;
 		
 		float timeSinceStart = Time.time - startTime;
 		int numCharacters = GetNumVisibleCharacters();
@@ -28,8 +30,13 @@ public class SpeechBubble : MonoBehaviour
 			textContainer.text = targetText.Remove(numCharacters);
 		} else {
 			textContainer.text = targetText;
+			if (talking)
+			{
+				talking = false;
+				onStopTalking.Invoke();
+			}
 			if (timeSinceStart - (1 / charactersPerSecond * targetText.Length) > timeDelayAfterTextComplete) {
-				isSpeaking = false;
+				complete = true;
 				onComplete.Invoke();
 			}
 		}
@@ -39,14 +46,15 @@ public class SpeechBubble : MonoBehaviour
 		textContainer.text = string.Empty;
 		startTime = Time.time;
 		targetText = text.Trim();
-		isSpeaking = true;
+		complete = false;
+		talking = true;
 	}
 
 	public void InterruptSpeaking()
 	{
-		if (!isSpeaking) return;
+		if (complete) return;
 		timeDelayAfterTextComplete = 0;
-		if (isSpeaking && GetNumVisibleCharacters() < targetText.Length) {
+		if (complete && GetNumVisibleCharacters() < targetText.Length) {
 			targetText = textContainer.text.TrimEnd() + "-";
 		}
 	}

@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 1146750645779768071}
   - component: {fileID: 312079923}
   m_Layer: 5
-  m_Name: SpeechBubble
+  m_Name: NpcSpeechBubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

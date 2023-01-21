@@ -4,16 +4,20 @@ using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class DialogueController : MonoBehaviour
 {
     public static DialogueController Instance { get; private set; }
 
-    public GameObject speechBubblePrefab;
+    [FormerlySerializedAs("speechBubblePrefab")] public GameObject npcSpeechBubblePrefab;
+    public GameObject playerSpeechBubblePrefab;
     public GameObject speechBubbleContainer;
 
     public GameObject choicePrefab;
     public GameObject choiceContainer;
+
+    public NpcAnimator npcAnimator;
 
     private List<Step> steps = new();
     private SpeechBubble latestSpeechBubble;
@@ -25,37 +29,40 @@ public class DialogueController : MonoBehaviour
 
     private void Start()
     {
-        AddSteps(new Step[]
+        npcAnimator.onStopWalking.AddListener(() =>
         {
-            new StepDialogue("Hi! It's so nice to meet you!"),
-            new StepDialogue("And on such a lovely day, too!"),
-        });
+            AddSteps(new Step[]
+            {
+                new StepDialogue(false, "Hi! It's so nice to meet you!"),
+                new StepDialogue(false, "And on such a lovely day, too!"),
+            });
         
-        AddChoice("Vampire!", new Step[]
-        {
-            new StepDialogue("Me: I'm a vampire!"),
-            new StepDialogue("Oh! Erm... that's... nice...?"),
-            new StepDialogue("I think...?"),
-            new StepDialogue("If you're a vampire..."),
-            new StepDialogue("That means you must be on the hunt..."),
-            new StepDialogue("Please, spare me!"),
-            new StepDialogue("Take my sister instead! She deserves it!"),
-            new StepDialogue("I'm too young to die!"),
-        });
+            AddChoice("Vampire!", new Step[]
+            {
+                new StepDialogue(true,  "I'm a vampire!"),
+                new StepDialogue(false, "Oh! Erm... that's... nice...?"),
+                new StepDialogue(false, "I think...?"),
+                new StepDialogue(false, "If you're a vampire..."),
+                new StepDialogue(false, "That means you must be on the hunt..."),
+                new StepDialogue(false, "Please, spare me!"),
+                new StepDialogue(false, "Take my sister instead! She deserves it!"),
+                new StepDialogue(false, "I'm too young to die!"),
+            });
         
-        AddChoice("Cats?", new Step[]
-        {
-            new StepDialogue("Me: What's your opinion of cats?"),
-            new StepDialogue("BIG fan. Seriously, all the way."),
-            new StepDialogue("You will NOT believe how many cats I have."),
-            new StepDialogue("There's Daeg, then there's Scout, Jonesy..."),
-            new StepDialogue("...Parker, Buča, Squee, Boots... you get the idea."),
-        });
+            AddChoice("Cats?", new Step[]
+            {
+                new StepDialogue(true,  "What's your opinion of cats?"),
+                new StepDialogue(false, "BIG fan. Seriously, all the way."),
+                new StepDialogue(false, "You will NOT believe how many cats I have."),
+                new StepDialogue(false, "There's Daeg, then there's Scout, Jonesy..."),
+                new StepDialogue(false, "...Parker, Buča, Squee, Boots... you get the idea."),
+            });
         
-        AddChoice("Weather?", new Step[]
-        {
-            new StepDialogue("Me: So how about that weather?"),
-            new StepDialogue("Uh, it's fine, I guess."),
+            AddChoice("Weather?", new Step[]
+            {
+                new StepDialogue(true,  "So how about that weather?"),
+                new StepDialogue(false, "Uh, it's fine, I guess."),
+            });
         });
     }
 
@@ -88,8 +95,6 @@ public class DialogueController : MonoBehaviour
 
     public void NextStep()
     {
-        print("Called NextStep() at " + Time.time);
-        
         if (steps.Count == 0) return;
         
         steps[0].End();
@@ -148,18 +153,27 @@ public class DialogueController : MonoBehaviour
 
     private class StepDialogue : Step
     {
+        public bool isPlayer;
         public string targetText;
 
-        public StepDialogue(string targetText)
+        public StepDialogue(bool isPlayer, string targetText)
         {
+            this.isPlayer = isPlayer;
             this.targetText = targetText;
         }
 
         public override void Start()
         {
-            print("Start called at " + Time.time);
-            SpeechBubble bubble = Instantiate(Instance.speechBubblePrefab, Instance.speechBubbleContainer.transform).GetComponent<SpeechBubble>();
+            if (!isPlayer) Instance.npcAnimator.StartTalking();
+
+            GameObject prefabToUse = isPlayer ? Instance.playerSpeechBubblePrefab : Instance.npcSpeechBubblePrefab;
+            
+            SpeechBubble bubble = Instantiate(prefabToUse, Instance.speechBubbleContainer.transform).GetComponent<SpeechBubble>();
             bubble.Speak(targetText);
+            bubble.onStopTalking.AddListener(() =>
+            {
+                Instance.npcAnimator.StopTalking();
+            });
             bubble.onComplete.AddListener(() =>
             {
                 Instance.NextStep();
