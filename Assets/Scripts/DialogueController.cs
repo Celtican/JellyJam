@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DialogueController : MonoBehaviour
@@ -9,11 +10,13 @@ public class DialogueController : MonoBehaviour
     public static DialogueController Instance { get; private set; }
 
     public GameObject speechBubblePrefab;
+    public GameObject speechBubbleContainer;
 
-    public float charactersPerSecond = 40;
-    public float timeBetweenDialogue = 2;
+    public GameObject choicePrefab;
+    public GameObject choiceContainer;
 
     private List<Step> steps = new();
+    private SpeechBubble latestSpeechBubble;
 
     private void Awake()
     {
@@ -24,40 +27,73 @@ public class DialogueController : MonoBehaviour
     {
         AddSteps(new Step[]
         {
-            new StepDialogue("Hi! It's so nice to meet you! And on such a lovely day, too!"),
-            new StepDialogue("I'm a vampire!"),
-            new StepDialogue("Oh! Erm, that's... nice? I think?"),
+            new StepDialogue("Hi! It's so nice to meet you!"),
+            new StepDialogue("And on such a lovely day, too!"),
+        });
+        
+        AddChoice("Vampire!", new Step[]
+        {
+            new StepDialogue("Me: I'm a vampire!"),
+            new StepDialogue("Oh! Erm... that's... nice...?"),
+            new StepDialogue("I think...?"),
+            new StepDialogue("If you're a vampire..."),
+            new StepDialogue("That means you must be on the hunt..."),
+            new StepDialogue("Please, spare me!"),
+            new StepDialogue("Take my sister instead! She deserves it!"),
+            new StepDialogue("I'm too young to die!"),
+        });
+        
+        AddChoice("Cats?", new Step[]
+        {
+            new StepDialogue("Me: What's your opinion of cats?"),
+            new StepDialogue("BIG fan. Seriously, all the way."),
+            new StepDialogue("You will NOT believe how many cats I have."),
+            new StepDialogue("There's Daeg, then there's Scout, Jonesy..."),
+            new StepDialogue("...Parker, Buča, Squee, Boots... you get the idea."),
+        });
+        
+        AddChoice("Weather?", new Step[]
+        {
+            new StepDialogue("Me: So how about that weather?"),
+            new StepDialogue("Uh, it's fine, I guess."),
         });
     }
 
     public void Update()
     {
-        if (steps.Count > 0) steps[0].Update();
+        if (steps.Count > 0)
+        {
+            if (!steps[0].started)
+            {
+                steps[0].started = true;
+                steps[0].Start();
+            }
+            steps[0].Update();
+        }
     }
 
     public void AddStep(Step step)
     {
+        step.started = false;
         steps.Add(step);
-        if (steps.Count == 1) step.Start();
     }
 
     public void AddSteps(IEnumerable<Step> steps)
     {
-        Step[] newSteps = steps as Step[] ?? steps.ToArray();
-        this.steps.AddRange(newSteps);
-        if (this.steps.Count == newSteps.Length) this.steps[0].Start();
+        foreach (Step step in steps)
+        {
+            AddStep(step);
+        }
     }
 
     public void NextStep()
     {
+        print("Called NextStep() at " + Time.time);
+        
         if (steps.Count == 0) return;
         
         steps[0].End();
         steps.RemoveAt(0);
-        
-        if (steps.Count == 0) return;
-        
-        steps[0].Start();
     }
 
     public void NextStepAndSetStep(Step step)
@@ -66,6 +102,31 @@ public class DialogueController : MonoBehaviour
         else steps.Add(step);
         
         NextStep();
+    }
+
+    public void ClearSteps()
+    {
+        if (steps.Count > 1) steps[0].End();
+        steps.Clear();
+        if (latestSpeechBubble != null) latestSpeechBubble.onComplete.RemoveAllListeners();
+    }
+
+    public void Interrupt()
+    {
+        ClearSteps();
+        
+        if (latestSpeechBubble != null) latestSpeechBubble.InterruptSpeaking();
+    }
+
+    public void AddChoice(string choiceText, Step[] stepsOnClick)
+    {
+        Choice choice = Instantiate(choicePrefab, choiceContainer.transform).GetComponent<Choice>();
+        choice.SetText(choiceText);
+        choice.AddListenerOnClick(() =>
+        {
+            Interrupt();
+            AddSteps(stepsOnClick);
+        });
     }
 
     private void OnDestroy()
@@ -79,6 +140,7 @@ public class DialogueController : MonoBehaviour
     [Serializable]
     public abstract class Step
     {
+        public bool started = false;
         public abstract void Start();
         public abstract void Update();
         public abstract void End();
@@ -95,14 +157,19 @@ public class DialogueController : MonoBehaviour
 
         public override void Start()
         {
-            SpeechBubble bubble = Instantiate(Instance.speechBubblePrefab, Instance.transform).GetComponent<SpeechBubble>();
+            print("Start called at " + Time.time);
+            SpeechBubble bubble = Instantiate(Instance.speechBubblePrefab, Instance.speechBubbleContainer.transform).GetComponent<SpeechBubble>();
             bubble.Speak(targetText);
-            bubble.onDialogueComplete.AddListener(() => Instance.NextStep());
+            bubble.onComplete.AddListener(() =>
+            {
+                Instance.NextStep();
+            });
+            Instance.latestSpeechBubble = bubble;
         }
 
         public override void Update()
         {
-            
+            // we wait for the speech bubble's animator to complete
         }
 
         public override void End()
@@ -115,10 +182,6 @@ public class DialogueController : MonoBehaviour
     {
         private float timeToWait;
 
-        public StepWait() : this(Instance.timeBetweenDialogue)
-        {
-        }
-        
         public StepWait(float timeToWait)
         {
             this.timeToWait = timeToWait;
