@@ -1,9 +1,17 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenuController : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public Slider volumeSlider;
+
+    private void Start()
+    {
+        volumeSlider.value = AudioController.Instance.GetVolume();
+    }
 
     public void Update()
     {
@@ -35,5 +43,10 @@ public class PauseMenuController : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void SetVolume(float volume)
+    {
+        AudioController.Instance.SetVolume(volume);
     }
 }
