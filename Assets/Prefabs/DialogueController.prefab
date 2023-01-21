@@ -177,7 +177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 108a47ac349d4556b9ca085feaea03de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speechBubblePrefab: {fileID: 1146750645779768089, guid: 168bcf24263aeae488187342e4d2b6ae, type: 3}
+  npcSpeechBubblePrefab: {fileID: 1146750645779768089, guid: 168bcf24263aeae488187342e4d2b6ae, type: 3}
+  playerSpeechBubblePrefab: {fileID: 5867497886618671854, guid: 4a18a45a3a8918a43bb6fd73d7c82276, type: 3}
   speechBubbleContainer: {fileID: 1031337171}
   choicePrefab: {fileID: 2178165956386141599, guid: 6930f4f3684eedb43b3e5f27755efb1f, type: 3}
   choiceContainer: {fileID: 2113442799}
+  npcAnimator: {fileID: 0}
