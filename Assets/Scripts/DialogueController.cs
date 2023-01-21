@@ -8,7 +8,7 @@ public class DialogueController : MonoBehaviour
 {
     public static DialogueController Instance { get; private set; }
 
-    public TMP_Text dialogueText;
+    public GameObject speechBubblePrefab;
 
     public float charactersPerSecond = 40;
     public float timeBetweenDialogue = 2;
@@ -87,7 +87,6 @@ public class DialogueController : MonoBehaviour
     private class StepDialogue : Step
     {
         public string targetText;
-        public float timePassed = 0;
 
         public StepDialogue(string targetText)
         {
@@ -96,22 +95,14 @@ public class DialogueController : MonoBehaviour
 
         public override void Start()
         {
-            Instance.dialogueText.text = "";
+            SpeechBubble bubble = Instantiate(Instance.speechBubblePrefab, Instance.transform).GetComponent<SpeechBubble>();
+            bubble.Speak(targetText);
+            bubble.onDialogueComplete.AddListener(() => Instance.NextStep());
         }
 
         public override void Update()
         {
-            timePassed += Time.deltaTime;
-            int numCharacters = (int)(timePassed * Instance.charactersPerSecond);
-            if (numCharacters >= targetText.Length)
-            {
-                Instance.dialogueText.text = targetText;
-                Instance.NextStepAndSetStep(new StepWait());
-            }
-            else
-            {
-                Instance.dialogueText.text = targetText[..numCharacters]; // substring
-            }
+            
         }
 
         public override void End()
