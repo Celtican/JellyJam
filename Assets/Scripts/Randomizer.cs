@@ -8,12 +8,10 @@ public class Randomizer : MonoBehaviour
     public Sprite[] spriteList;
 
     public Color[] colorList;
-
-    // Start is called before the first frame update
-    void Start()
+    
+    void Awake()
     {
         rend = GetComponent<SpriteRenderer>();
-        GetRandomSprite();  
     }
 
     public void GetRandomSprite()
