@@ -182,4 +182,23 @@ MonoBehaviour:
   speechBubbleContainer: {fileID: 1031337171}
   choicePrefab: {fileID: 2178165956386141599, guid: 6930f4f3684eedb43b3e5f27755efb1f, type: 3}
   choiceContainer: {fileID: 2113442799}
-  npcAnimator: {fileID: 0}
+  npcPrefab: {fileID: 163618041495844330, guid: 429ea7fb6577bcf45b8e447737f6dae0, type: 3}
+  npcSpawnPosition: {x: -5, y: -1, z: 0}
+  npcEnterDialogues:
+  - speech:
+    - isPlayer: 0
+      text: Hi! It's so nice to meet you!
+    - isPlayer: 0
+      text: And on such a lovely day, too!
+  npcDepartDialogues:
+  - speech:
+    - isPlayer: 0
+      text: Actually, uh...
+    - isPlayer: 0
+      text: I forgot I had plans tonight, I gotta go...
+  npcPassDialogues:
+  - speech:
+    - isPlayer: 1
+      text: I think it would be in our best interest if we were to depart.
+    - isPlayer: 0
+      text: O-oh? Well, alright then.

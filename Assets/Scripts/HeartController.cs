@@ -26,6 +26,7 @@ public class HeartController : MonoBehaviour
 
     public void ResetHearts()
     {
+        hypnotizedHearts = 0;
         SetHearts(startingHearts);
     }
 
@@ -36,7 +37,7 @@ public class HeartController : MonoBehaviour
 
     public void SetHearts(float amount)
     {
-        curHearts = Mathf.Clamp(amount, 0, maxHearts);
+        curHearts = Mathf.Clamp(amount, hypnotizedHearts, maxHearts);
         for (int i = 0; i < maxHearts; i++)
         {
             heartAnimators[i].SetBool("Full", i <= curHearts-1);
@@ -47,5 +48,11 @@ public class HeartController : MonoBehaviour
     private void OnDestroy()
     {
         if (Instance == this) Instance = null;
+    }
+
+    public void Hypnotize(float amount)
+    {
+        hypnotizedHearts += amount;
+        AddHearts(amount);
     }
 }
