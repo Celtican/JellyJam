@@ -405,7 +405,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982148042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.01, y: -0.015962422, z: 0}
+  m_LocalPosition: {x: -5.01, y: -0.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -767,10 +767,6 @@ PrefabInstance:
       propertyPath: npcAnimator
       value: 
       objectReference: {fileID: 1982148046}
-    - target: {fileID: 792887847163021675, guid: 57420b9e83a79594eb0f59e97f2cba6f, type: 3}
-      propertyPath: playerSpeechBubblePrefab
-      value: 
-      objectReference: {fileID: 5867497886618671854, guid: 4a18a45a3a8918a43bb6fd73d7c82276, type: 3}
     - target: {fileID: 792887847163021685, guid: 57420b9e83a79594eb0f59e97f2cba6f, type: 3}
       propertyPath: m_Pivot.x
       value: 1
