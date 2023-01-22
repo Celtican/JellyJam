@@ -30,6 +30,12 @@ public class HeartController : MonoBehaviour
         SetHearts(startingHearts);
     }
 
+    public void ClearHearts()
+    {
+        hypnotizedHearts = 0;
+        SetHearts(0);
+    }
+
     public void AddHearts(float amount)
     {
         SetHearts(curHearts + amount);

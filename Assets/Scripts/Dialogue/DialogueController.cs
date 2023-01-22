@@ -119,7 +119,7 @@ public class DialogueController : MonoBehaviour
     {
         foreach (Choice choice in activeChoices)
         {
-            Destroy(choice.gameObject);
+            choice.PlayHideAnimation();
         }
         activeChoices.Clear();
     }
@@ -165,6 +165,7 @@ public class DialogueController : MonoBehaviour
     {
         Choice choice = Instantiate(choicePrefab, choiceContainer.transform).GetComponent<Choice>();
         choice.SetText(choiceText);
+        choice.AddListenerOnClick(() => choice.PlayChooseAnimation());
         choice.AddListenerOnClick(Interrupt);
         choice.AddListenerOnClick(ClearChoices);
         choice.AddListenerOnClick(onClick);
@@ -255,6 +256,7 @@ public class DialogueController : MonoBehaviour
         {
             Instance.npcAnimator = Instantiate(Instance.npcPrefab).GetComponent<NpcAnimator>();
             Instance.npcAnimator.transform.position = Instance.npcSpawnPosition;
+            HeartController.Instance.ResetHearts();
         }
 
         public override void End()
@@ -268,6 +270,7 @@ public class DialogueController : MonoBehaviour
         public override void Start()
         {
             Instance.npcAnimator.Exit();
+            HeartController.Instance.ClearHearts();
         }
     }
 

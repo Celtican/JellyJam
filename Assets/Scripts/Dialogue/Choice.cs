@@ -5,13 +5,34 @@ using UnityEngine.UI;
 
 public class Choice : MonoBehaviour
 {
+    private Button button;
+    private TMP_Text tmpText;
+    private Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        tmpText = GetComponentInChildren<TMP_Text>();
+        button = GetComponentInChildren<Button>();
+    }
+
     public void SetText(string text)
     {
-        GetComponentInChildren<TMP_Text>().text = text;
+        tmpText.text = text;
     }
 
     public void AddListenerOnClick(UnityAction action)
     {
-        GetComponent<Button>().onClick.AddListener(action);
+        button.onClick.AddListener(action);
+    }
+
+    public void PlayHideAnimation()
+    {
+        animator.SetBool("Disappear", true);
+    }
+
+    public void PlayChooseAnimation()
+    {
+        animator.SetBool("Chosen", true);
     }
 }
