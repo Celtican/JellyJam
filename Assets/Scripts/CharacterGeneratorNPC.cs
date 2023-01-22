@@ -19,6 +19,7 @@ public class CharacterGeneratorNPC : MonoBehaviour
         GenerateCharacter();
     }
 
+
     public void GenerateCharacter()
     {
         randHead.GetRandomSprite();
@@ -28,6 +29,8 @@ public class CharacterGeneratorNPC : MonoBehaviour
         randShirt.GetRandomSprite();
         randHair.GetRandomSprite();
         randAccessories.GetRandomSprite();
+
+
     }
 
 }
