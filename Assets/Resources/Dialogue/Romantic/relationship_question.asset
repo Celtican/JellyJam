@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b2f863c7a645a48fe3bda290206a9d, type: 3}
+  m_Name: relationship_question
+  m_EditorClassIdentifier: 
+  text: 
+  potentialDialogue:
+  - {fileID: 11400000, guid: db964244aab061d44b6a76ab76e356be, type: 2}
+  - {fileID: 11400000, guid: 51cb58ae77025d2489e3c196059e2daa, type: 2}

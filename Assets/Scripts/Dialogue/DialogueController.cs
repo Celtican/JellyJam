@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
@@ -31,6 +32,9 @@ public class DialogueController : MonoBehaviour
 
     private List<QuestionObject> questions = new();
     private List<Choice> activeChoices = new();
+
+    private bool gameOver = false;
+    public string epilogueScene;
 
     private void Awake()
     {
@@ -183,8 +187,29 @@ public class DialogueController : MonoBehaviour
             else AddSteps(npcDepartDialogues[Random.Range(0, npcDepartDialogues.Count)]);
             AddStep(new StepNpcExit());
         }
-        AddStep(new StepNpcEnter());
-        AddSteps(npcEnterDialogues[Random.Range(0, npcEnterDialogues.Count)]);
+
+        if (gameOver)
+        {
+            AddStep(new StepEpilogue());
+        }
+        else
+        {
+            AddStep(new StepNpcEnter());
+            AddSteps(npcEnterDialogues[Random.Range(0, npcEnterDialogues.Count)]);
+        }
+    }
+
+    public void TimeOver()
+    {
+        gameOver = true;
+        AttemptNewNpc(false);
+    }
+
+    public void TurnNpc()
+    {
+        Interrupt();
+        ClearSteps();
+        AddStep(new StepEpilogue());
     }
 
     private void OnDestroy()
@@ -283,20 +308,19 @@ public class DialogueController : MonoBehaviour
             this.timeToWait = timeToWait;
         }
         
-        public override void Start()
-        {
-            
-        }
-
         public override void Update()
         {
             timeToWait -= Time.deltaTime;
             if (timeToWait <= 0) Instance.NextStep();
         }
+    }
 
-        public override void End()
+    private class StepEpilogue : Step
+    {
+        public override void Start()
         {
-            
+            Time.timeScale = 1;
+            SceneManager.LoadScene(Instance.epilogueScene);
         }
     }
 }

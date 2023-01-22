@@ -23,7 +23,7 @@ public class PlayerTraits : MonoBehaviour
         playerTraitsList = playerTraits.GetComponent<TraitsList>();
         playerTraitsList.Athletic.value = 5; 
         playerTraitsList.Nerdy.value = 5;
-        playerTraitsList.Weird.value = 5;
+        playerTraitsList.Romantic.value = 5;
         playerTraitsList.Funny.value = 5;
         playerTraitsList.AnimalLover.value = 5;
         
@@ -38,26 +38,7 @@ public class PlayerTraits : MonoBehaviour
         
     }
 
-    void UpdateAthletics()
-    {
-        playerTraitsList.Athletic.value = 10;
-    }
-    void UpdateNerdy()
-    {
-        playerTraitsList.Nerdy.value = 10;
-    }
-    void UpdateWeird()
-    {
-        playerTraitsList.Weird.value = 10;
-    }
-    void UpdateFunny()
-    {
-        playerTraitsList.Funny.value = 10;
-    }
-    void UpdateAnimalLover()
-    {
-        playerTraitsList.AnimalLover.value = 10;
-    }
+    
 
 
 }
