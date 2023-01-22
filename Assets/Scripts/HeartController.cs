@@ -31,7 +31,6 @@ public class HeartController : MonoBehaviour
 
     public void AddHearts(float amount)
     {
-        print("Gained " + amount + " hearts.");
         SetHearts(curHearts + amount);
     }
 

@@ -17,7 +17,14 @@ public class DialogueController : MonoBehaviour
     public GameObject choicePrefab;
     public GameObject choiceContainer;
 
-    public NpcAnimator npcAnimator;
+    public GameObject npcPrefab;
+    public Vector3 npcSpawnPosition;
+    private NpcAnimator npcAnimator;
+
+    public List<DialogueList> npcEnterDialogues;
+    public List<DialogueList> npcDepartDialogues;
+    public List<DialogueList> npcPassDialogues;
+    public List<SpriteRenderer[]> test;
 
     private List<Step> steps = new();
     private SpeechBubble latestSpeechBubble;
@@ -41,16 +48,7 @@ public class DialogueController : MonoBehaviour
 
     private void Start()
     {
-        npcAnimator.onStopWalking.AddListener(() =>
-        {
-            AddSteps(new Step[]
-            {
-                new StepDialogue(false, "Hi! It's so nice to meet you!"),
-                new StepDialogue(false, "And on such a lovely day, too!"),
-            });
-            
-            AddRandomQuestions();
-        });
+        AttemptNewNpc(false);
     }
 
     public void Update()
@@ -72,6 +70,13 @@ public class DialogueController : MonoBehaviour
         steps.Add(step);
     }
 
+    public void AddSteps(DialogueList dialogue)
+    {
+        foreach (Dialogue d in dialogue.speech)
+        {
+            AddStep(new StepDialogue(d));
+        }
+    }
     public void AddSteps(IEnumerable<Step> steps)
     {
         foreach (Step step in steps)
@@ -167,6 +172,20 @@ public class DialogueController : MonoBehaviour
         activeChoices.Add(choice);
     }
 
+    public void AttemptNewNpc(bool passed)
+    {
+        Interrupt();
+        ClearChoices();
+        if (npcAnimator != null)
+        {
+            if (passed) AddSteps(npcPassDialogues[Random.Range(0, npcPassDialogues.Count)]);
+            else AddSteps(npcDepartDialogues[Random.Range(0, npcDepartDialogues.Count)]);
+            AddStep(new StepNpcExit());
+        }
+        AddStep(new StepNpcEnter());
+        AddSteps(npcEnterDialogues[Random.Range(0, npcEnterDialogues.Count)]);
+    }
+
     private void OnDestroy()
     {
         if (Instance == this)
@@ -176,19 +195,34 @@ public class DialogueController : MonoBehaviour
     }
 
     [Serializable]
-    public abstract class Step
+    public class Step
     {
-        public bool started = false;
-        public abstract void Start();
-        public abstract void Update();
-        public abstract void End();
+        [NonSerialized] public bool started = false;
+
+        public virtual void Start()
+        {
+        }
+
+        public virtual void Update()
+        {
+        }
+
+        public virtual void End()
+        {
+        }
     }
 
-    private class StepDialogue : Step
+    [Serializable]
+    public class StepDialogue : Step
     {
         public bool isPlayer;
         public string targetText;
 
+        public StepDialogue(Dialogue dialogue)
+        {
+            isPlayer = dialogue.isPlayer;
+            targetText = dialogue.text;
+        }
         public StepDialogue(bool isPlayer, string targetText)
         {
             this.isPlayer = isPlayer;
@@ -213,15 +247,27 @@ public class DialogueController : MonoBehaviour
             });
             Instance.latestSpeechBubble = bubble;
         }
+    }
 
-        public override void Update()
+    private class StepNpcEnter : Step
+    {
+        public override void Start()
         {
-            // we wait for the speech bubble's animator to complete
+            Instance.npcAnimator = Instantiate(Instance.npcPrefab).GetComponent<NpcAnimator>();
+            Instance.npcAnimator.transform.position = Instance.npcSpawnPosition;
         }
 
         public override void End()
         {
-            
+            Instance.AddRandomQuestions();
+        }
+    }
+    
+    private class StepNpcExit : Step
+    {
+        public override void Start()
+        {
+            Instance.npcAnimator.Exit();
         }
     }
 
