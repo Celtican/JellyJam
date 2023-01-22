@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9debfa7208c94d0b80794a4481754b32, type: 3}
-  m_Name: bats_negative_agree
+  m_Script: {fileID: 11500000, guid: 10b2f863c7a645a48fe3bda290206a9d, type: 3}
+  m_Name: wo_question
   m_EditorClassIdentifier: 
-  heartsGained: 1
   text: 
-  speech:
-  - isPlayer: 1
-    text: Psych! Of course I don't have bats...
+  potentialDialogue:
+  - {fileID: 11400000, guid: 61406a347f33f744780f9d46cfb35400, type: 2}
+  - {fileID: 11400000, guid: a17e34ec2cd915147b0dc50047267e36, type: 2}
