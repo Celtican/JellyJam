@@ -10,7 +10,7 @@ public class TraitsList : MonoBehaviour
 {
     public Trait Athletic;
     public Trait Nerdy;
-    public Trait Weird;
+    public Trait Romantic;
     public Trait Funny;
     public Trait AnimalLover;
     
