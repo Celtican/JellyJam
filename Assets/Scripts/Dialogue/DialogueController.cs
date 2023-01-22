@@ -207,6 +207,7 @@ public class DialogueController : MonoBehaviour
 
     public void TurnNpc()
     {
+        Interrupt();
         ClearSteps();
         AddStep(new StepEpilogue());
     }
