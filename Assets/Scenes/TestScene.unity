@@ -227,7 +227,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5ffa36dc9a8af144a99b0e003b53c831, type: 3}
   - {fileID: 21300000, guid: 1b977fe9bcb0f964db80fa84f2ccb2e3, type: 3}
   colorList:
-  - {r: 1, g: 1, b: 1, a: 0}
+  - {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &512790406
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +332,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: cbe467ef89e89d940a93e593ead58aaa, type: 3}
   - {fileID: 21300000, guid: 9c5bb2824f84fba42bfed9b5509ad32a, type: 3}
   colorList:
-  - {r: 1, g: 1, b: 1, a: 0}
+  - {r: 0.25490198, g: 0.25490198, b: 0.25490198, a: 1}
 --- !u!1 &669339384
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,7 +437,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ab6480aff4bc6584ead479251dad3f7c, type: 3}
   - {fileID: 21300000, guid: 6ad5ec0d23334d949b322dd65e18b96b, type: 3}
   colorList:
-  - {r: 1, g: 1, b: 1, a: 0}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0.57254905, g: 0.22745098, b: 0.2784314, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0.5687461, g: 0, b: 1, a: 1}
+  - {r: 0, g: 0.22523785, b: 1, a: 1}
+  - {r: 0.5388948, g: 0.3443841, b: 0.6698113, a: 1}
+  - {r: 0.0141509175, g: 0.6935285, b: 1, a: 1}
+  - {r: 0, g: 1, b: 0.10735226, a: 1}
+  - {r: 0.89983267, g: 1, b: 0.07075471, a: 1}
 --- !u!1 &910860187
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,7 +549,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1458ec46269eaac4da4fb95cb99e3e6e, type: 3}
   - {fileID: 21300000, guid: 22a090ae1ab014e46a3521b823f8563d, type: 3}
   colorList:
-  - {r: 1, g: 1, b: 1, a: 0}
+  - {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1030493817
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,7 +650,7 @@ MonoBehaviour:
   spriteList:
   - {fileID: 21300000, guid: 1abbd8eeb4d9eb842be636b71bf9fd27, type: 3}
   colorList:
-  - {r: 1, g: 1, b: 1, a: 0}
+  - {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1176438822
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,7 +990,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d9353d16769f5b84dbfee6a5374967ca, type: 3}
   - {fileID: 21300000, guid: eeb9a68d565fab5419dd633f2bbea172, type: 3}
   colorList:
-  - {r: 1, g: 1, b: 1, a: 0}
+  - {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1339275322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,7 +1175,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 81b8f776898293341861d72a38f25e71, type: 3}
   - {fileID: 21300000, guid: 4a4812a4dd17121449228c5ac6f865a9, type: 3}
   colorList:
-  - {r: 1, g: 1, b: 1, a: 0}
+  - {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &1395867995
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1321,7 +1330,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a583bd7b24a5eca439f487c63d6df20c, type: 3}
   - {fileID: 0}
   colorList:
-  - {r: 1, g: 1, b: 1, a: 0}
+  - {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1852080930
 GameObject:
   m_ObjectHideFlags: 0
