@@ -205,6 +205,12 @@ public class DialogueController : MonoBehaviour
         AttemptNewNpc(false);
     }
 
+    public void TurnNpc()
+    {
+        ClearSteps();
+        AddStep(new StepEpilogue());
+    }
+
     private void OnDestroy()
     {
         if (Instance == this)
