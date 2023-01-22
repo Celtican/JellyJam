@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b2f863c7a645a48fe3bda290206a9d, type: 3}
+  m_Name: cats
+  m_EditorClassIdentifier: 
+  text: Cats?
+  potentialDialogue:
+  - {fileID: 11400000, guid: fb952446c28da7b45bc9acc234b83fb6, type: 2}
+  - {fileID: 11400000, guid: 60fe38df98cf31c4f95d7b40d0808708, type: 2}

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2acb1a43bc146b5a43e35b59842bda2, type: 3}
+  m_Name: cats_dislike
+  m_EditorClassIdentifier: 
+  speech:
+  - isPlayer: 1
+    text: What is thine opinion of "cats"?
+  - isPlayer: 0
+    text: Ugh, I'm allergic.
+  - isPlayer: 0
+    text: Even if I WASN'T allergic, I would never get a cat.
+  - isPlayer: 0
+    text: They scratch everything, I hear!
+  - isPlayer: 0
+    text: Even people! Nonstop!
+  followUps:
+  - {fileID: 11400000, guid: 25edfe7a4c8683447acb4c170f51f5ac, type: 2}
+  - {fileID: 11400000, guid: f7048e27fbc20314fb9590afdbc4014f, type: 2}
+  - {fileID: 11400000, guid: b73c3e1f36ff72740a2518ee9fde8c42, type: 2}

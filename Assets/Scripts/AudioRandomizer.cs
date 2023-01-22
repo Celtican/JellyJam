@@ -19,7 +19,6 @@ public class AudioRandomizer : MonoBehaviour
 
     public void Play()
     {
-        print("Playing random audio");
         audio.clip = clipSelection[Random.Range(0, clipSelection.Length)];
         AudioController.Instance.PlayAudio(audio);
     }

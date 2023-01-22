@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2acb1a43bc146b5a43e35b59842bda2, type: 3}
+  m_Name: cats_like
+  m_EditorClassIdentifier: 
+  speech:
+  - isPlayer: 1
+    text: What is thine opinion of "cats"?
+  - isPlayer: 0
+    text: BIG fan. Seriously, all the way.
+  - isPlayer: 0
+    text: You would NOT believe how many cats I have.
+  - isPlayer: 0
+    text: There's Daeg, then there's Scout, Jonesy...
+  - isPlayer: 0
+    text: ...Parker...
+  - isPlayer: 0
+    text: "... Bu\u010Da, Squee..."
+  - isPlayer: 0
+    text: ... Boots... you get the idea.
+  followUps:
+  - {fileID: 11400000, guid: 1bb55eff2608d3c45926e9dd9a3820d5, type: 2}
+  - {fileID: 11400000, guid: 5c02d3dd61e5e1e49993a929ca470c0a, type: 2}
+  - {fileID: 11400000, guid: fbd6312c62b88ad41a577b94710e011e, type: 2}

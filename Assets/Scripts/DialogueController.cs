@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using TMPro;
-using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class DialogueController : MonoBehaviour
 {
@@ -22,9 +22,21 @@ public class DialogueController : MonoBehaviour
     private List<Step> steps = new();
     private SpeechBubble latestSpeechBubble;
 
+    private List<QuestionObject> questions = new();
+    private List<Choice> activeChoices = new();
+
     private void Awake()
     {
         Instance = this;
+        
+        string[] assetNames = AssetDatabase.FindAssets("t:QuestionObject", new[] { "Assets/Resources" });
+        questions.Clear();
+        foreach (string name in assetNames)
+        {
+            var path    = AssetDatabase.GUIDToAssetPath(name);
+            var question = AssetDatabase.LoadAssetAtPath<QuestionObject>(path);
+            questions.Add(question);
+        }
     }
 
     private void Start()
@@ -36,33 +48,8 @@ public class DialogueController : MonoBehaviour
                 new StepDialogue(false, "Hi! It's so nice to meet you!"),
                 new StepDialogue(false, "And on such a lovely day, too!"),
             });
-        
-            AddChoice("Vampire!", new Step[]
-            {
-                new StepDialogue(true,  "I'm a vampire!"),
-                new StepDialogue(false, "Oh! Erm... that's... nice...?"),
-                new StepDialogue(false, "I think...?"),
-                new StepDialogue(false, "If you're a vampire..."),
-                new StepDialogue(false, "That means you must be on the hunt..."),
-                new StepDialogue(false, "Please, spare me!"),
-                new StepDialogue(false, "Take my sister instead! She deserves it!"),
-                new StepDialogue(false, "I'm too young to die!"),
-            });
-        
-            AddChoice("Cats?", new Step[]
-            {
-                new StepDialogue(true,  "What's your opinion of cats?"),
-                new StepDialogue(false, "BIG fan. Seriously, all the way."),
-                new StepDialogue(false, "You will NOT believe how many cats I have."),
-                new StepDialogue(false, "There's Daeg, then there's Scout, Jonesy..."),
-                new StepDialogue(false, "...Parker, Buča, Squee, Boots... you get the idea."),
-            });
-        
-            AddChoice("Weather?", new Step[]
-            {
-                new StepDialogue(true,  "So how about that weather?"),
-                new StepDialogue(false, "Uh, it's fine, I guess."),
-            });
+            
+            AddRandomQuestions();
         });
     }
 
@@ -123,15 +110,59 @@ public class DialogueController : MonoBehaviour
         if (latestSpeechBubble != null) latestSpeechBubble.InterruptSpeaking();
     }
 
-    public void AddChoice(string choiceText, Step[] stepsOnClick)
+    public void ClearChoices()
+    {
+        foreach (Choice choice in activeChoices)
+        {
+            Destroy(choice.gameObject);
+        }
+        activeChoices.Clear();
+    }
+
+    public void AddRandomQuestion()
+    {
+        QuestionObject question = questions[Random.Range(0, questions.Count)];
+        AddChoice(question.text, () =>
+        {
+            DialogueObject dialogue = question.potentialDialogue[Random.Range(0, question.potentialDialogue.Length)];
+            foreach (DialogueObject.Speech speech in dialogue.speech)
+            {
+                AddStep(new StepDialogue(speech.isPlayer, speech.text));
+            }
+
+            if (dialogue.followUps.Count == 0)
+            {
+                AddRandomQuestions();
+            } else {
+                foreach (FollowUpObject followUp in dialogue.followUps)
+                {
+                    AddChoice(followUp.text, () =>
+                    {
+                        foreach (DialogueObject.Speech speech in followUp.speech)
+                        {
+                            AddStep(new StepDialogue(speech.isPlayer, speech.text));
+                        }
+                        AddRandomQuestions();
+                    });
+                }
+            }
+        });
+    }
+
+    public void AddRandomQuestions()
+    {
+        for (int i = 0; i < 3; i++) AddRandomQuestion();
+    }
+
+    public void AddChoice(string choiceText, UnityAction onClick)
     {
         Choice choice = Instantiate(choicePrefab, choiceContainer.transform).GetComponent<Choice>();
         choice.SetText(choiceText);
-        choice.AddListenerOnClick(() =>
-        {
-            Interrupt();
-            AddSteps(stepsOnClick);
-        });
+        choice.AddListenerOnClick(Interrupt);
+        choice.AddListenerOnClick(ClearChoices);
+        choice.AddListenerOnClick(onClick);
+        
+        activeChoices.Add(choice);
     }
 
     private void OnDestroy()
