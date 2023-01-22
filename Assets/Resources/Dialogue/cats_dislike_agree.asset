@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9debfa7208c94d0b80794a4481754b32, type: 3}
   m_Name: cats_dislike_agree
   m_EditorClassIdentifier: 
+  heartsGained: 1
   text: Indeed!
   speech:
   - isPlayer: 1

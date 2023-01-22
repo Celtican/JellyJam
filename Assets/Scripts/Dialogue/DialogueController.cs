@@ -125,6 +125,7 @@ public class DialogueController : MonoBehaviour
         AddChoice(question.text, () =>
         {
             DialogueObject dialogue = question.potentialDialogue[Random.Range(0, question.potentialDialogue.Length)];
+            HeartController.Instance.AddHearts(dialogue.heartsGained);
             foreach (DialogueObject.Speech speech in dialogue.speech)
             {
                 AddStep(new StepDialogue(speech.isPlayer, speech.text));
@@ -138,6 +139,7 @@ public class DialogueController : MonoBehaviour
                 {
                     AddChoice(followUp.text, () =>
                     {
+                        HeartController.Instance.AddHearts(followUp.heartsGained);
                         foreach (DialogueObject.Speech speech in followUp.speech)
                         {
                             AddStep(new StepDialogue(speech.isPlayer, speech.text));
