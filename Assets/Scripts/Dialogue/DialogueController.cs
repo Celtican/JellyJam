@@ -20,8 +20,8 @@ public class DialogueController : MonoBehaviour
 
     public GameObject npcPrefab;
     public Vector3 npcSpawnPosition;
-    private NpcAnimator npcAnimator;
-    private TraitsList npcTraits;
+    public NpcAnimator npcAnimator;
+    public TraitsList npcTraits;
 
     public List<DialogueList> npcEnterDialogues;
     public List<DialogueList> npcDepartDialogues;
