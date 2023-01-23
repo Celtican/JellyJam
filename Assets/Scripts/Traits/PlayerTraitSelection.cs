@@ -14,6 +14,8 @@ public class PlayerTraitSelection : MonoBehaviour
     public bool positiveTraitSelectionDone; 
     public TextMeshProUGUI TraitMenuText;
 
+    public MainMenuController mainMenuController;
+
 
     private void Start()
     {
@@ -34,13 +36,13 @@ public class PlayerTraitSelection : MonoBehaviour
         switch (positiveTraitSelected)
         {
             case 0:
-                textMeshProUGUI.text = "Choose your first liked Trait";
+                textMeshProUGUI.text = "Choose two things that describe you!";
                 break;
             case 1:
-                textMeshProUGUI.text = "Choose your second liked Trait";
+                textMeshProUGUI.text = "Choose two things that describe you!";
                 break;
             case 2:
-                textMeshProUGUI.text = "Choose your disliked Trait";
+                textMeshProUGUI.text = "Choose one thing that you aren't!";
                 positiveTraitSelectionDone = true;
                 break;
         }
@@ -49,6 +51,7 @@ public class PlayerTraitSelection : MonoBehaviour
     }
     public void IncreaseTrait(Button button)
     {
+        button.interactable = false;
         if (positiveTraitSelectionDone == false )
         {
             selectedTraitName = button.GetComponentInChildren<TextMeshProUGUI>().text;
@@ -56,72 +59,48 @@ public class PlayerTraitSelection : MonoBehaviour
             {
                 case "Athletic":
                     traitsList.athletic.value = 10;
-                    button.interactable = false;
-
-
                     break;
                 case "Nerdy":
                     traitsList.nerdy.value = 10;
-                    button.interactable = false;
-                    
-
                     break;
                 case "Romantic":
                     traitsList.romantic.value = 10;
-                    button.interactable = false;
-                    
-
                     break;
                 case "Funny":
                     traitsList.funny.value = 10;
-                    button.interactable = false;
-
-
                     break;
                 case "Animal Lover":
                     traitsList.animalLover.value = 10;
-                    button.interactable = false;
-
-
                     break;
                 default:
                     break;
             }
             positiveTraitSelected++;
         }
-        
-    }
-    public void DecreaseTrait(Button button)
-    {
-        if (positiveTraitSelectionDone == true)
+        else
         {
             selectedTraitName = button.GetComponentInChildren<TextMeshProUGUI>().text;
             switch (selectedTraitName)
             {
                 case "Athletic":
                     traitsList.athletic.value = 1;
-
                     break;
                 case "Nerdy":
                     traitsList.nerdy.value = 1;
-
                     break;
                 case "Romantic":
                     traitsList.romantic.value = 1;
-
                     break;
                 case "Funny":
                     traitsList.funny.value = 1;
-
                     break;
                 case "Animal Lover":
                     traitsList.animalLover.value = 1;
-
                     break;
                 default:
                     break;
             }
-            TraitsMenu.SetActive(false);
+            mainMenuController.AdvanceAnimation();
         }
        
     }

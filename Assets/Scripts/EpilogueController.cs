@@ -2,6 +2,7 @@
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EpilogueController : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class EpilogueController : MonoBehaviour
         compatibility = playerTraits == null ? 0.5f : Traits.CalculateCompatibility(playerTraits, npcTraits);
         hearts = HeartController.Instance.GetHearts();
         hypnosisCount = HeartController.Instance.GetHypnosis();
-        score = (hearts / 5f) * (1 - (hypnosisCount / 5f)) * compatibility;
+        score = (hearts / 5f) * (1 - (hypnosisCount / 5f)) * compatibility + hearts*0.1f + compatibility*0.1f;
         EpilogueController.dateName = dateName;
 
         epilogueText = "";
@@ -52,9 +53,9 @@ public class EpilogueController : MonoBehaviour
         };
         epilogueText += score switch
         {
-            >= 0.75f => "All in all, you've lived a happily ever after in your castle for several thousand years! You and " + dateName + " are happy at last...\nPerhaps, it was simply meant to be.",
+            >= 0.75f => "All in all, you've lived a happily ever after in your castle for several thousand years! You and " + dateName + " are happy at last...\nPerhaps, it was simply meant to be.\n",
             >= 0.5f => "Ah yes, it was good while it lasted. At least " + dateName + " had your company, when you'd had none. Unfortunately, you divorced after only " + (int)((score - 0.5f)*250 + 2) + " years...\n",
-            >= 0.25f => "Shudder the thought. You may have been dishonest or told them what they wanted to hear...\nbut you gave " + dateName + " the ultimate gift...and now they are missing from the castle! You never see them again...\n",
+            >= 0.25f => "Shudder the thought. You may have been a smidge dishonest...but you gave " + dateName + " the ultimate gift...and now they are missing from the castle! You never see them again...\n",
             _ => "Tensions were high for too many months. One day, " + dateName + " left the cold halls of the castle. Recently, you've heard rumors of their attempts to raise a revolution against you...\n",
         };
         epilogueText += "Score: " + (int)(score * 100000) + "\n";
@@ -85,6 +86,11 @@ public class EpilogueController : MonoBehaviour
     public float textSpeed = 20f;
     private float timeSinceStarted = 0;
 
+    public SpriteRenderer spriteRenderer;
+    public Sprite badEndingSprite;
+    public Sprite neutralEndingSprite;
+    public Sprite goodEndingSprite;
+
     private void Start()
     {
         if (dateName == "") musicAlone.SetActive(true);
@@ -94,12 +100,15 @@ public class EpilogueController : MonoBehaviour
             {
                 case >= 0.75f:
                     musicHarmony.SetActive(true);
+                    spriteRenderer.sprite = goodEndingSprite;
                     break;
                 case >= 0.5f:
                     musicNeutral.SetActive(true);
+                    spriteRenderer.sprite = neutralEndingSprite;
                     break;
                 default:
                     musicDiscord.SetActive(true);
+                    spriteRenderer.sprite = badEndingSprite;
                     break;
             }
         }
@@ -117,5 +126,10 @@ public class EpilogueController : MonoBehaviour
         {
             tmpText.text = epilogueText;
         }
+    }
+
+    public void SetScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

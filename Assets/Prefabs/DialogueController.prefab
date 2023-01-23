@@ -185,12 +185,33 @@ MonoBehaviour:
   choiceContainer: {fileID: 2113442799}
   npcPrefab: {fileID: 163618041495844330, guid: 429ea7fb6577bcf45b8e447737f6dae0, type: 3}
   npcSpawnPosition: {x: -3.6256, y: -1, z: 0}
+  npcAnimator: {fileID: 0}
+  npcTraits: {fileID: 0}
   npcEnterDialogues:
   - speech:
     - isPlayer: 0
-      text: Hi! It's so nice to meet you!
+      text: Hi! I'm %name%! It's so nice to meet you!
     - isPlayer: 0
       text: And on such a lovely day, too!
+  - speech:
+    - isPlayer: 0
+      text: Thanks for meeting me! I'm %name%!
+    - isPlayer: 0
+      text: What a nice restaurant!
+  - speech:
+    - isPlayer: 0
+      text: It's wonderful to see you!
+    - isPlayer: 0
+      text: What nice eyes you have...
+    - isPlayer: 0
+      text: Uh, my name is %name%!
+  - speech:
+    - isPlayer: 0
+      text: What a perfect place, I'm so hungry!
+    - isPlayer: 0
+      text: Hmm... should we split an appetizer?
+    - isPlayer: 0
+      text: My name is %name%, by the way!
   npcDepartDialogues:
   - speech:
     - isPlayer: 0
@@ -204,6 +225,7 @@ MonoBehaviour:
     - isPlayer: 0
       text: O-oh? Well, alright then.
   epilogueScene: Epilogue
+  fadeOutAnimator: {fileID: 0}
 --- !u!1 &1121834686525096376
 GameObject:
   m_ObjectHideFlags: 0

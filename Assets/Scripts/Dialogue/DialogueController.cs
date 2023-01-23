@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -37,22 +36,17 @@ public class DialogueController : MonoBehaviour
     private bool gameOver = false;
     public string epilogueScene;
 
+    public Animator fadeOutAnimator;
+
     private void Awake()
     {
         Instance = this;
         
-        string[] assetNames = AssetDatabase.FindAssets("t:QuestionObject", new[] { "Assets/Resources" });
-        questions.Clear();
-        foreach (string name in assetNames)
-        {
-            var path    = AssetDatabase.GUIDToAssetPath(name);
-            var question = AssetDatabase.LoadAssetAtPath<QuestionObject>(path);
-            questions.Add(question);
-        }
     }
 
     private void Start()
     {
+        questions = new List<QuestionObject>(Resources.LoadAll<QuestionObject>("Dialogue"));
         AttemptNewNpc(false);
     }
 
@@ -232,7 +226,7 @@ public class DialogueController : MonoBehaviour
         Interrupt();
         ClearSteps();
         AddStep(new StepEpilogue());
-        EpilogueController.CalculateScore(npcAnimator.randomName, null, npcTraits);
+        EpilogueController.CalculateScore(npcAnimator.randomName, PlayerTraits.Instance != null ? PlayerTraits.Instance.playerTraitsList : null, npcTraits);
     }
 
     private void OnDestroy()
@@ -341,10 +335,17 @@ public class DialogueController : MonoBehaviour
 
     private class StepEpilogue : Step
     {
+        public float timeLeft = 2.5f;
+        
         public override void Start()
         {
-            Time.timeScale = 1;
-            SceneManager.LoadScene(Instance.epilogueScene);
+            Instance.fadeOutAnimator.SetBool("FadeOut", true);
+        }
+        
+        public override void Update()
+        {
+            timeLeft -= Time.deltaTime;
+            if (timeLeft <= 0) SceneManager.LoadScene(Instance.epilogueScene);
         }
     }
 }

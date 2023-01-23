@@ -45,7 +45,7 @@ public class SpeechBubble : MonoBehaviour
 	public void Speak(string text) {
 		textContainer.text = string.Empty;
 		startTime = Time.time;
-		targetText = text.Trim();
+		targetText = text.Replace("%name%", DialogueController.Instance.npcAnimator.randomName).Trim();
 		complete = false;
 		talking = true;
 	}

@@ -26,11 +26,36 @@ public class TraitsList : MonoBehaviour
 
     public void Randomize()
     {
-        athletic.value = Random.Range(1, 10);
-        nerdy.value = Random.Range(1, 10);
-        romantic.value = Random.Range(1, 10);
-        funny.value = Random.Range(1, 10);
-        animalLover.value = Random.Range(1, 10);
+        athletic.value = Random.Range(0, 3) switch
+        {
+            0 => 1,
+            1 => 5,
+            _ => 10, 
+        };
+        nerdy.value = Random.Range(0, 3) switch
+        {
+            0 => 1,
+            1 => 5,
+            _ => 10, 
+        };
+        romantic.value = Random.Range(0, 3) switch
+        {
+            0 => 1,
+            1 => 5,
+            _ => 10, 
+        };
+        funny.value = Random.Range(0, 3) switch
+        {
+            0 => 1,
+            1 => 5,
+            _ => 10, 
+        };
+        animalLover.value = Random.Range(0, 3) switch
+        {
+            0 => 1,
+            1 => 5,
+            _ => 10, 
+        };
     }
 
     public Trait GetTraitOfType(Traits.Type type)
