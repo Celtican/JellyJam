@@ -224,6 +224,7 @@ public class DialogueController : MonoBehaviour
     {
         gameOver = true;
         AttemptNewNpc(false);
+        EpilogueController.ForeverAlone();
     }
 
     public void TurnNpc()
@@ -231,6 +232,7 @@ public class DialogueController : MonoBehaviour
         Interrupt();
         ClearSteps();
         AddStep(new StepEpilogue());
+        EpilogueController.CalculateScore(npcAnimator.randomName, null, npcTraits);
     }
 
     private void OnDestroy()

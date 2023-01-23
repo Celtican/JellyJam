@@ -13,7 +13,7 @@ public class Traits : MonoBehaviour
     }
 
 
-    public float CalculateCompatibility(TraitsList playerTraits, TraitsList NPCtraits)
+    public static float CalculateCompatibility(TraitsList playerTraits, TraitsList NPCtraits)
     {
         float compatibleTraits = 0;
         compatibleTraits += Math.Min(playerTraits.athletic.value, NPCtraits.athletic.value) / 10f;

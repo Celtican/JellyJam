@@ -131,6 +131,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4fc631240a4f07a0040d7971e216ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maleNames:
+  - Abdul
+  - Carson
+  - Bahati
+  - Min-Jun
+  - Hugh
+  - Mosi
+  - Cameron
+  - Leroy
+  - Darnell
+  - Ben
+  - Raphael
+  - Uzzie
+  - Yusef
+  - Hyun-Joo
+  - Wyatt
+  - Freddy
+  - Alex
+  - Bo
+  - Jun
+  - Noel
+  - Kit
+  - Jessie
+  - Frankie
+  - Quinn
+  - Zhong
+  - Rory
+  - Jordan
+  - Hari
+  - Dayo
+  - Avery
+  - Ash
+  femaleNames:
+  - Carmen
+  - Trina
+  - Pauline
+  - Susana
+  - Eve
+  - Gwen
+  - Priscilla
+  - Hafsa
+  - Geeta
+  - Chima
+  - Fatima
+  - Ji-Won
+  - Xue
+  - Amaka
+  - Priya
+  - Alex
+  - Bo
+  - Jun
+  - Noel
+  - Kit
+  - Jessie
+  - Frankie
+  - Quinn
+  - Zhong
+  - Rory
+  - Jordan
+  - Hari
+  - Dayo
+  - Avery
+  - Ash
 --- !u!114 &8663255388100847590
 MonoBehaviour:
   m_ObjectHideFlags: 0
