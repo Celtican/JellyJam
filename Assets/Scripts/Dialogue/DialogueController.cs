@@ -41,18 +41,11 @@ public class DialogueController : MonoBehaviour
     {
         Instance = this;
         
-        string[] assetNames = AssetDatabase.FindAssets("t:QuestionObject", new[] { "Assets/Resources" });
-        questions.Clear();
-        foreach (string name in assetNames)
-        {
-            var path    = AssetDatabase.GUIDToAssetPath(name);
-            var question = AssetDatabase.LoadAssetAtPath<QuestionObject>(path);
-            questions.Add(question);
-        }
     }
 
     private void Start()
     {
+        questions = new List<QuestionObject>(Resources.LoadAll<QuestionObject>("Dialogue"));
         AttemptNewNpc(false);
     }
 
