@@ -17,7 +17,7 @@ public class EpilogueController : MonoBehaviour
         compatibility = playerTraits == null ? 0.5f : Traits.CalculateCompatibility(playerTraits, npcTraits);
         hearts = HeartController.Instance.GetHearts();
         hypnosisCount = HeartController.Instance.GetHypnosis();
-        score = (hearts / 5f) * (1 - (hypnosisCount / 5f)) * compatibility;
+        score = (hearts / 5f) * (1 - (hypnosisCount / 5f)) * compatibility + hearts*0.1f + compatibility*0.1f;
         EpilogueController.dateName = dateName;
 
         epilogueText = "";
