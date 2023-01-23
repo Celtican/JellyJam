@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: -8392636992717238526}
   - component: {fileID: 8104547390305844905}
   - component: {fileID: 1869984447412048405}
+  - component: {fileID: 8639358886490090462}
   m_Layer: 5
   m_Name: DialogueChoice
   m_TagString: Untagged
@@ -228,6 +229,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe5a5db52e6452bbb7ad31a9402d50e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8639358886490090462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2178165956386141599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 160cdb17319449f2819c4393b086773c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio:
+    clip: {fileID: 8300000, guid: 3bc194e7aedd2604a84486dd33db8f85, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
 --- !u!1 &7448272888923335484
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,4 +368,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2087921970443593324}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8639358886490090462}
+        m_TargetAssemblyTypeName: AudioOnCommand, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

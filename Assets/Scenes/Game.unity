@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 265130687}
   - component: {fileID: 265130686}
   - component: {fileID: 265130685}
+  - component: {fileID: 265130688}
   m_Layer: 5
   m_Name: TurnButton
   m_TagString: Untagged
@@ -354,6 +355,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 265130688}
+        m_TargetAssemblyTypeName: AudioOnCommand, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &265130686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,6 +405,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265130683}
   m_CullTransparentMesh: 1
+--- !u!114 &265130688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265130683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 160cdb17319449f2819c4393b086773c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio:
+    clip: {fileID: 8300000, guid: 61fe3545052fb134aa397c7cd98492df, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
 --- !u!1 &411383278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1764,6 +1795,7 @@ GameObject:
   - component: {fileID: 1273793023}
   - component: {fileID: 1273793022}
   - component: {fileID: 1273793021}
+  - component: {fileID: 1273793025}
   m_Layer: 5
   m_Name: ReadMindButton
   m_TagString: Untagged
@@ -1864,6 +1896,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1273793025}
+        m_TargetAssemblyTypeName: AudioOnCommand, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1273793023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1902,6 +1946,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273793019}
   m_CullTransparentMesh: 1
+--- !u!114 &1273793025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273793019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 160cdb17319449f2819c4393b086773c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio:
+    clip: {fileID: 8300000, guid: 83c6dfeb00c6a9d48a0faa318513e4e2, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
 --- !u!224 &1301869448 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8284774579914268987, guid: fef7c260fbf184d4d9d29cc7514b395b, type: 3}
@@ -1919,6 +1981,7 @@ GameObject:
   - component: {fileID: 1354025105}
   - component: {fileID: 1354025104}
   - component: {fileID: 1354025103}
+  - component: {fileID: 1354025106}
   m_Layer: 5
   m_Name: PassButton
   m_TagString: Untagged
@@ -2003,6 +2066,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1354025106}
+        m_TargetAssemblyTypeName: AudioOnCommand, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1354025104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2041,6 +2116,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354025101}
   m_CullTransparentMesh: 1
+--- !u!114 &1354025106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354025101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 160cdb17319449f2819c4393b086773c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio:
+    clip: {fileID: 8300000, guid: 3bc194e7aedd2604a84486dd33db8f85, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
 --- !u!1 &1414001517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2800,6 +2893,7 @@ GameObject:
   - component: {fileID: 1955668149}
   - component: {fileID: 1955668148}
   - component: {fileID: 1955668147}
+  - component: {fileID: 1955668151}
   m_Layer: 5
   m_Name: HypnotizeButton
   m_TagString: Untagged
@@ -2900,6 +2994,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1955668151}
+        m_TargetAssemblyTypeName: AudioOnCommand, Assembly-CSharp
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1955668149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2938,6 +3044,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1955668145}
   m_CullTransparentMesh: 1
+--- !u!114 &1955668151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955668145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 160cdb17319449f2819c4393b086773c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio:
+    clip: {fileID: 8300000, guid: 0f3c9ec0129736f46aaf6b57cb1afae6, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
 --- !u!224 &2036987580 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8284774579914268987, guid: fef7c260fbf184d4d9d29cc7514b395b, type: 3}

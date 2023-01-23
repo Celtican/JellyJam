@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EpilogueController : MonoBehaviour
 {
-    private static string dateName;
+    private static string dateName = "";
     private static float compatibility;
     private static float hearts;
     private static float hypnosisCount;
@@ -76,11 +76,34 @@ public class EpilogueController : MonoBehaviour
                        "Try again?";
     }
 
-
+    public GameObject musicHarmony;
+    public GameObject musicNeutral;
+    public GameObject musicDiscord;
+    public GameObject musicAlone;
 
     public TMP_Text tmpText;
     public float textSpeed = 20f;
     private float timeSinceStarted = 0;
+
+    private void Start()
+    {
+        if (dateName == "") musicAlone.SetActive(true);
+        else
+        {
+            switch (score)
+            {
+                case >= 0.75f:
+                    musicHarmony.SetActive(true);
+                    break;
+                case >= 0.5f:
+                    musicNeutral.SetActive(true);
+                    break;
+                default:
+                    musicDiscord.SetActive(true);
+                    break;
+            }
+        }
+    }
 
     public void Update()
     {
