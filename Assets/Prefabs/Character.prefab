@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 163618041495844331}
   - component: {fileID: 163618041495844334}
   - component: {fileID: 8663255388100847590}
-  - component: {fileID: 7143817108521450683}
+  - component: {fileID: 1052715059785836107}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe5a5db52e6452bbb7ad31a9402d50e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7143817108521450683
+--- !u!114 &1052715059785836107
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,10 +152,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 163618041495844330}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a86e4d8b68794b7b86d9f7e891aecfd6, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c5faddc3cd80864d90a8f83b846f174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  traitsList: {fileID: 0}
+  athletic:
+    value: 0
+  nerdy:
+    value: 0
+  romantic:
+    value: 0
+  funny:
+    value: 0
+  animalLover:
+    value: 0
+  isNpc: 1
 --- !u!1001 &239731648605026449
 PrefabInstance:
   m_ObjectHideFlags: 0
