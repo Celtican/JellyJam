@@ -446,7 +446,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1918768159}
         m_TargetAssemblyTypeName: CharacterGeneratorNPC, Assembly-CSharp
-        m_MethodName: GenerateCharacter
+        m_MethodName: FemininePref
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -458,7 +458,7 @@ MonoBehaviour:
         m_CallState: 1
       - m_Target: {fileID: 1918768159}
         m_TargetAssemblyTypeName: CharacterGeneratorNPC, Assembly-CSharp
-        m_MethodName: FemininePref
+        m_MethodName: GenerateCharacter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
