@@ -1,0 +1,212 @@
+### YamlMime:ManagedReference
+items:
+- uid: E7.Introloop.IntroloopAudioUnityEvent
+  commentId: T:E7.Introloop.IntroloopAudioUnityEvent
+  id: IntroloopAudioUnityEvent
+  parent: E7.Introloop
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IntroloopAudioUnityEvent
+  nameWithType: IntroloopAudioUnityEvent
+  fullName: E7.Introloop.IntroloopAudioUnityEvent
+  type: Class
+  source:
+    id: IntroloopAudioUnityEvent
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/UnityEvents.cs
+    startLine: 9
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nA <xref href=\"UnityEngine.Events.UnityEvent\" data-throw-if-not-resolved=\"false\"></xref> subclass that could send <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref> to\ndynamically invoke <xref href=\"E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio)\" data-throw-if-not-resolved=\"false\"></xref> on <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class IntroloopAudioUnityEvent : UnityEvent<IntroloopAudio>, ISerializationCallbackReceiver
+    content.vb: >-
+      <Serializable>
+
+      Public Class IntroloopAudioUnityEvent
+          Inherits UnityEvent(Of IntroloopAudio)
+          Implements ISerializationCallbackReceiver
+  inheritance:
+  - System.Object
+  - UnityEngine.Events.UnityEventBase
+  - UnityEngine.Events.UnityEvent{E7.Introloop.IntroloopAudio}
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: UnityEngine.Events.UnityEvent
+  commentId: T:UnityEngine.Events.UnityEvent
+  isExternal: true
+- uid: E7.Introloop.IntroloopAudio
+  commentId: T:E7.Introloop.IntroloopAudio
+  parent: E7.Introloop
+  name: IntroloopAudio
+  nameWithType: IntroloopAudio
+  fullName: E7.Introloop.IntroloopAudio
+- uid: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio)
+  commentId: M:E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio)
+  parent: E7.Introloop.IntroloopPlayer
+  name: Play(IntroloopAudio)
+  nameWithType: IntroloopPlayer.Play(IntroloopAudio)
+  fullName: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio)
+    name: Play
+    nameWithType: IntroloopPlayer.Play
+    fullName: E7.Introloop.IntroloopPlayer.Play
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: E7.Introloop.IntroloopAudio
+    name: IntroloopAudio
+    nameWithType: IntroloopAudio
+    fullName: E7.Introloop.IntroloopAudio
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio)
+    name: Play
+    nameWithType: IntroloopPlayer.Play
+    fullName: E7.Introloop.IntroloopPlayer.Play
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: E7.Introloop.IntroloopAudio
+    name: IntroloopAudio
+    nameWithType: IntroloopAudio
+    fullName: E7.Introloop.IntroloopAudio
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop
+  commentId: N:E7.Introloop
+  name: E7.Introloop
+  nameWithType: E7.Introloop
+  fullName: E7.Introloop
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Events.UnityEventBase
+  commentId: T:UnityEngine.Events.UnityEventBase
+  parent: UnityEngine.Events
+  isExternal: true
+  name: UnityEventBase
+  nameWithType: UnityEventBase
+  fullName: UnityEngine.Events.UnityEventBase
+- uid: UnityEngine.Events.UnityEvent{E7.Introloop.IntroloopAudio}
+  commentId: T:UnityEngine.Events.UnityEvent{E7.Introloop.IntroloopAudio}
+  parent: UnityEngine.Events
+  definition: UnityEngine.Events.UnityEvent`1
+  name: UnityEvent<IntroloopAudio>
+  nameWithType: UnityEvent<IntroloopAudio>
+  fullName: UnityEngine.Events.UnityEvent<E7.Introloop.IntroloopAudio>
+  nameWithType.vb: UnityEvent(Of IntroloopAudio)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of E7.Introloop.IntroloopAudio)
+  name.vb: UnityEvent(Of IntroloopAudio)
+  spec.csharp:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    nameWithType: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: E7.Introloop.IntroloopAudio
+    name: IntroloopAudio
+    nameWithType: IntroloopAudio
+    fullName: E7.Introloop.IntroloopAudio
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    nameWithType: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: E7.Introloop.IntroloopAudio
+    name: IntroloopAudio
+    nameWithType: IntroloopAudio
+    fullName: E7.Introloop.IntroloopAudio
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer
+  commentId: T:E7.Introloop.IntroloopPlayer
+  parent: E7.Introloop
+  name: IntroloopPlayer
+  nameWithType: IntroloopPlayer
+  fullName: E7.Introloop.IntroloopPlayer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.Events
+  commentId: N:UnityEngine.Events
+  isExternal: true
+  name: UnityEngine.Events
+  nameWithType: UnityEngine.Events
+  fullName: UnityEngine.Events
+- uid: UnityEngine.Events.UnityEvent`1
+  commentId: T:UnityEngine.Events.UnityEvent`1
+  isExternal: true
+  name: UnityEvent<T0>
+  nameWithType: UnityEvent<T0>
+  fullName: UnityEngine.Events.UnityEvent<T0>
+  nameWithType.vb: UnityEvent(Of T0)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of T0)
+  name.vb: UnityEvent(Of T0)
+  spec.csharp:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    nameWithType: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T0
+    nameWithType: T0
+    fullName: T0
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    nameWithType: UnityEvent
+    fullName: UnityEngine.Events.UnityEvent
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T0
+    nameWithType: T0
+    fullName: T0
+  - name: )
+    nameWithType: )
+    fullName: )

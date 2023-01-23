@@ -1,0 +1,907 @@
+### YamlMime:ManagedReference
+items:
+- uid: E7.Introloop.IntroloopPlayer`1
+  commentId: T:E7.Introloop.IntroloopPlayer`1
+  id: IntroloopPlayer`1
+  parent: E7.Introloop
+  children:
+  - E7.Introloop.IntroloopPlayer`1.Instance
+  - E7.Introloop.IntroloopPlayer`1.SetSingletonInstanceTemplateSource(UnityEngine.AudioSource)
+  langs:
+  - csharp
+  - vb
+  name: IntroloopPlayer<T>
+  nameWithType: IntroloopPlayer<T>
+  fullName: E7.Introloop.IntroloopPlayer<T>
+  type: Class
+  source:
+    id: IntroloopPlayer
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayerAbstract.cs
+    startLine: 25
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\n<p>\n    An <code>abstract</code> class that grants you a new set of convenient singleton instance just like the\n<xref href=\"E7.Introloop.IntroloopPlayer.Instance\" data-throw-if-not-resolved=\"false\"></xref>, but now under your own self-defined class name.\n(e.g. You can now call <code>MyIntroloopPlayer.Instance</code> and so on.)\n</p>\n"
+  remarks: "\n<p>\n    This class utilize C# trick where each unique combination of generic class gives you a\n    unique instance of <code>static</code> variables. Putting your self-defined class itself inside <code>T</code>\n    basically give you a personal set of <code>static</code>.\n</p>\n<p>\n    Define your class like this :\n<pre><code>public class FieldBGMPlayer : IntroloopPlayer&lt;FieldBGMPlayer></code></pre>\n    (Put your class <strong>itself</strong> into the generic variable.)\n</p>\n"
+  example: []
+  syntax:
+    content: 'public abstract class IntroloopPlayer<T> : IntroloopPlayer where T : IntroloopPlayer'
+    typeParameters:
+    - id: T
+    content.vb: >-
+      Public MustInherit Class IntroloopPlayer(Of T As IntroloopPlayer)
+          Inherits IntroloopPlayer
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - E7.Introloop.IntroloopPlayer
+  inheritedMembers:
+  - E7.Introloop.IntroloopPlayer.DefaultIntroloopAudio
+  - E7.Introloop.IntroloopPlayer.PlayOnAwake
+  - E7.Introloop.IntroloopPlayer.TemplateSource
+  - E7.Introloop.IntroloopPlayer.InternalAudioSources
+  - E7.Introloop.IntroloopPlayer.OnApplicationPause(System.Boolean)
+  - E7.Introloop.IntroloopPlayer.Play(System.Single,System.Single)
+  - E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio,System.Single,System.Single)
+  - E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio)
+  - E7.Introloop.IntroloopPlayer.Play
+  - E7.Introloop.IntroloopPlayer.Seek(System.Single)
+  - E7.Introloop.IntroloopPlayer.Stop
+  - E7.Introloop.IntroloopPlayer.Stop(System.Single)
+  - E7.Introloop.IntroloopPlayer.Pause
+  - E7.Introloop.IntroloopPlayer.Pause(System.Single)
+  - E7.Introloop.IntroloopPlayer.Resume(System.Single)
+  - E7.Introloop.IntroloopPlayer.Preload(E7.Introloop.IntroloopAudio)
+  - E7.Introloop.IntroloopPlayer.GetPlayheadTime
+  - E7.Introloop.IntroloopPlayer.SetMixerGroup(UnityEngine.Audio.AudioMixerGroup)
+  - E7.Introloop.IntroloopPlayer.ApplyAudioSource(UnityEngine.AudioSource)
+  - E7.Introloop.IntroloopPlayer.GetDebugStringsTrack1
+  - E7.Introloop.IntroloopPlayer.GetDebugStringsTrack2
+  nameWithType.vb: IntroloopPlayer(Of T)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+  fullName.vb: E7.Introloop.IntroloopPlayer(Of T)
+  name.vb: IntroloopPlayer(Of T)
+- uid: E7.Introloop.IntroloopPlayer`1.Instance
+  commentId: P:E7.Introloop.IntroloopPlayer`1.Instance
+  id: Instance
+  parent: E7.Introloop.IntroloopPlayer`1
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: IntroloopPlayer<T>.Instance
+  fullName: E7.Introloop.IntroloopPlayer<T>.Instance
+  type: Property
+  source:
+    id: Instance
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayerAbstract.cs
+    startLine: 45
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\n<p>\n    Get a convenient singleton instance of <see cref=\"!:T\"></see> from anywhere in your code.\n    This singleton instant is different for each subclass of this <code>abstract</code> class.\n    It has <code>DontDestroyOnLoad</code> applied.\n</p>\n<p>\n    Before calling this <strong>for the first time</strong>, call <xref href=\"E7.Introloop.IntroloopPlayer%601.SetSingletonInstanceTemplateSource(UnityEngine.AudioSource)\" data-throw-if-not-resolved=\"false\"></xref>\n    first to setup its <xref href=\"E7.Introloop.IntroloopPlayer.TemplateSource\" data-throw-if-not-resolved=\"false\"></xref> from script.\n    (It does not exist until runtime, you cannot setup the template ahead of time\n    unlike non-singleton instances.)\n</p>\n"
+  example: []
+  syntax:
+    content: public static T Instance { get; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Public Shared ReadOnly Property Instance As T
+  overload: E7.Introloop.IntroloopPlayer`1.Instance*
+  nameWithType.vb: IntroloopPlayer(Of T).Instance
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+  fullName.vb: E7.Introloop.IntroloopPlayer(Of T).Instance
+- uid: E7.Introloop.IntroloopPlayer`1.SetSingletonInstanceTemplateSource(UnityEngine.AudioSource)
+  commentId: M:E7.Introloop.IntroloopPlayer`1.SetSingletonInstanceTemplateSource(UnityEngine.AudioSource)
+  id: SetSingletonInstanceTemplateSource(UnityEngine.AudioSource)
+  parent: E7.Introloop.IntroloopPlayer`1
+  langs:
+  - csharp
+  - vb
+  name: SetSingletonInstanceTemplateSource(AudioSource)
+  nameWithType: IntroloopPlayer<T>.SetSingletonInstanceTemplateSource(AudioSource)
+  fullName: E7.Introloop.IntroloopPlayer<T>.SetSingletonInstanceTemplateSource(UnityEngine.AudioSource)
+  type: Method
+  source:
+    id: SetSingletonInstanceTemplateSource
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayerAbstract.cs
+    startLine: 77
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nCall this before the first use of <xref href=\"E7.Introloop.IntroloopPlayer%601.Instance\" data-throw-if-not-resolved=\"false\"></xref> to have the singleton instance\ncopy <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref> fields from <code data-dev-comment-type=\"paramref\" class=\"paramref\">templateSource</code>.\n"
+  remarks: "\n<p>\n    Singleton instance is convenient but you cannot pre-connect\n<xref href=\"E7.Introloop.IntroloopPlayer.TemplateSource\" data-throw-if-not-resolved=\"false\"></xref> like a regular instance because\nit does not exist until runtime.\n</p>\n<p>\n    If you had already used the singleton instance before calling this, you can still call\n<xref href=\"E7.Introloop.IntroloopPlayer.ApplyAudioSource(UnityEngine.AudioSource)\" data-throw-if-not-resolved=\"false\"></xref> on the singleton instance to apply different\nsettings of <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref>.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void SetSingletonInstanceTemplateSource(AudioSource templateSource)
+    parameters:
+    - id: templateSource
+      type: UnityEngine.AudioSource
+    content.vb: Public Shared Sub SetSingletonInstanceTemplateSource(templateSource As AudioSource)
+  overload: E7.Introloop.IntroloopPlayer`1.SetSingletonInstanceTemplateSource*
+  nameWithType.vb: IntroloopPlayer(Of T).SetSingletonInstanceTemplateSource(AudioSource)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: E7.Introloop.IntroloopPlayer(Of T).SetSingletonInstanceTemplateSource(UnityEngine.AudioSource)
+references:
+- uid: E7.Introloop.IntroloopPlayer.Instance
+  commentId: P:E7.Introloop.IntroloopPlayer.Instance
+  isExternal: true
+- uid: E7.Introloop
+  commentId: N:E7.Introloop
+  name: E7.Introloop
+  nameWithType: E7.Introloop
+  fullName: E7.Introloop
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: E7.Introloop.IntroloopPlayer
+  commentId: T:E7.Introloop.IntroloopPlayer
+  parent: E7.Introloop
+  name: IntroloopPlayer
+  nameWithType: IntroloopPlayer
+  fullName: E7.Introloop.IntroloopPlayer
+- uid: E7.Introloop.IntroloopPlayer.DefaultIntroloopAudio
+  commentId: P:E7.Introloop.IntroloopPlayer.DefaultIntroloopAudio
+  parent: E7.Introloop.IntroloopPlayer
+  name: DefaultIntroloopAudio
+  nameWithType: IntroloopPlayer.DefaultIntroloopAudio
+  fullName: E7.Introloop.IntroloopPlayer.DefaultIntroloopAudio
+- uid: E7.Introloop.IntroloopPlayer.PlayOnAwake
+  commentId: P:E7.Introloop.IntroloopPlayer.PlayOnAwake
+  parent: E7.Introloop.IntroloopPlayer
+  name: PlayOnAwake
+  nameWithType: IntroloopPlayer.PlayOnAwake
+  fullName: E7.Introloop.IntroloopPlayer.PlayOnAwake
+- uid: E7.Introloop.IntroloopPlayer.TemplateSource
+  commentId: P:E7.Introloop.IntroloopPlayer.TemplateSource
+  parent: E7.Introloop.IntroloopPlayer
+  name: TemplateSource
+  nameWithType: IntroloopPlayer.TemplateSource
+  fullName: E7.Introloop.IntroloopPlayer.TemplateSource
+- uid: E7.Introloop.IntroloopPlayer.InternalAudioSources
+  commentId: P:E7.Introloop.IntroloopPlayer.InternalAudioSources
+  parent: E7.Introloop.IntroloopPlayer
+  name: InternalAudioSources
+  nameWithType: IntroloopPlayer.InternalAudioSources
+  fullName: E7.Introloop.IntroloopPlayer.InternalAudioSources
+- uid: E7.Introloop.IntroloopPlayer.OnApplicationPause(System.Boolean)
+  commentId: M:E7.Introloop.IntroloopPlayer.OnApplicationPause(System.Boolean)
+  parent: E7.Introloop.IntroloopPlayer
+  isExternal: true
+  name: OnApplicationPause(Boolean)
+  nameWithType: IntroloopPlayer.OnApplicationPause(Boolean)
+  fullName: E7.Introloop.IntroloopPlayer.OnApplicationPause(System.Boolean)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.OnApplicationPause(System.Boolean)
+    name: OnApplicationPause
+    nameWithType: IntroloopPlayer.OnApplicationPause
+    fullName: E7.Introloop.IntroloopPlayer.OnApplicationPause
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.OnApplicationPause(System.Boolean)
+    name: OnApplicationPause
+    nameWithType: IntroloopPlayer.OnApplicationPause
+    fullName: E7.Introloop.IntroloopPlayer.OnApplicationPause
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.Play(System.Single,System.Single)
+  commentId: M:E7.Introloop.IntroloopPlayer.Play(System.Single,System.Single)
+  parent: E7.Introloop.IntroloopPlayer
+  isExternal: true
+  name: Play(Single, Single)
+  nameWithType: IntroloopPlayer.Play(Single, Single)
+  fullName: E7.Introloop.IntroloopPlayer.Play(System.Single, System.Single)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.Play(System.Single,System.Single)
+    name: Play
+    nameWithType: IntroloopPlayer.Play
+    fullName: E7.Introloop.IntroloopPlayer.Play
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.Play(System.Single,System.Single)
+    name: Play
+    nameWithType: IntroloopPlayer.Play
+    fullName: E7.Introloop.IntroloopPlayer.Play
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio,System.Single,System.Single)
+  commentId: M:E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio,System.Single,System.Single)
+  parent: E7.Introloop.IntroloopPlayer
+  isExternal: true
+  name: Play(IntroloopAudio, Single, Single)
+  nameWithType: IntroloopPlayer.Play(IntroloopAudio, Single, Single)
+  fullName: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio, System.Single, System.Single)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio,System.Single,System.Single)
+    name: Play
+    nameWithType: IntroloopPlayer.Play
+    fullName: E7.Introloop.IntroloopPlayer.Play
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: E7.Introloop.IntroloopAudio
+    name: IntroloopAudio
+    nameWithType: IntroloopAudio
+    fullName: E7.Introloop.IntroloopAudio
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio,System.Single,System.Single)
+    name: Play
+    nameWithType: IntroloopPlayer.Play
+    fullName: E7.Introloop.IntroloopPlayer.Play
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: E7.Introloop.IntroloopAudio
+    name: IntroloopAudio
+    nameWithType: IntroloopAudio
+    fullName: E7.Introloop.IntroloopAudio
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio)
+  commentId: M:E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio)
+  parent: E7.Introloop.IntroloopPlayer
+  name: Play(IntroloopAudio)
+  nameWithType: IntroloopPlayer.Play(IntroloopAudio)
+  fullName: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio)
+    name: Play
+    nameWithType: IntroloopPlayer.Play
+    fullName: E7.Introloop.IntroloopPlayer.Play
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: E7.Introloop.IntroloopAudio
+    name: IntroloopAudio
+    nameWithType: IntroloopAudio
+    fullName: E7.Introloop.IntroloopAudio
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio)
+    name: Play
+    nameWithType: IntroloopPlayer.Play
+    fullName: E7.Introloop.IntroloopPlayer.Play
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: E7.Introloop.IntroloopAudio
+    name: IntroloopAudio
+    nameWithType: IntroloopAudio
+    fullName: E7.Introloop.IntroloopAudio
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.Play
+  commentId: M:E7.Introloop.IntroloopPlayer.Play
+  parent: E7.Introloop.IntroloopPlayer
+  name: Play()
+  nameWithType: IntroloopPlayer.Play()
+  fullName: E7.Introloop.IntroloopPlayer.Play()
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.Play
+    name: Play
+    nameWithType: IntroloopPlayer.Play
+    fullName: E7.Introloop.IntroloopPlayer.Play
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.Play
+    name: Play
+    nameWithType: IntroloopPlayer.Play
+    fullName: E7.Introloop.IntroloopPlayer.Play
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.Seek(System.Single)
+  commentId: M:E7.Introloop.IntroloopPlayer.Seek(System.Single)
+  parent: E7.Introloop.IntroloopPlayer
+  isExternal: true
+  name: Seek(Single)
+  nameWithType: IntroloopPlayer.Seek(Single)
+  fullName: E7.Introloop.IntroloopPlayer.Seek(System.Single)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.Seek(System.Single)
+    name: Seek
+    nameWithType: IntroloopPlayer.Seek
+    fullName: E7.Introloop.IntroloopPlayer.Seek
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.Seek(System.Single)
+    name: Seek
+    nameWithType: IntroloopPlayer.Seek
+    fullName: E7.Introloop.IntroloopPlayer.Seek
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.Stop
+  commentId: M:E7.Introloop.IntroloopPlayer.Stop
+  parent: E7.Introloop.IntroloopPlayer
+  name: Stop()
+  nameWithType: IntroloopPlayer.Stop()
+  fullName: E7.Introloop.IntroloopPlayer.Stop()
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.Stop
+    name: Stop
+    nameWithType: IntroloopPlayer.Stop
+    fullName: E7.Introloop.IntroloopPlayer.Stop
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.Stop
+    name: Stop
+    nameWithType: IntroloopPlayer.Stop
+    fullName: E7.Introloop.IntroloopPlayer.Stop
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.Stop(System.Single)
+  commentId: M:E7.Introloop.IntroloopPlayer.Stop(System.Single)
+  parent: E7.Introloop.IntroloopPlayer
+  isExternal: true
+  name: Stop(Single)
+  nameWithType: IntroloopPlayer.Stop(Single)
+  fullName: E7.Introloop.IntroloopPlayer.Stop(System.Single)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.Stop(System.Single)
+    name: Stop
+    nameWithType: IntroloopPlayer.Stop
+    fullName: E7.Introloop.IntroloopPlayer.Stop
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.Stop(System.Single)
+    name: Stop
+    nameWithType: IntroloopPlayer.Stop
+    fullName: E7.Introloop.IntroloopPlayer.Stop
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.Pause
+  commentId: M:E7.Introloop.IntroloopPlayer.Pause
+  parent: E7.Introloop.IntroloopPlayer
+  name: Pause()
+  nameWithType: IntroloopPlayer.Pause()
+  fullName: E7.Introloop.IntroloopPlayer.Pause()
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.Pause
+    name: Pause
+    nameWithType: IntroloopPlayer.Pause
+    fullName: E7.Introloop.IntroloopPlayer.Pause
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.Pause
+    name: Pause
+    nameWithType: IntroloopPlayer.Pause
+    fullName: E7.Introloop.IntroloopPlayer.Pause
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.Pause(System.Single)
+  commentId: M:E7.Introloop.IntroloopPlayer.Pause(System.Single)
+  parent: E7.Introloop.IntroloopPlayer
+  isExternal: true
+  name: Pause(Single)
+  nameWithType: IntroloopPlayer.Pause(Single)
+  fullName: E7.Introloop.IntroloopPlayer.Pause(System.Single)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.Pause(System.Single)
+    name: Pause
+    nameWithType: IntroloopPlayer.Pause
+    fullName: E7.Introloop.IntroloopPlayer.Pause
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.Pause(System.Single)
+    name: Pause
+    nameWithType: IntroloopPlayer.Pause
+    fullName: E7.Introloop.IntroloopPlayer.Pause
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.Resume(System.Single)
+  commentId: M:E7.Introloop.IntroloopPlayer.Resume(System.Single)
+  parent: E7.Introloop.IntroloopPlayer
+  isExternal: true
+  name: Resume(Single)
+  nameWithType: IntroloopPlayer.Resume(Single)
+  fullName: E7.Introloop.IntroloopPlayer.Resume(System.Single)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.Resume(System.Single)
+    name: Resume
+    nameWithType: IntroloopPlayer.Resume
+    fullName: E7.Introloop.IntroloopPlayer.Resume
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.Resume(System.Single)
+    name: Resume
+    nameWithType: IntroloopPlayer.Resume
+    fullName: E7.Introloop.IntroloopPlayer.Resume
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.Preload(E7.Introloop.IntroloopAudio)
+  commentId: M:E7.Introloop.IntroloopPlayer.Preload(E7.Introloop.IntroloopAudio)
+  parent: E7.Introloop.IntroloopPlayer
+  name: Preload(IntroloopAudio)
+  nameWithType: IntroloopPlayer.Preload(IntroloopAudio)
+  fullName: E7.Introloop.IntroloopPlayer.Preload(E7.Introloop.IntroloopAudio)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.Preload(E7.Introloop.IntroloopAudio)
+    name: Preload
+    nameWithType: IntroloopPlayer.Preload
+    fullName: E7.Introloop.IntroloopPlayer.Preload
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: E7.Introloop.IntroloopAudio
+    name: IntroloopAudio
+    nameWithType: IntroloopAudio
+    fullName: E7.Introloop.IntroloopAudio
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.Preload(E7.Introloop.IntroloopAudio)
+    name: Preload
+    nameWithType: IntroloopPlayer.Preload
+    fullName: E7.Introloop.IntroloopPlayer.Preload
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: E7.Introloop.IntroloopAudio
+    name: IntroloopAudio
+    nameWithType: IntroloopAudio
+    fullName: E7.Introloop.IntroloopAudio
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.GetPlayheadTime
+  commentId: M:E7.Introloop.IntroloopPlayer.GetPlayheadTime
+  parent: E7.Introloop.IntroloopPlayer
+  name: GetPlayheadTime()
+  nameWithType: IntroloopPlayer.GetPlayheadTime()
+  fullName: E7.Introloop.IntroloopPlayer.GetPlayheadTime()
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.GetPlayheadTime
+    name: GetPlayheadTime
+    nameWithType: IntroloopPlayer.GetPlayheadTime
+    fullName: E7.Introloop.IntroloopPlayer.GetPlayheadTime
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.GetPlayheadTime
+    name: GetPlayheadTime
+    nameWithType: IntroloopPlayer.GetPlayheadTime
+    fullName: E7.Introloop.IntroloopPlayer.GetPlayheadTime
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.SetMixerGroup(UnityEngine.Audio.AudioMixerGroup)
+  commentId: M:E7.Introloop.IntroloopPlayer.SetMixerGroup(UnityEngine.Audio.AudioMixerGroup)
+  parent: E7.Introloop.IntroloopPlayer
+  isExternal: true
+  name: SetMixerGroup(AudioMixerGroup)
+  nameWithType: IntroloopPlayer.SetMixerGroup(AudioMixerGroup)
+  fullName: E7.Introloop.IntroloopPlayer.SetMixerGroup(UnityEngine.Audio.AudioMixerGroup)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.SetMixerGroup(UnityEngine.Audio.AudioMixerGroup)
+    name: SetMixerGroup
+    nameWithType: IntroloopPlayer.SetMixerGroup
+    fullName: E7.Introloop.IntroloopPlayer.SetMixerGroup
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: UnityEngine.Audio.AudioMixerGroup
+    name: AudioMixerGroup
+    nameWithType: AudioMixerGroup
+    fullName: UnityEngine.Audio.AudioMixerGroup
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.SetMixerGroup(UnityEngine.Audio.AudioMixerGroup)
+    name: SetMixerGroup
+    nameWithType: IntroloopPlayer.SetMixerGroup
+    fullName: E7.Introloop.IntroloopPlayer.SetMixerGroup
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: UnityEngine.Audio.AudioMixerGroup
+    name: AudioMixerGroup
+    nameWithType: AudioMixerGroup
+    fullName: UnityEngine.Audio.AudioMixerGroup
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.ApplyAudioSource(UnityEngine.AudioSource)
+  commentId: M:E7.Introloop.IntroloopPlayer.ApplyAudioSource(UnityEngine.AudioSource)
+  parent: E7.Introloop.IntroloopPlayer
+  isExternal: true
+  name: ApplyAudioSource(AudioSource)
+  nameWithType: IntroloopPlayer.ApplyAudioSource(AudioSource)
+  fullName: E7.Introloop.IntroloopPlayer.ApplyAudioSource(UnityEngine.AudioSource)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.ApplyAudioSource(UnityEngine.AudioSource)
+    name: ApplyAudioSource
+    nameWithType: IntroloopPlayer.ApplyAudioSource
+    fullName: E7.Introloop.IntroloopPlayer.ApplyAudioSource
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: UnityEngine.AudioSource
+    name: AudioSource
+    nameWithType: AudioSource
+    fullName: UnityEngine.AudioSource
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.ApplyAudioSource(UnityEngine.AudioSource)
+    name: ApplyAudioSource
+    nameWithType: IntroloopPlayer.ApplyAudioSource
+    fullName: E7.Introloop.IntroloopPlayer.ApplyAudioSource
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: UnityEngine.AudioSource
+    name: AudioSource
+    nameWithType: AudioSource
+    fullName: UnityEngine.AudioSource
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack1
+  commentId: M:E7.Introloop.IntroloopPlayer.GetDebugStringsTrack1
+  parent: E7.Introloop.IntroloopPlayer
+  name: GetDebugStringsTrack1()
+  nameWithType: IntroloopPlayer.GetDebugStringsTrack1()
+  fullName: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack1()
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack1
+    name: GetDebugStringsTrack1
+    nameWithType: IntroloopPlayer.GetDebugStringsTrack1
+    fullName: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack1
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack1
+    name: GetDebugStringsTrack1
+    nameWithType: IntroloopPlayer.GetDebugStringsTrack1
+    fullName: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack1
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack2
+  commentId: M:E7.Introloop.IntroloopPlayer.GetDebugStringsTrack2
+  parent: E7.Introloop.IntroloopPlayer
+  name: GetDebugStringsTrack2()
+  nameWithType: IntroloopPlayer.GetDebugStringsTrack2()
+  fullName: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack2()
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack2
+    name: GetDebugStringsTrack2
+    nameWithType: IntroloopPlayer.GetDebugStringsTrack2
+    fullName: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack2
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack2
+    name: GetDebugStringsTrack2
+    nameWithType: IntroloopPlayer.GetDebugStringsTrack2
+    fullName: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack2
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: E7.Introloop.IntroloopPlayer`1.SetSingletonInstanceTemplateSource(UnityEngine.AudioSource)
+  commentId: M:E7.Introloop.IntroloopPlayer`1.SetSingletonInstanceTemplateSource(UnityEngine.AudioSource)
+  isExternal: true
+- uid: E7.Introloop.IntroloopPlayer`1.Instance*
+  commentId: Overload:E7.Introloop.IntroloopPlayer`1.Instance
+  name: Instance
+  nameWithType: IntroloopPlayer<T>.Instance
+  fullName: E7.Introloop.IntroloopPlayer<T>.Instance
+  nameWithType.vb: IntroloopPlayer(Of T).Instance
+  fullName.vb: E7.Introloop.IntroloopPlayer(Of T).Instance
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  commentId: '!:T'
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: E7.Introloop.IntroloopPlayer`1.Instance
+  commentId: P:E7.Introloop.IntroloopPlayer`1.Instance
+  isExternal: true
+- uid: UnityEngine.AudioSource
+  commentId: T:UnityEngine.AudioSource
+  parent: UnityEngine
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: UnityEngine.AudioSource
+- uid: E7.Introloop.IntroloopPlayer`1.SetSingletonInstanceTemplateSource*
+  commentId: Overload:E7.Introloop.IntroloopPlayer`1.SetSingletonInstanceTemplateSource
+  name: SetSingletonInstanceTemplateSource
+  nameWithType: IntroloopPlayer<T>.SetSingletonInstanceTemplateSource
+  fullName: E7.Introloop.IntroloopPlayer<T>.SetSingletonInstanceTemplateSource
+  nameWithType.vb: IntroloopPlayer(Of T).SetSingletonInstanceTemplateSource
+  fullName.vb: E7.Introloop.IntroloopPlayer(Of T).SetSingletonInstanceTemplateSource

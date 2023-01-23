@@ -1,0 +1,84 @@
+### YamlMime:ManagedReference
+items:
+- uid: E7.Introloop
+  commentId: N:E7.Introloop
+  id: E7.Introloop
+  children:
+  - E7.Introloop.IntroloopAudio
+  - E7.Introloop.IntroloopAudioUnityEvent
+  - E7.Introloop.IntroloopException
+  - E7.Introloop.IntroloopPlayer
+  - E7.Introloop.IntroloopPlayer`1
+  langs:
+  - csharp
+  - vb
+  name: E7.Introloop
+  nameWithType: E7.Introloop
+  fullName: E7.Introloop
+  type: Namespace
+  assemblies:
+  - E7.Introloop
+references:
+- uid: E7.Introloop.IntroloopAudio
+  commentId: T:E7.Introloop.IntroloopAudio
+  parent: E7.Introloop
+  name: IntroloopAudio
+  nameWithType: IntroloopAudio
+  fullName: E7.Introloop.IntroloopAudio
+- uid: E7.Introloop.IntroloopException
+  commentId: T:E7.Introloop.IntroloopException
+  name: IntroloopException
+  nameWithType: IntroloopException
+  fullName: E7.Introloop.IntroloopException
+- uid: E7.Introloop.IntroloopPlayer
+  commentId: T:E7.Introloop.IntroloopPlayer
+  parent: E7.Introloop
+  name: IntroloopPlayer
+  nameWithType: IntroloopPlayer
+  fullName: E7.Introloop.IntroloopPlayer
+- uid: E7.Introloop.IntroloopPlayer`1
+  commentId: T:E7.Introloop.IntroloopPlayer`1
+  name: IntroloopPlayer<T>
+  nameWithType: IntroloopPlayer<T>
+  fullName: E7.Introloop.IntroloopPlayer<T>
+  nameWithType.vb: IntroloopPlayer(Of T)
+  fullName.vb: E7.Introloop.IntroloopPlayer(Of T)
+  name.vb: IntroloopPlayer(Of T)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer`1
+    name: IntroloopPlayer
+    nameWithType: IntroloopPlayer
+    fullName: E7.Introloop.IntroloopPlayer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer`1
+    name: IntroloopPlayer
+    nameWithType: IntroloopPlayer
+    fullName: E7.Introloop.IntroloopPlayer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopAudioUnityEvent
+  commentId: T:E7.Introloop.IntroloopAudioUnityEvent
+  name: IntroloopAudioUnityEvent
+  nameWithType: IntroloopAudioUnityEvent
+  fullName: E7.Introloop.IntroloopAudioUnityEvent
+- uid: E7.Introloop
+  commentId: N:E7.Introloop
+  name: E7.Introloop
+  nameWithType: E7.Introloop
+  fullName: E7.Introloop
