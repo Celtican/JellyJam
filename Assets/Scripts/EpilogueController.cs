@@ -23,38 +23,38 @@ public class EpilogueController : MonoBehaviour
         epilogueText = "";
         epilogueText += hearts switch
         {
-            >= 5 => "You just had one of the best dates in your death! You and " + dateName +
-                    " really hit it off running!\n",
+            >= 5 => "Such luck, amidst a sea of woe. You and " + dateName +
+                    " really hit it off running! You've found a companion fit to see you to the end of time.\n",
             >= 4 => "You had an excellent time out, and " + dateName + " really enjoyed themselves!\n",
-            >= 3 => "It was as good of a date as any. But " + dateName + " seemed quite promising!\n",
-            >= 2 => "The date went... okay. It felt like you and " + dateName +
+            >= 3 => "What promise your date with " + dateName + " held for you!\n",
+            >= 2 => "The date was... acceptable. It felt like you and " + dateName +
                     " were only getting started when it ended, though.\n",
-            >= 1 => "That night took some unexpected turns. " + dateName +
-                    " seemed flabbergasted by it all, but they agreed to give you a chance!\n",
+            >= 1 => "The evening took some unexpected turns. " + dateName +
+                    " seemed flabbergasted, but agreed to give you a chance!\n",
             _ => "... The universe was too cruel that night. " + dateName +
-                 " seemed quite unhappy. But after a lot of begging from yourself, " + dateName +
+                 " seemed quite unhappy. After a lot of begging, " + dateName +
                  " agreed to give you a second chance.\n"
         };
-        epilogueText += "Two hours later, at midnight, you used the powers of darkness to transform " + dateName + " into a vampire...\nSlowly, they rose from their new undeath, and... ";
+        epilogueText += "Before the bell tolled midnight, you used the powers of darkness to transform " + dateName + " into a vampire...\nSlowly, they arose in their new undeath, and... ";
         epilogueText += compatibility switch
         {
             >= 0.75f => "as it turns out, you two were actually quite compatible!\n",
             >= 0.5f => "luckily, the two of you were somewhat compatible.\n",
-            >= 0.25f => "both of you had very different interests. But, it was bearable for a little while.\n",
-            _ => "apparently you both aren't similar at all.\n"
+            >= 0.25f => "both of you had very different interests. It was tolerable for a time.\n",
+            _ => "you weren't similar in the slightest.\n"
         };
         epilogueText += hypnosisCount switch
         {
-            >= 3 => "Much later, " + dateName + " seemed incredibly offended when they realized you used your hypnosis powers against them on your first date.\n",
-            >= 2 => "Much later, " + dateName + " was not especially pleased when they learned the truth of your hypnosis powers.\n",
-            >= 1 => dateName + " didn't even notice that you used your hypnosis powers on your first date.\n",
-            _ => "You felt proud that you didn't even use your hypnosis powers during your first date! True love, surely!\n",
+            >= 3 => "Much later, " + dateName + " seemed incredibly offended when they realized you used your power of hypnosis against them on your first date.\n",
+            >= 2 => "Much later, " + dateName + " was not especially pleased when they learned the truth of your hypnotic power.\n",
+            >= 1 => dateName + " never noticed that you used your hypnotic power on your first date.\n",
+            _ => "You felt proud that you didn't need to use hypnosis during your first date! True love, surely!\n",
         };
         epilogueText += score switch
         {
-            >= 0.75f => "All in all, you live a happily ever after in your castle for the next several thousand years! You and " + dateName + " are happy at last!\n",
-            >= 0.5f => "Ah, it was good while it lasted. Unfortunately, you divorce after only " + (int)((score - 0.5f)*250 + 2) + " years...\n",
-            >= 0.25f => "Peace only lasted a little while. Several years pass, and " + dateName + " is missing from the castle! You never see them again...\n",
+            >= 0.75f => "All in all, you've lived a happily ever after in your castle for several thousand years! You and " + dateName + " are happy at last...\nPerhaps, it was simply meant to be.",
+            >= 0.5f => "Ah yes, it was good while it lasted. At least " + dateName + " had your company, when you'd had none. Unfortunately, you divorced after only " + (int)((score - 0.5f)*250 + 2) + " years...\n",
+            >= 0.25f => "Shudder the thought. You may have been dishonest or told them what they wanted to hear...\nbut you gave " + dateName + " the ultimate gift...and now they are missing from the castle! You never see them again...\n",
             _ => "Tensions were high for too many months. One day, " + dateName + " left the cold halls of the castle. Recently, you've heard rumors of their attempts to raise a revolution against you...\n",
         };
         epilogueText += "Score: " + (int)(score * 100000) + "\n";
