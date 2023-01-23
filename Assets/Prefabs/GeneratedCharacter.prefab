@@ -173,6 +173,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 3d7c052982b7c294eb10d7ae083cdc95, type: 3}
   randomVoicePitchRange: 0.05
   voiceAudioSource: {fileID: 0}
+  feminine: 0
 --- !u!1 &6223665645505317113
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +271,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21652b35ba324f74cbda4e7c815364a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList:
+  masculineList:
+  - {fileID: 21300000, guid: c57aee9cc29109444951c336ad07bd91, type: 3}
+  - {fileID: 21300000, guid: 2fb9ca43985173e45bb73ed0c20eca30, type: 3}
+  - {fileID: 21300000, guid: 7dbea5b5bc74f3a478dee7caf24e9bf7, type: 3}
+  - {fileID: 21300000, guid: 8cb8f039a12bf6c4c92b3ddeacb82062, type: 3}
+  - {fileID: 21300000, guid: 564821a288d085f48aee08ef1e9d80d8, type: 3}
+  - {fileID: 21300000, guid: b904315f03d7af040b4a630085c349cb, type: 3}
+  - {fileID: 21300000, guid: 3f65bed53b5447541b676e6e9f14d4f5, type: 3}
+  - {fileID: 21300000, guid: 2a7088a281b69aa419a6f6ee5f7c3188, type: 3}
+  feminineList:
   - {fileID: 21300000, guid: c57aee9cc29109444951c336ad07bd91, type: 3}
   - {fileID: 21300000, guid: 2fb9ca43985173e45bb73ed0c20eca30, type: 3}
   - {fileID: 21300000, guid: 7dbea5b5bc74f3a478dee7caf24e9bf7, type: 3}
@@ -378,7 +388,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21652b35ba324f74cbda4e7c815364a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList:
+  masculineList:
+  - {fileID: 21300000, guid: e2f54b151f2d7e74cb78aa2b2d6ddd77, type: 3}
+  - {fileID: 21300000, guid: f509a858aaead444a8ca35924f4e0d50, type: 3}
+  - {fileID: 21300000, guid: 1b399f1f6fa0cd94e9a1102982d60129, type: 3}
+  - {fileID: 21300000, guid: 414cfe8da46c9ce4e8d6e67a7d13a5c4, type: 3}
+  - {fileID: 21300000, guid: 4f106aec2e0d614419cd30c075af5350, type: 3}
+  - {fileID: 21300000, guid: bb65ae29ede75424f83251ebb04bf8d9, type: 3}
+  - {fileID: 21300000, guid: 8c13c67fb80dce3489c682c44b399f42, type: 3}
+  - {fileID: 21300000, guid: 4ec9294840eace64588a9150f82037a0, type: 3}
+  - {fileID: 21300000, guid: 057ae09b082f3f147ba9e45fb15ec655, type: 3}
+  - {fileID: 21300000, guid: c6865748bba58f2418c9abf2c5b67e46, type: 3}
+  - {fileID: 21300000, guid: 79951cf04f6ab1e42a3ed25c99219288, type: 3}
+  - {fileID: 21300000, guid: 703fa2c3ffa8dbd4a945912284653192, type: 3}
+  - {fileID: 21300000, guid: b1fcf3436692d7046881a7a3bc9eca22, type: 3}
+  - {fileID: 21300000, guid: 637cf5696cba41b41852633db5042a92, type: 3}
+  - {fileID: 21300000, guid: 10b686c3f331d814ab6d1cc61d790807, type: 3}
+  - {fileID: 21300000, guid: 99fd05657b41d794683b1d1f5b3185b8, type: 3}
+  - {fileID: 21300000, guid: 8aa317b7ac41de04e9107b8b693523fc, type: 3}
+  - {fileID: 21300000, guid: 34df12af6dcbb6542ae6d3a57d789feb, type: 3}
+  - {fileID: 21300000, guid: 9e1d9a5e29f89284cad3bdce221bf9d6, type: 3}
+  - {fileID: 21300000, guid: 7a5aa52db8cb3a9449425f501ece4c48, type: 3}
+  - {fileID: 21300000, guid: a85ad3c813603044987fb4c6ce4a018d, type: 3}
+  feminineList:
   - {fileID: 21300000, guid: e2f54b151f2d7e74cb78aa2b2d6ddd77, type: 3}
   - {fileID: 21300000, guid: f509a858aaead444a8ca35924f4e0d50, type: 3}
   - {fileID: 21300000, guid: 1b399f1f6fa0cd94e9a1102982d60129, type: 3}
@@ -499,8 +531,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21652b35ba324f74cbda4e7c815364a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList:
+  masculineList:
   - {fileID: 21300000, guid: fb5437dd1bb532d429f8e866c294b642, type: 3}
+  - {fileID: 21300000, guid: 5e53d3e027c2db44dafc2f9706a3a856, type: 3}
+  - {fileID: 21300000, guid: b95ece7afd0e66848b89a3037f48eebc, type: 3}
+  feminineList:
+  - {fileID: 21300000, guid: fb5437dd1bb532d429f8e866c294b642, type: 3}
+  - {fileID: 21300000, guid: 5e53d3e027c2db44dafc2f9706a3a856, type: 3}
+  - {fileID: 21300000, guid: b95ece7afd0e66848b89a3037f48eebc, type: 3}
   colorList:
   - {r: 0.90588236, g: 0.6901961, b: 0.42352942, a: 1}
   - {r: 0.8901961, g: 0.5803922, b: 0.32941177, a: 1}
@@ -604,7 +642,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21652b35ba324f74cbda4e7c815364a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList:
+  masculineList:
+  - {fileID: 21300000, guid: 0f2c68c1936309243b88904217854a2f, type: 3}
+  - {fileID: 21300000, guid: 6d292bc4a7b76ae428df985b64f56906, type: 3}
+  - {fileID: 21300000, guid: 1c7f40c934529f64087a00c60d4c60e4, type: 3}
+  - {fileID: 21300000, guid: 8218844d1c6016642bbd6dd9c5ca4f45, type: 3}
+  - {fileID: 21300000, guid: 8df7975408bb2b54a8f87a622aeed8c4, type: 3}
+  - {fileID: 21300000, guid: 0338b71977454904bac16ae297e8b1bd, type: 3}
+  - {fileID: 21300000, guid: 76d95081c77cc6d45bec513b008b57a9, type: 3}
+  - {fileID: 21300000, guid: 30b0f468debece5478126a3c47fc99fb, type: 3}
+  - {fileID: 21300000, guid: a77a75d8a40532f45b945bbc18eaa225, type: 3}
+  - {fileID: 21300000, guid: ac698498cbfa126468b137af43e0f103, type: 3}
+  - {fileID: 21300000, guid: 82e5d548c6fd0c444ac88c1c86b45241, type: 3}
+  - {fileID: 21300000, guid: 09fb40144d9926241a8aba31a1f193f1, type: 3}
+  - {fileID: 21300000, guid: dd8e95e665a1fa24f8ac054c4a389e7d, type: 3}
+  - {fileID: 21300000, guid: 19998be80858f58448b701dd2ec93a72, type: 3}
+  feminineList:
   - {fileID: 21300000, guid: 6e2c204b48584554083720e5322d2a4a, type: 3}
   - {fileID: 21300000, guid: f71305d61acc24d47b85b2dcf4f5220c, type: 3}
   - {fileID: 21300000, guid: 9b96cc264c80ee94a96ecbdfd06485dd, type: 3}
@@ -724,7 +777,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21652b35ba324f74cbda4e7c815364a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList:
+  masculineList:
+  - {fileID: 21300000, guid: 6e60f018a1a2d6247ad72a0b22d406b3, type: 3}
+  feminineList:
   - {fileID: 21300000, guid: 6e60f018a1a2d6247ad72a0b22d406b3, type: 3}
   colorList:
   - {r: 0.57254905, g: 0.22745098, b: 0.2784314, a: 1}
@@ -830,7 +885,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21652b35ba324f74cbda4e7c815364a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList:
+  masculineList:
+  - {fileID: 21300000, guid: c60fbd28df5012f489ba5bef6e69279c, type: 3}
+  - {fileID: 21300000, guid: 89b93b2e12804f2408a7b029f0d0bcef, type: 3}
+  - {fileID: 21300000, guid: 61b6d2186122fb2408f1fffdd43ec281, type: 3}
+  - {fileID: 21300000, guid: 8a7090473dd722d4790f841e6728b866, type: 3}
+  - {fileID: 21300000, guid: 0674ecfc3088c5d4fb2a00197c151a19, type: 3}
+  - {fileID: 21300000, guid: 42d4abbdc9cea9a4ab27e79c6cdbbc32, type: 3}
+  feminineList:
   - {fileID: 21300000, guid: b73c7162584809648a411c464f340c0b, type: 3}
   - {fileID: 21300000, guid: 6b7aea641ab46174bacf6d606f553f0c, type: 3}
   - {fileID: 21300000, guid: b3d6fc9fc828e8b479d72d852029311f, type: 3}
@@ -937,7 +999,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21652b35ba324f74cbda4e7c815364a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList:
+  masculineList:
+  - {fileID: 21300000, guid: d6bf29dd70dd82948ab4c66395693d2b, type: 3}
+  - {fileID: 21300000, guid: 16148f8016a24184ba50ac2fcfbf4551, type: 3}
+  - {fileID: 21300000, guid: 598671e69d7c76b4b886407ec53e5ff9, type: 3}
+  - {fileID: 21300000, guid: f8a407cccd1062645a3fd094d2344579, type: 3}
+  - {fileID: 21300000, guid: f3ab14986f68b714884db5d14518224f, type: 3}
+  feminineList:
   - {fileID: 21300000, guid: d6bf29dd70dd82948ab4c66395693d2b, type: 3}
   - {fileID: 21300000, guid: 16148f8016a24184ba50ac2fcfbf4551, type: 3}
   - {fileID: 21300000, guid: 598671e69d7c76b4b886407ec53e5ff9, type: 3}
@@ -1042,7 +1110,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21652b35ba324f74cbda4e7c815364a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteList:
+  masculineList:
+  - {fileID: 21300000, guid: c313c5e039bbb2e4099afdf60e9cd31c, type: 3}
+  - {fileID: 21300000, guid: 55e09ef4e6fd74047a95d174cd36948d, type: 3}
+  feminineList:
   - {fileID: 21300000, guid: 674c0fc816886ec4cada23f24f636416, type: 3}
+  - {fileID: 21300000, guid: be4654718e62e3845870876348c14273, type: 3}
   colorList:
   - {r: 1, g: 1, b: 1, a: 1}
