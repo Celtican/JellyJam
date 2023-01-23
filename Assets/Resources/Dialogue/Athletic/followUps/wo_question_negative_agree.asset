@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: wo_question_negative_agree
   m_EditorClassIdentifier: 
   heartsGained: 1
-  text: Wow, really?
+  text: Really?
   speech:
   - isPlayer: 1
     text: So you're naturally this captivating?

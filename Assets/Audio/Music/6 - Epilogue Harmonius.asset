@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10b2f863c7a645a48fe3bda290206a9d, type: 3}
-  m_Name: wo_question
+  m_Script: {fileID: 11500000, guid: b2cd7c3672a89964589361a843fb5884, type: 3}
+  m_Name: 6 - Epilogue Harmonius
   m_EditorClassIdentifier: 
-  text: Work out?
-  potentialDialogue:
-  - {fileID: 11400000, guid: 61406a347f33f744780f9d46cfb35400, type: 2}
-  - {fileID: 11400000, guid: a17e34ec2cd915147b0dc50047267e36, type: 2}
+  volume: 1
+  pitch: 1
+  audioClip: {fileID: 8300000, guid: 1f2fe7960e2a8c34195f834a28e7b43d, type: 3}
+  introBoundary: 0
+  loopingBoundary: 0
+  nonLooping: 1
+  loopWholeAudio: 0

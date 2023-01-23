@@ -61,4 +61,14 @@ public class HeartController : MonoBehaviour
         hypnotizedHearts += amount;
         AddHearts(amount);
     }
+
+    public float GetHearts()
+    {
+        return curHearts;
+    }
+
+    public float GetHypnosis()
+    {
+        return hypnotizedHearts;
+    }
 }

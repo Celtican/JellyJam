@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: cat_cafe_positive_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: So dirty!
+  text: Disagree!
   speech:
   - isPlayer: 1
     text: Ugh, those places are filthy!

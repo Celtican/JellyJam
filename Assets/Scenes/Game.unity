@@ -342,9 +342,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1161316033}
-        m_TargetAssemblyTypeName: PowerController, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1939580383}
+        m_TargetAssemblyTypeName: DialogueController, Assembly-CSharp
+        m_MethodName: TurnNpc
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1615,11 +1615,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146403999}
   m_CullTransparentMesh: 1
---- !u!1 &1161316033 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 792887847163021686, guid: 57420b9e83a79594eb0f59e97f2cba6f, type: 3}
-  m_PrefabInstance: {fileID: 423945509}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1172990192
 GameObject:
   m_ObjectHideFlags: 0
@@ -2730,7 +2725,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 792887847163021675, guid: 57420b9e83a79594eb0f59e97f2cba6f, type: 3}
   m_PrefabInstance: {fileID: 423945509}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1161316033}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 108a47ac349d4556b9ca085feaea03de, type: 3}
