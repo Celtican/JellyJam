@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: wo_question_positive_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: 
+  text: Good for you
   speech:
   - isPlayer: 1
     text: As long as you're happy.

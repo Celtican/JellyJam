@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: convention_positive_agree
   m_EditorClassIdentifier: 
   heartsGained: 1
-  text: 
+  text: I love conventions!
   speech:
   - isPlayer: 1
-    text: Many people stop me at convetions for pictures...jokes on them!
+    text: Many people stop me at conventions for pictures...joke's on them!

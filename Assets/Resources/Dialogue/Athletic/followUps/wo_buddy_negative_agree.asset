@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: wo_buddy_negative_agree
   m_EditorClassIdentifier: 
   heartsGained: 1
-  text: 
+  text: Sure!
   speech:
   - isPlayer: 1
     text: Something else could be fun!

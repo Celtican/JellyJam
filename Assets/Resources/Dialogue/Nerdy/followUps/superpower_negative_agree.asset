@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: superpower_negative_agree
   m_EditorClassIdentifier: 
   heartsGained: 1
-  text: 
+  text: Yeah!
   speech:
   - isPlayer: 1
     text: You're perfect as you are!

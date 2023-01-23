@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: bats_positive_agree
   m_EditorClassIdentifier: 
   heartsGained: 1
-  text: 
+  text: Maybe soon?
   speech:
   - isPlayer: 1
     text: Only one bat is hanging around but I think another will join soon...

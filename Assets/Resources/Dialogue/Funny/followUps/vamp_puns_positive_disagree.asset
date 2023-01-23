@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: vamp_puns_positive_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: 
+  text: No more!
   speech:
   - isPlayer: 1
     text: Ehe, anytime!

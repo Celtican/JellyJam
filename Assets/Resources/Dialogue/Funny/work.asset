@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b2f863c7a645a48fe3bda290206a9d, type: 3}
   m_Name: work
   m_EditorClassIdentifier: 
-  text: 
-  potentialDialogue: []
+  text: Office Humor
+  potentialDialogue:
+  - {fileID: 11400000, guid: f2950092b8bb27f42b5f2dadbde55ce8, type: 2}
+  - {fileID: 11400000, guid: 8109aec1e61df57479aa048686b0c701, type: 2}

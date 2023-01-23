@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: work_negative_agree
   m_EditorClassIdentifier: 
   heartsGained: 1
-  text: 
+  text: Well, actually...
   speech:
   - isPlayer: 1
     text: It's actually a corporate office.

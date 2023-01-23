@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: superpower_positive_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: 
+  text: Reading Minds
   speech:
   - isPlayer: 1
     text: Flying is so basic--you know what's hard? Reading minds.

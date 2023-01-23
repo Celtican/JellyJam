@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Romantic1_followup_negative_agree
   m_EditorClassIdentifier: 
   heartsGained: 1
-  text: 
+  text: That's okay
   speech:
   - isPlayer: 1
     text: No rush!

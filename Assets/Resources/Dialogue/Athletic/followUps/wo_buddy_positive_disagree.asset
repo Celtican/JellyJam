@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: wo_buddy_positive_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: 
+  text: Oops!
   speech:
   - isPlayer: 1
     text: Apologies, I was just curious.

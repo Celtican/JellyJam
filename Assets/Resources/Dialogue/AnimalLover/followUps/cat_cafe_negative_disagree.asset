@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: cat_cafe_negative_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: 
+  text: They're not so bad!
   speech:
   - isPlayer: 1
     text: They're alright...

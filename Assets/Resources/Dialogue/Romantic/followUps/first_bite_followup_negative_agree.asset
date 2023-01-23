@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: first_bite_followup_negative_agree
   m_EditorClassIdentifier: 
   heartsGained: 1
-  text: 
+  text: Move on
   speech:
   - isPlayer: 1
     text: In any case...

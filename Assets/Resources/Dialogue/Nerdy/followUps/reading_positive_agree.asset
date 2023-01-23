@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: reading_positive_agree
   m_EditorClassIdentifier: 
   heartsGained: 1
-  text: 
+  text: Yes!
   speech:
   - isPlayer: 1
     text: Could you fax it instead?

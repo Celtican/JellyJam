@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: cat_lady_positive_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: 
+  text: Maybe not a hero...
   speech:
   - isPlayer: 1
     text: I'm sure she had good intentions if nothing else.

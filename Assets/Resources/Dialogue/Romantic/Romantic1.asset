@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b2f863c7a645a48fe3bda290206a9d, type: 3}
   m_Name: Romantic1
   m_EditorClassIdentifier: 
-  text: 
+  text: To the point
   potentialDialogue:
   - {fileID: 11400000, guid: db964244aab061d44b6a76ab76e356be, type: 2}
   - {fileID: 11400000, guid: 51cb58ae77025d2489e3c196059e2daa, type: 2}

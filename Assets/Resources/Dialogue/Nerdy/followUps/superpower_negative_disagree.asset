@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: superpower_negative_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: 
+  text: Aw...
   speech:
   - isPlayer: 1
     text: That's a real bummer.

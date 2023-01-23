@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: cat_lady_positive_agree
   m_EditorClassIdentifier: 
   heartsGained: 1
-  text: 
+  text: My hero!
   speech:
   - isPlayer: 1
     text: A heroine for the ages, truly. If only we all had the means for so many

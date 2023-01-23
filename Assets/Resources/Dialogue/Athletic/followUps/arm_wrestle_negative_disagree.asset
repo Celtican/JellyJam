@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: arm_wrestle_negative_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: 
+  text: If you say so
   speech:
   - isPlayer: 1
     text: Whatever makes you comfortable.

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b2f863c7a645a48fe3bda290206a9d, type: 3}
   m_Name: cat_lady
   m_EditorClassIdentifier: 
-  text: 
+  text: Cat Lady?
   potentialDialogue:
   - {fileID: 11400000, guid: 916e4a56b38e75c47ab1cda923c4f7b1, type: 2}
   - {fileID: 11400000, guid: fd2f8677931d18942a138ba73c2b7122, type: 2}

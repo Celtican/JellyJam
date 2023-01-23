@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: vamp_puns_negative_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: 
+  text: What?
   speech:
   - isPlayer: 1
     text: What is this "cos-play?"

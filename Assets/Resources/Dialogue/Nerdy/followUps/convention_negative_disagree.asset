@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: convention_negative_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: 
+  text: No...
   speech:
   - isPlayer: 1
     text: It's alright, that means I have plenty to show you!

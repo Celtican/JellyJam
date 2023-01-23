@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: wo_buddy_negative_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: 
+  text: I guess...
   speech:
   - isPlayer: 1
     text: That's okay, it's not for everyone.

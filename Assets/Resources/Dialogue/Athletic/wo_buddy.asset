@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b2f863c7a645a48fe3bda290206a9d, type: 3}
   m_Name: wo_buddy
   m_EditorClassIdentifier: 
-  text: 
-  potentialDialogue: []
+  text: Buddy System?
+  potentialDialogue:
+  - {fileID: 11400000, guid: f9a4db8da25e9554b94a7b0102cadf7a, type: 2}
+  - {fileID: 11400000, guid: b1ddb7b19b182c349a90761fb39294e1, type: 2}

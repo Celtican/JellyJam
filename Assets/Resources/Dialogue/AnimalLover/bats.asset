@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b2f863c7a645a48fe3bda290206a9d, type: 3}
   m_Name: bats
   m_EditorClassIdentifier: 
-  text: 
+  text: Bats?
   potentialDialogue:
   - {fileID: 11400000, guid: fe10e73921bdacd449cc3398676f8ba4, type: 2}
   - {fileID: 11400000, guid: 6c0a8cc2016816b42a4b1c683f1cb829, type: 2}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: vamp_puns_positive_agree
   m_EditorClassIdentifier: 
   heartsGained: 1
-  text: 
+  text: Again?
   speech:
   - isPlayer: 1
     text: Are people smoking? I can't stop coffin!

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: reading_negative_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: 
+  text: That's unfortunate
   speech:
   - isPlayer: 1
     text: I guess we can't all make time for simple pleasures.

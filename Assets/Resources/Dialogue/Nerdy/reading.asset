@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b2f863c7a645a48fe3bda290206a9d, type: 3}
   m_Name: reading
   m_EditorClassIdentifier: 
-  text: 
+  text: Books!
   potentialDialogue:
   - {fileID: 11400000, guid: c6a1fcbbd428c1a4f8d52825071bbab6, type: 2}
   - {fileID: 11400000, guid: 5105aa0012905324eb391475d4e3a004, type: 2}

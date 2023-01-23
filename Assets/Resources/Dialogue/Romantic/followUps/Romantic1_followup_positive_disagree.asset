@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Romantic1_followup_positive_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: 
+  text: Good luck!
   speech:
   - isPlayer: 1
     text: I hope you find them!

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: arm_wrestle_positive_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: 
+  text: On second thought...
   speech:
   - isPlayer: 1
     text: On second thought, I'll pass.

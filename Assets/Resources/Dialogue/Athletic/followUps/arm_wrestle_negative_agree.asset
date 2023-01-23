@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: arm_wrestle_negative_agree
   m_EditorClassIdentifier: 
   heartsGained: 1
-  text: 
+  text: Sorry
   speech:
   - isPlayer: 1
     text: Sorry, I'll try something else.

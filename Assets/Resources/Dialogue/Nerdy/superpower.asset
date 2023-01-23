@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b2f863c7a645a48fe3bda290206a9d, type: 3}
   m_Name: superpower
   m_EditorClassIdentifier: 
-  text: 
+  text: Super powers?
   potentialDialogue:
   - {fileID: 11400000, guid: a2d477a3384c9fe48a524340ac7728b5, type: 2}
   - {fileID: 11400000, guid: 6d903b6efcd1cf1408c02510c2b742f8, type: 2}

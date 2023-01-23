@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: work_negative_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: 
+  text: Work, forever!
   speech:
   - isPlayer: 1
     text: It's full-time! For...eternity!

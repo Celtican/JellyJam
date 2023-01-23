@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: reading_negative_agree
   m_EditorClassIdentifier: 
   heartsGained: 1
-  text: 
+  text: Fair enough
   speech:
   - isPlayer: 1
     text: Understandable, you probably have better things to do.

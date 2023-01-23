@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: cat_lady_negative_agree
   m_EditorClassIdentifier: 
   heartsGained: 1
-  text: 
+  text: She's crazy
   speech:
   - isPlayer: 1
     text: I can't fathom the insanity that followed that decision.

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: cat_cafe_positive_agree
   m_EditorClassIdentifier: 
   heartsGained: 1
-  text: 
+  text: It's my happy place
   speech:
   - isPlayer: 1
     text: I agree, there's no better place to relax!

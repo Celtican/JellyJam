@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Romantic1_followup_positive_agree
   m_EditorClassIdentifier: 
   heartsGained: 1
-  text: 
+  text: I agree!
   speech:
   - isPlayer: 1
     text: I wish everyone felt that way!

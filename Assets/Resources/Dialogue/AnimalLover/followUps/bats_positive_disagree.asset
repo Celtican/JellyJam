@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: bats_positive_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: 
+  text: Nooooooo
   speech:
   - isPlayer: 1
     text: I'm glad you think so, but I'm not sure I'd want a nest near me.

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: reading_positive_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: 
+  text: That's cool...
   speech:
   - isPlayer: 1
     text: It is wonderful that you can enjoy it at all.

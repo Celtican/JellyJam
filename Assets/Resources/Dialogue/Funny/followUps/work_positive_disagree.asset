@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: work_positive_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: 
+  text: Actually...
   speech:
   - isPlayer: 1
     text: Actually, we need employees. Turnover is quite high.

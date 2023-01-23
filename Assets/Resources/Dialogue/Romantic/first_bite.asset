@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b2f863c7a645a48fe3bda290206a9d, type: 3}
   m_Name: first_bite
   m_EditorClassIdentifier: 
-  text: 
-  potentialDialogue: []
+  text: Love?
+  potentialDialogue:
+  - {fileID: 11400000, guid: f260e23d773f1b14885e86f9e1711366, type: 2}
+  - {fileID: 11400000, guid: aac107dbb9a8bdf4cb0f693af43fce7a, type: 2}

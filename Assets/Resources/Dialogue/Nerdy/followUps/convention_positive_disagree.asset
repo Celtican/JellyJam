@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: convention_positive_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: 
+  text: What is a convention?
   speech:
   - isPlayer: 1
     text: Many have suggested I go to something called a "cosplay" convention.
