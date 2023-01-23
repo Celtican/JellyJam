@@ -1750,8 +1750,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3885002b8512452384f90edbe4022081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenPowers: 10
+  timeBetweenPowers: 20
   fillImage: {fileID: 807072299}
+  mindReadingPrefab: {fileID: 7742129600014648853, guid: b19858fedab1aa0499cf02ffcca732bb, type: 3}
 --- !u!114 &1273793022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2785,8 +2786,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3885002b8512452384f90edbe4022081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenPowers: 10
+  timeBetweenPowers: 20
   fillImage: {fileID: 1888954670}
+  mindReadingPrefab: {fileID: 0}
 --- !u!114 &1955668148
 MonoBehaviour:
   m_ObjectHideFlags: 0
