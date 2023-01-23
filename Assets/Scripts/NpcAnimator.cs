@@ -15,9 +15,10 @@ public class NpcAnimator : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        
-        //todo switch depending on player preferences;
-        randomName = femaleNames[Random.Range(0, femaleNames.Length)];
+
+        string[] nameArray = PlayerTraits.Instance != null ? maleNames :
+            PlayerTraits.Instance.prefersFemales ? femaleNames : maleNames;
+        randomName = nameArray[Random.Range(0, nameArray.Length)];
     }
 
     public void StartTalking()

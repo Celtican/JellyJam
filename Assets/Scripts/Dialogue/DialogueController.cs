@@ -225,7 +225,7 @@ public class DialogueController : MonoBehaviour
         Interrupt();
         ClearSteps();
         AddStep(new StepEpilogue());
-        EpilogueController.CalculateScore(npcAnimator.randomName, null, npcTraits);
+        EpilogueController.CalculateScore(npcAnimator.randomName, PlayerTraits.Instance != null ? PlayerTraits.Instance.playerTraitsList : null, npcTraits);
     }
 
     private void OnDestroy()

@@ -17,6 +17,7 @@ public class CharacterGeneratorNPC : MonoBehaviour
     void Start()
     {
         feminine = false;
+        if (PlayerTraits.Instance != null) feminine = PlayerTraits.Instance.prefersFemales;
         GenerateCharacter();
 
     }
@@ -42,8 +43,8 @@ public class CharacterGeneratorNPC : MonoBehaviour
         }
         if (voiceAudioSource!= null)
         {
-            // todo: switch array based on player preference
-            voiceAudioSource.clipSelection = femaleVoices[Random.Range(0, femaleVoices.Length)].voices;
+            VoiceList[] voiceArray = feminine ? femaleVoices : maleVoices;
+            voiceAudioSource.clipSelection = voiceArray[Random.Range(0, voiceArray.Length)].voices;
             voiceAudioSource.pitch = Random.Range(-randomVoicePitchRange, randomVoicePitchRange);
         }
         
