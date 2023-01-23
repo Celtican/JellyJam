@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -36,6 +35,8 @@ public class DialogueController : MonoBehaviour
 
     private bool gameOver = false;
     public string epilogueScene;
+
+    public Animator fadeOutAnimator;
 
     private void Awake()
     {
@@ -334,10 +335,17 @@ public class DialogueController : MonoBehaviour
 
     private class StepEpilogue : Step
     {
+        public float timeLeft = 2.5f;
+        
         public override void Start()
         {
-            Time.timeScale = 1;
-            SceneManager.LoadScene(Instance.epilogueScene);
+            Instance.fadeOutAnimator.SetBool("FadeOut", true);
+        }
+        
+        public override void Update()
+        {
+            timeLeft -= Time.deltaTime;
+            if (timeLeft <= 0) SceneManager.LoadScene(Instance.epilogueScene);
         }
     }
 }

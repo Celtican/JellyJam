@@ -190,12 +190,12 @@ MonoBehaviour:
   npcEnterDialogues:
   - speech:
     - isPlayer: 0
-      text: Hi! It's so nice to meet you!
+      text: Hi! I'm %name%! It's so nice to meet you!
     - isPlayer: 0
       text: And on such a lovely day, too!
   - speech:
     - isPlayer: 0
-      text: Thanks for meeting me!
+      text: Thanks for meeting me! I'm %name%!
     - isPlayer: 0
       text: What a nice restaurant!
   - speech:
@@ -203,11 +203,15 @@ MonoBehaviour:
       text: It's wonderful to see you!
     - isPlayer: 0
       text: What nice eyes you have...
+    - isPlayer: 0
+      text: Uh, my name is %name%!
   - speech:
     - isPlayer: 0
       text: What a perfect place, I'm so hungry!
     - isPlayer: 0
       text: Hmm... should we split an appetizer?
+    - isPlayer: 0
+      text: My name is %name%, by the way!
   npcDepartDialogues:
   - speech:
     - isPlayer: 0
@@ -221,6 +225,7 @@ MonoBehaviour:
     - isPlayer: 0
       text: O-oh? Well, alright then.
   epilogueScene: Epilogue
+  fadeOutAnimator: {fileID: 0}
 --- !u!1 &1121834686525096376
 GameObject:
   m_ObjectHideFlags: 0

@@ -52,7 +52,7 @@ public class EpilogueController : MonoBehaviour
         };
         epilogueText += score switch
         {
-            >= 0.75f => "All in all, you've lived a happily ever after in your castle for several thousand years! You and " + dateName + " are happy at last...\nPerhaps, it was simply meant to be.",
+            >= 0.75f => "All in all, you've lived a happily ever after in your castle for several thousand years! You and " + dateName + " are happy at last...\nPerhaps, it was simply meant to be.\n",
             >= 0.5f => "Ah yes, it was good while it lasted. At least " + dateName + " had your company, when you'd had none. Unfortunately, you divorced after only " + (int)((score - 0.5f)*250 + 2) + " years...\n",
             >= 0.25f => "Shudder the thought. You may have been a smidge dishonest...but you gave " + dateName + " the ultimate gift...and now they are missing from the castle! You never see them again...\n",
             _ => "Tensions were high for too many months. One day, " + dateName + " left the cold halls of the castle. Recently, you've heard rumors of their attempts to raise a revolution against you...\n",

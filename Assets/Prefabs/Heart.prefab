@@ -342,14 +342,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   growAudio:
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+    clip: {fileID: 8300000, guid: 99103018c321a2642a1816757430dcfa, type: 3}
+    volume: 1
+    pitch: 1
     randomVolume: 0
-    randomPitch: 0
+    randomPitch: 0.1
   emptyAudio:
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+    clip: {fileID: 8300000, guid: 97edc94f66d431d43b9a3c62c955a265, type: 3}
+    volume: 1
+    pitch: 1
     randomVolume: 0
-    randomPitch: 0
+    randomPitch: 0.1
