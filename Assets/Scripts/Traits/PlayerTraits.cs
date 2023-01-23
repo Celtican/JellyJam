@@ -21,11 +21,11 @@ public class PlayerTraits : MonoBehaviour
     {
         playerTraits = GetComponent<Traits>();
         playerTraitsList = playerTraits.GetComponent<TraitsList>();
-        playerTraitsList.Athletic.value = 5; 
-        playerTraitsList.Nerdy.value = 5;
-        playerTraitsList.Romantic.value = 5;
-        playerTraitsList.Funny.value = 5;
-        playerTraitsList.AnimalLover.value = 5;
+        playerTraitsList.athletic.value = 5; 
+        playerTraitsList.nerdy.value = 5;
+        playerTraitsList.romantic.value = 5;
+        playerTraitsList.funny.value = 5;
+        playerTraitsList.animalLover.value = 5;
         
 
 
