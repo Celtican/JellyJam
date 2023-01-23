@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2acb1a43bc146b5a43e35b59842bda2, type: 3}
+  m_Name: cat_lady_negative
+  m_EditorClassIdentifier: 
+  associatedTrait: 5
+  npcEnjoysTrait: 0
+  heartsGained: 0
+  speech:
+  - isPlayer: 1
+    text: Have you heard about the mistress with 40 cats?
+  - isPlayer: 0
+    text: Ew, that must be a really messy home!
+  followUps:
+  - {fileID: 11400000, guid: 242381a2da641b14a87549b155a0a0c0, type: 2}
+  - {fileID: 11400000, guid: 0a8fd5d2cc696a64bb7f0bf2639aa0e8, type: 2}

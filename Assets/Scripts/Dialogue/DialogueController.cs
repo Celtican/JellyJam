@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
@@ -20,6 +21,7 @@ public class DialogueController : MonoBehaviour
     public GameObject npcPrefab;
     public Vector3 npcSpawnPosition;
     private NpcAnimator npcAnimator;
+    private TraitsList npcTraits;
 
     public List<DialogueList> npcEnterDialogues;
     public List<DialogueList> npcDepartDialogues;
@@ -31,6 +33,9 @@ public class DialogueController : MonoBehaviour
 
     private List<QuestionObject> questions = new();
     private List<Choice> activeChoices = new();
+
+    private bool gameOver = false;
+    public string epilogueScene;
 
     private void Awake()
     {
@@ -129,7 +134,27 @@ public class DialogueController : MonoBehaviour
         QuestionObject question = questions[Random.Range(0, questions.Count)];
         AddChoice(question.text, () =>
         {
-            DialogueObject dialogue = question.potentialDialogue[Random.Range(0, question.potentialDialogue.Length)];
+            List<DialogueObject> potentialDialogue = new List<DialogueObject>(question.potentialDialogue);
+            for (int i = potentialDialogue.Count - 1; i >= 0; i--)
+            {
+                Traits.Type associatedTrait = potentialDialogue[i].associatedTrait;
+                if (associatedTrait == Traits.Type.None) continue;
+
+                bool npcEnjoys = npcTraits.GetTraitOfType(associatedTrait).value >= 5.5f;
+                if (npcEnjoys != potentialDialogue[i].npcEnjoysTrait) potentialDialogue.RemoveAt(i);
+            }
+
+            DialogueObject dialogue;
+            if (potentialDialogue.Count == 0)
+            {
+                // oh no!
+                dialogue = question.potentialDialogue[0];
+            }
+            else
+            {
+                dialogue = potentialDialogue[Random.Range(0, potentialDialogue.Count)];
+            }
+            
             HeartController.Instance.AddHearts(dialogue.heartsGained);
             foreach (DialogueObject.Speech speech in dialogue.speech)
             {
@@ -183,8 +208,29 @@ public class DialogueController : MonoBehaviour
             else AddSteps(npcDepartDialogues[Random.Range(0, npcDepartDialogues.Count)]);
             AddStep(new StepNpcExit());
         }
-        AddStep(new StepNpcEnter());
-        AddSteps(npcEnterDialogues[Random.Range(0, npcEnterDialogues.Count)]);
+
+        if (gameOver)
+        {
+            AddStep(new StepEpilogue());
+        }
+        else
+        {
+            AddStep(new StepNpcEnter());
+            AddSteps(npcEnterDialogues[Random.Range(0, npcEnterDialogues.Count)]);
+        }
+    }
+
+    public void TimeOver()
+    {
+        gameOver = true;
+        AttemptNewNpc(false);
+    }
+
+    public void TurnNpc()
+    {
+        Interrupt();
+        ClearSteps();
+        AddStep(new StepEpilogue());
     }
 
     private void OnDestroy()
@@ -255,6 +301,7 @@ public class DialogueController : MonoBehaviour
         public override void Start()
         {
             Instance.npcAnimator = Instantiate(Instance.npcPrefab).GetComponent<NpcAnimator>();
+            Instance.npcTraits = Instance.npcAnimator.GetComponent<TraitsList>();
             Instance.npcAnimator.transform.position = Instance.npcSpawnPosition;
             HeartController.Instance.ResetHearts();
         }
@@ -283,20 +330,19 @@ public class DialogueController : MonoBehaviour
             this.timeToWait = timeToWait;
         }
         
-        public override void Start()
-        {
-            
-        }
-
         public override void Update()
         {
             timeToWait -= Time.deltaTime;
             if (timeToWait <= 0) Instance.NextStep();
         }
+    }
 
-        public override void End()
+    private class StepEpilogue : Step
+    {
+        public override void Start()
         {
-            
+            Time.timeScale = 1;
+            SceneManager.LoadScene(Instance.epilogueScene);
         }
     }
 }

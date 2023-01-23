@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2acb1a43bc146b5a43e35b59842bda2, type: 3}
+  m_Name: wo_buddy_negative
+  m_EditorClassIdentifier: 
+  associatedTrait: 1
+  npcEnjoysTrait: 0
+  heartsGained: 0
+  speech:
+  - isPlayer: 1
+    text: Are you looking for a workout buddy?
+  - isPlayer: 0
+    text: Definitely not, but maybe we can do something else?
+  followUps:
+  - {fileID: 11400000, guid: c210cb99a2fe85144b6dee7b7b02b4a1, type: 2}
+  - {fileID: 11400000, guid: 9d06e7ee51eb68644a6c7a84bd36c4b8, type: 2}

@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2acb1a43bc146b5a43e35b59842bda2, type: 3}
   m_Name: cats_like
   m_EditorClassIdentifier: 
+  associatedTrait: 5
+  npcEnjoysTrait: 1
+  heartsGained: 0
   speech:
   - isPlayer: 1
     text: What is thine opinion of "cats"?
@@ -24,7 +27,7 @@ MonoBehaviour:
   - isPlayer: 0
     text: ...Parker...
   - isPlayer: 0
-    text: "... Bu\u010Da, Squee..."
+    text: ... Buca, Squee...
   - isPlayer: 0
     text: ... Boots... you get the idea.
   followUps:

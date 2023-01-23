@@ -1,0 +1,15 @@
+### YamlMime:TableOfContent
+- uid: E7.Introloop
+  name: E7.Introloop
+  items:
+  - uid: E7.Introloop.IntroloopAudio
+    name: IntroloopAudio
+  - uid: E7.Introloop.IntroloopAudioUnityEvent
+    name: IntroloopAudioUnityEvent
+  - uid: E7.Introloop.IntroloopException
+    name: IntroloopException
+  - uid: E7.Introloop.IntroloopPlayer
+    name: IntroloopPlayer
+  - uid: E7.Introloop.IntroloopPlayer`1
+    name: IntroloopPlayer<T>
+    name.vb: IntroloopPlayer(Of T)

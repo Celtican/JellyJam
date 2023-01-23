@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2acb1a43bc146b5a43e35b59842bda2, type: 3}
+  m_Name: bloodtype_dialogue_positive
+  m_EditorClassIdentifier: 
+  associatedTrait: 3
+  npcEnjoysTrait: 1
+  heartsGained: 0
+  speech:
+  - isPlayer: 1
+    text: I noticed your donor card on your profile...and you're just my type!
+  - isPlayer: 0
+    text: HA! Wow, charming AND funny? What a package!
+  followUps:
+  - {fileID: 11400000, guid: ae52caa9d575d4449af1f30f02c905d6, type: 2}
+  - {fileID: 11400000, guid: 6783d7579c5ec04478ae1e8f0ca30832, type: 2}

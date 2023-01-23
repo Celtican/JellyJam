@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2acb1a43bc146b5a43e35b59842bda2, type: 3}
+  m_Name: arm_wrestle_negative
+  m_EditorClassIdentifier: 
+  associatedTrait: 1
+  npcEnjoysTrait: 0
+  heartsGained: 0
+  speech:
+  - isPlayer: 1
+    text: 'Want to arm wrestle? '
+  - isPlayer: 0
+    text: You have a weird way of trying to impress.
+  followUps:
+  - {fileID: 11400000, guid: 668ba8e15afa9ac46a0010f3289a6935, type: 2}
+  - {fileID: 11400000, guid: eb83e2d9aa9fc4a4b8d8ceaa6956655a, type: 2}

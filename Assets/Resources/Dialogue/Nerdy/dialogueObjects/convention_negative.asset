@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2acb1a43bc146b5a43e35b59842bda2, type: 3}
+  m_Name: convention_negative
+  m_EditorClassIdentifier: 
+  associatedTrait: 2
+  npcEnjoysTrait: 0
+  heartsGained: 0
+  speech:
+  - isPlayer: 1
+    text: What convention do you like best?
+  - isPlayer: 0
+    text: Like...real estate conventions?
+  followUps:
+  - {fileID: 11400000, guid: e391d7839a7f9c2499ae3adb416ae26a, type: 2}
+  - {fileID: 11400000, guid: 87d89d5476fe1594fb513711b2728fda, type: 2}

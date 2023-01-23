@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2acb1a43bc146b5a43e35b59842bda2, type: 3}
+  m_Name: arm_wrestle_positive
+  m_EditorClassIdentifier: 
+  associatedTrait: 1
+  npcEnjoysTrait: 1
+  heartsGained: 0
+  speech:
+  - isPlayer: 1
+    text: 'Want to arm wrestle? '
+  - isPlayer: 0
+    text: Here? Are you sure you can handle losing in front of all these people?
+  followUps:
+  - {fileID: 11400000, guid: e913523cac590454098eba26398b6d93, type: 2}
+  - {fileID: 11400000, guid: de602bd8db2726e428ab691b2c6aaaf7, type: 2}

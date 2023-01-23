@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b2f863c7a645a48fe3bda290206a9d, type: 3}
+  m_Name: knock_knock
+  m_EditorClassIdentifier: 
+  text: Knock knock
+  potentialDialogue:
+  - {fileID: 11400000, guid: 2bc7dea2b4d6ead448c2a8a82a2f7b21, type: 2}
+  - {fileID: 11400000, guid: 4ec45b0f0945bbb44bd0030ddec34bea, type: 2}

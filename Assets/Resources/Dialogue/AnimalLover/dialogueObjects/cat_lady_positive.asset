@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2acb1a43bc146b5a43e35b59842bda2, type: 3}
+  m_Name: cat_lady_positive
+  m_EditorClassIdentifier: 
+  associatedTrait: 5
+  npcEnjoysTrait: 1
+  heartsGained: 0
+  speech:
+  - isPlayer: 1
+    text: Have you heard about the mistress with 40 cats?
+  - isPlayer: 0
+    text: She's my hero! I wish I could rescue so many animals!
+  followUps:
+  - {fileID: 11400000, guid: 56f10c5d428cb6148aaa8ceeb4961648, type: 2}
+  - {fileID: 11400000, guid: a5c5ede177df5e946876111ec1f2a1d0, type: 2}

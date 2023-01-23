@@ -55,31 +55,31 @@ public class PlayerTraitSelection : MonoBehaviour
             switch (selectedTraitName)
             {
                 case "Athletic":
-                    traitsList.Athletic.value = 10;
+                    traitsList.athletic.value = 10;
                     button.interactable = false;
 
 
                     break;
                 case "Nerdy":
-                    traitsList.Nerdy.value = 10;
+                    traitsList.nerdy.value = 10;
                     button.interactable = false;
                     
 
                     break;
                 case "Romantic":
-                    traitsList.Romantic.value = 10;
+                    traitsList.romantic.value = 10;
                     button.interactable = false;
                     
 
                     break;
                 case "Funny":
-                    traitsList.Funny.value = 10;
+                    traitsList.funny.value = 10;
                     button.interactable = false;
 
 
                     break;
                 case "Animal Lover":
-                    traitsList.AnimalLover.value = 10;
+                    traitsList.animalLover.value = 10;
                     button.interactable = false;
 
 
@@ -99,23 +99,23 @@ public class PlayerTraitSelection : MonoBehaviour
             switch (selectedTraitName)
             {
                 case "Athletic":
-                    traitsList.Athletic.value = 1;
+                    traitsList.athletic.value = 1;
 
                     break;
                 case "Nerdy":
-                    traitsList.Nerdy.value = 1;
+                    traitsList.nerdy.value = 1;
 
                     break;
                 case "Romantic":
-                    traitsList.Romantic.value = 1;
+                    traitsList.romantic.value = 1;
 
                     break;
                 case "Funny":
-                    traitsList.Funny.value = 1;
+                    traitsList.funny.value = 1;
 
                     break;
                 case "Animal Lover":
-                    traitsList.AnimalLover.value = 1;
+                    traitsList.animalLover.value = 1;
 
                     break;
                 default:

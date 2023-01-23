@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2acb1a43bc146b5a43e35b59842bda2, type: 3}
+  m_Name: bats_negative
+  m_EditorClassIdentifier: 
+  associatedTrait: 5
+  npcEnjoysTrait: 0
+  heartsGained: 0
+  speech:
+  - isPlayer: 1
+    text: Would bats be a dealbreaker?
+  - isPlayer: 0
+    text: Don't bats carry disease?
+  followUps:
+  - {fileID: 11400000, guid: 493dcc8b010c569488e0aacfd9b8d1ff, type: 2}
+  - {fileID: 11400000, guid: e7b44d253864cb543b24b8ac2fae78a7, type: 2}

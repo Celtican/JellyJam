@@ -5,6 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Dialogue", menuName = "Heartstring/Dialogue", order = 1)]
 public class DialogueObject : ScriptableObject
 {
+    public Traits.Type associatedTrait;
+    public bool npcEnjoysTrait;
+    
     public float heartsGained;
     public List<Speech> speech;
     public List<FollowUpObject> followUps;

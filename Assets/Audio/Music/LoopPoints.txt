@@ -1,11 +1,18 @@
+All tracks at 48kHz Sample Rate
 Track 1 - Restaurant BGM
 Loop from 0:03.790 to 2:31.00
 
 Track 2 - Character Creation
 Loop from 0:08.275 to 1:10.344
 
-Track 3 - Restaurant BGM
-Loop from * to *
+Track 3 - Epilogue Discordant
+Loop from 0:06.133 to 0:49.066
 
-Track 4 - Restaurant BGM
+Track 4 - Epilogue Forever Alone
+Loop from * to * - NO LOOP
+
+Track 5 - Epilogue Neutral
+Loop from 0:06.827 to 0:22.758
+
+Track 6 - Epilogue Harmonius
 Loop from * to *
