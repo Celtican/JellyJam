@@ -26,10 +26,11 @@ public class Traits : MonoBehaviour
 
     public enum Type
     {
+        None,
         Athletic,
         Nerdy,
         Romantic,
         Funny,
-        AnimalLover
+        AnimalLover,
     }
 }

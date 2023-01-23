@@ -21,6 +21,7 @@ public class DialogueController : MonoBehaviour
     public GameObject npcPrefab;
     public Vector3 npcSpawnPosition;
     private NpcAnimator npcAnimator;
+    private NpcTraits npcTraits;
 
     public List<DialogueList> npcEnterDialogues;
     public List<DialogueList> npcDepartDialogues;
@@ -133,7 +134,27 @@ public class DialogueController : MonoBehaviour
         QuestionObject question = questions[Random.Range(0, questions.Count)];
         AddChoice(question.text, () =>
         {
-            DialogueObject dialogue = question.potentialDialogue[Random.Range(0, question.potentialDialogue.Length)];
+            List<DialogueObject> potentialDialogue = new List<DialogueObject>(question.potentialDialogue);
+            for (int i = potentialDialogue.Count - 1; i >= 0; i--)
+            {
+                Traits.Type associatedTrait = potentialDialogue[i].associatedTrait;
+                if (associatedTrait == Traits.Type.None) continue;
+
+                bool npcEnjoys = npcTraits.traitsList.GetTraitOfType(associatedTrait).value >= 5.5f;
+                if (npcEnjoys != potentialDialogue[i].npcEnjoysTrait) potentialDialogue.RemoveAt(i);
+            }
+
+            DialogueObject dialogue;
+            if (potentialDialogue.Count == 0)
+            {
+                // oh no!
+                dialogue = question.potentialDialogue[0];
+            }
+            else
+            {
+                dialogue = potentialDialogue[Random.Range(0, potentialDialogue.Count)];
+            }
+            
             HeartController.Instance.AddHearts(dialogue.heartsGained);
             foreach (DialogueObject.Speech speech in dialogue.speech)
             {
@@ -280,6 +301,7 @@ public class DialogueController : MonoBehaviour
         public override void Start()
         {
             Instance.npcAnimator = Instantiate(Instance.npcPrefab).GetComponent<NpcAnimator>();
+            Instance.npcTraits = Instance.npcAnimator.GetComponent<NpcTraits>();
             Instance.npcAnimator.transform.position = Instance.npcSpawnPosition;
             HeartController.Instance.ResetHearts();
         }
