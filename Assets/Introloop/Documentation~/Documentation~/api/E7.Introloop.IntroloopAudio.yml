@@ -1,0 +1,335 @@
+### YamlMime:ManagedReference
+items:
+- uid: E7.Introloop.IntroloopAudio
+  commentId: T:E7.Introloop.IntroloopAudio
+  id: IntroloopAudio
+  parent: E7.Introloop
+  children:
+  - E7.Introloop.IntroloopAudio.AudioClip
+  - E7.Introloop.IntroloopAudio.ClipLength
+  - E7.Introloop.IntroloopAudio.Loop
+  - E7.Introloop.IntroloopAudio.Pitch
+  - E7.Introloop.IntroloopAudio.Volume
+  langs:
+  - csharp
+  - vb
+  name: IntroloopAudio
+  nameWithType: IntroloopAudio
+  fullName: E7.Introloop.IntroloopAudio
+  type: Class
+  source:
+    id: IntroloopAudio
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopAudio.cs
+    startLine: 13
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nAn asset file for use with <xref href=\"E7.Introloop.IntroloopPlayer\" data-throw-if-not-resolved=\"false\"></xref>.\nContains an information where should the audio loop so the player can schedule the seams ahead of time.\n"
+  example: []
+  syntax:
+    content: >-
+      [CreateAssetMenu(menuName = "Introloop/Introloop Audio")]
+
+      public class IntroloopAudio : ScriptableObject
+    content.vb: >-
+      <CreateAssetMenu(menuName:="Introloop/Introloop Audio")>
+
+      Public Class IntroloopAudio
+          Inherits ScriptableObject
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  attributes:
+  - type: UnityEngine.CreateAssetMenuAttribute
+    ctor: UnityEngine.CreateAssetMenuAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: menuName
+      type: System.String
+      value: Introloop/Introloop Audio
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: E7.Introloop.IntroloopAudio.AudioClip
+  commentId: P:E7.Introloop.IntroloopAudio.AudioClip
+  id: AudioClip
+  parent: E7.Introloop.IntroloopAudio
+  langs:
+  - csharp
+  - vb
+  name: AudioClip
+  nameWithType: IntroloopAudio.AudioClip
+  fullName: E7.Introloop.IntroloopAudio.AudioClip
+  type: Property
+  source:
+    id: AudioClip
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopAudio.cs
+    startLine: 46
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nThe underlying <xref href=\"E7.Introloop.IntroloopAudio.AudioClip\" data-throw-if-not-resolved=\"false\"></xref> that this asset uses.\n"
+  example: []
+  syntax:
+    content: public AudioClip AudioClip { get; }
+    parameters: []
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: Public ReadOnly Property AudioClip As AudioClip
+  overload: E7.Introloop.IntroloopAudio.AudioClip*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: E7.Introloop.IntroloopAudio.ClipLength
+  commentId: P:E7.Introloop.IntroloopAudio.ClipLength
+  id: ClipLength
+  parent: E7.Introloop.IntroloopAudio
+  langs:
+  - csharp
+  - vb
+  name: ClipLength
+  nameWithType: IntroloopAudio.ClipLength
+  fullName: E7.Introloop.IntroloopAudio.ClipLength
+  type: Property
+  source:
+    id: ClipLength
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopAudio.cs
+    startLine: 69
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nLength of this audio if played without looping, already taken account of pitch modification\nsetup on the asset. (Unity&apos;s &quot;pitch&quot; is not a real pitch shifting, it is just a play speed change\nthat in turn affects pitch.)\n"
+  remarks: "\n<p>\n    Together with <xref href=\"E7.Introloop.IntroloopAudio.ClipLength\" data-throw-if-not-resolved=\"false\"></xref>, if the audio&apos;s <code>Loop</code> is <code>false</code> then you can predict\n    that audio should end after that much time passed.\n</p>\n<p>\n    This allows you to implement an audio queue in the case of playing non-looping audio that\n    wants to follow with something else afterwards.\n    (e.g. inn music while sleeping then continue the old ones which is set to introloop.)\n</p>\n<p>\n    You may not be expecting something like <code>IsPlaying</code> property to be lacking in <code>IntroloopPlayer</code>.\n    Because scheduling methods inside wrecks <code>AudioSource</code> play state that they could not be trusted 100%.\n    For instance, a scheduled-to-play audio is already considered &quot;playing&quot; while actually it is not.\n</p>\n"
+  example: []
+  syntax:
+    content: public float ClipLength { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property ClipLength As Single
+  overload: E7.Introloop.IntroloopAudio.ClipLength*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: E7.Introloop.IntroloopAudio.Loop
+  commentId: P:E7.Introloop.IntroloopAudio.Loop
+  id: Loop
+  parent: E7.Introloop.IntroloopAudio
+  langs:
+  - csharp
+  - vb
+  name: Loop
+  nameWithType: IntroloopAudio.Loop
+  fullName: E7.Introloop.IntroloopAudio.Loop
+  type: Property
+  source:
+    id: Loop
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopAudio.cs
+    startLine: 77
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nIf the asset is set to either Introloop or Loop button in the editor, this is `true`.\n"
+  remarks: "\nIf this is `false`, <xref href=\"E7.Introloop.IntroloopAudio.ClipLength\" data-throw-if-not-resolved=\"false\"></xref> can predict when the audio would end after played.\n"
+  example: []
+  syntax:
+    content: public bool Loop { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Loop As Boolean
+  overload: E7.Introloop.IntroloopAudio.Loop*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: E7.Introloop.IntroloopAudio.Volume
+  commentId: P:E7.Introloop.IntroloopAudio.Volume
+  id: Volume
+  parent: E7.Introloop.IntroloopAudio
+  langs:
+  - csharp
+  - vb
+  name: Volume
+  nameWithType: IntroloopAudio.Volume
+  fullName: E7.Introloop.IntroloopAudio.Volume
+  type: Property
+  source:
+    id: Volume
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopAudio.cs
+    startLine: 87
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nSet the underlying <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref> to this volume on play.\n"
+  remarks: "\nThis allows a per-music volume adjustment. The composer can master/maximize the volume from his DAW\nwithout worry about game&apos;s context. The developer can drop the volume down after importing on their own.\nResulting in a happy game studio.\n"
+  example: []
+  syntax:
+    content: public float Volume { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Volume As Single
+  overload: E7.Introloop.IntroloopAudio.Volume*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopAudio.Pitch
+  commentId: P:E7.Introloop.IntroloopAudio.Pitch
+  id: Pitch
+  parent: E7.Introloop.IntroloopAudio
+  langs:
+  - csharp
+  - vb
+  name: Pitch
+  nameWithType: IntroloopAudio.Pitch
+  fullName: E7.Introloop.IntroloopAudio.Pitch
+  type: Property
+  source:
+    id: Pitch
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopAudio.cs
+    startLine: 112
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nRead-only pitch settings that you have set on the <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref> asset file.\n"
+  remarks: "\n<p>\n    Introloop does not allow pitch change other than at the asset, since it will wreck the scheduling if\n    that happen while things are playing. Scheduling needs predictability to plan ahead of time and\n    pitch change will invalidates many assumptions.\n</p>\n<p>\n    (For instance, I schedule &quot;halfway ahead of the seam&quot; and that will not work if suddenly\n    you decided to change the pitch right in front of the seam.)\n</p>\n<p>\n    Also Unity&apos;s &quot;pitch&quot; wording in their <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref> is technically incorrect.\n    It is rather &quot;speed&quot; that affects pitch in the end. It is not a real pitch shifting.\n    The wording here follows what Unity used rather than technical correctness.\n</p>\n"
+  example: []
+  syntax:
+    content: public float Pitch { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Pitch As Single
+  overload: E7.Introloop.IntroloopAudio.Pitch*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: E7.Introloop.IntroloopPlayer
+  commentId: T:E7.Introloop.IntroloopPlayer
+  parent: E7.Introloop
+  name: IntroloopPlayer
+  nameWithType: IntroloopPlayer
+  fullName: E7.Introloop.IntroloopPlayer
+- uid: E7.Introloop
+  commentId: N:E7.Introloop
+  name: E7.Introloop
+  nameWithType: E7.Introloop
+  fullName: E7.Introloop
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: E7.Introloop.IntroloopAudio.AudioClip
+  commentId: P:E7.Introloop.IntroloopAudio.AudioClip
+  isExternal: true
+- uid: E7.Introloop.IntroloopAudio.AudioClip*
+  commentId: Overload:E7.Introloop.IntroloopAudio.AudioClip
+  name: AudioClip
+  nameWithType: IntroloopAudio.AudioClip
+  fullName: E7.Introloop.IntroloopAudio.AudioClip
+- uid: UnityEngine.AudioClip
+  commentId: T:UnityEngine.AudioClip
+  parent: UnityEngine
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: UnityEngine.AudioClip
+- uid: E7.Introloop.IntroloopAudio.ClipLength
+  commentId: P:E7.Introloop.IntroloopAudio.ClipLength
+  isExternal: true
+- uid: E7.Introloop.IntroloopAudio.ClipLength*
+  commentId: Overload:E7.Introloop.IntroloopAudio.ClipLength
+  name: ClipLength
+  nameWithType: IntroloopAudio.ClipLength
+  fullName: E7.Introloop.IntroloopAudio.ClipLength
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: E7.Introloop.IntroloopAudio.Loop*
+  commentId: Overload:E7.Introloop.IntroloopAudio.Loop
+  name: Loop
+  nameWithType: IntroloopAudio.Loop
+  fullName: E7.Introloop.IntroloopAudio.Loop
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: UnityEngine.AudioSource
+  commentId: T:UnityEngine.AudioSource
+  parent: UnityEngine
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: UnityEngine.AudioSource
+- uid: E7.Introloop.IntroloopAudio.Volume*
+  commentId: Overload:E7.Introloop.IntroloopAudio.Volume
+  name: Volume
+  nameWithType: IntroloopAudio.Volume
+  fullName: E7.Introloop.IntroloopAudio.Volume
+- uid: E7.Introloop.IntroloopAudio
+  commentId: T:E7.Introloop.IntroloopAudio
+  parent: E7.Introloop
+  name: IntroloopAudio
+  nameWithType: IntroloopAudio
+  fullName: E7.Introloop.IntroloopAudio
+- uid: E7.Introloop.IntroloopAudio.Pitch*
+  commentId: Overload:E7.Introloop.IntroloopAudio.Pitch
+  name: Pitch
+  nameWithType: IntroloopAudio.Pitch
+  fullName: E7.Introloop.IntroloopAudio.Pitch
