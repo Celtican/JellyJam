@@ -1,0 +1,15 @@
+{
+  "name": "E7.Introloop.Demo",
+  "references": [
+    "GUID:8a18b43bbefca455abece4fd62e82bba"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

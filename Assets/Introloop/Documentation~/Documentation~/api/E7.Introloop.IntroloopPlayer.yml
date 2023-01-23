@@ -1,0 +1,1513 @@
+### YamlMime:ManagedReference
+items:
+- uid: E7.Introloop.IntroloopPlayer
+  commentId: T:E7.Introloop.IntroloopPlayer
+  id: IntroloopPlayer
+  parent: E7.Introloop
+  children:
+  - E7.Introloop.IntroloopPlayer.ApplyAudioSource(UnityEngine.AudioSource)
+  - E7.Introloop.IntroloopPlayer.DefaultIntroloopAudio
+  - E7.Introloop.IntroloopPlayer.GetDebugStringsTrack1
+  - E7.Introloop.IntroloopPlayer.GetDebugStringsTrack2
+  - E7.Introloop.IntroloopPlayer.GetPlayheadTime
+  - E7.Introloop.IntroloopPlayer.Instance
+  - E7.Introloop.IntroloopPlayer.InternalAudioSources
+  - E7.Introloop.IntroloopPlayer.OnApplicationPause(System.Boolean)
+  - E7.Introloop.IntroloopPlayer.Pause
+  - E7.Introloop.IntroloopPlayer.Pause(System.Single)
+  - E7.Introloop.IntroloopPlayer.Play
+  - E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio)
+  - E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio,System.Single,System.Single)
+  - E7.Introloop.IntroloopPlayer.Play(System.Single,System.Single)
+  - E7.Introloop.IntroloopPlayer.PlayOnAwake
+  - E7.Introloop.IntroloopPlayer.Preload(E7.Introloop.IntroloopAudio)
+  - E7.Introloop.IntroloopPlayer.Resume(System.Single)
+  - E7.Introloop.IntroloopPlayer.Seek(System.Single)
+  - E7.Introloop.IntroloopPlayer.SetMixerGroup(UnityEngine.Audio.AudioMixerGroup)
+  - E7.Introloop.IntroloopPlayer.SetSingletonInstanceTemplateSource(UnityEngine.AudioSource)
+  - E7.Introloop.IntroloopPlayer.Stop
+  - E7.Introloop.IntroloopPlayer.Stop(System.Single)
+  - E7.Introloop.IntroloopPlayer.TemplateSource
+  langs:
+  - csharp
+  - vb
+  name: IntroloopPlayer
+  nameWithType: IntroloopPlayer
+  fullName: E7.Introloop.IntroloopPlayer
+  type: Class
+  source:
+    id: IntroloopPlayer
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 23
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nA component that coordinates 4 <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref> together with scheduling methods\nto achieve gap-less looping music with intro section.\n"
+  remarks: "\n<p>\n    2 <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref> uses scheduling methods to stitch up audio precisely, while the other 2 sources\n    are there to support cross fading to a new Introloop audio.\n</p>\n<p>\n    Potentially there is a moment when all 4 sources are playing at the same time.\n    (e.g. One introlooping audio at the seam, while being tasked to cross fade into\n    an another introloop audio that starts near the seam.)\n</p>\n"
+  example: []
+  syntax:
+    content: 'public class IntroloopPlayer : MonoBehaviour'
+    content.vb: >-
+      Public Class IntroloopPlayer
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  derivedClasses:
+  - E7.Introloop.IntroloopPlayer`1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: E7.Introloop.IntroloopPlayer.DefaultIntroloopAudio
+  commentId: P:E7.Introloop.IntroloopPlayer.DefaultIntroloopAudio
+  id: DefaultIntroloopAudio
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: DefaultIntroloopAudio
+  nameWithType: IntroloopPlayer.DefaultIntroloopAudio
+  fullName: E7.Introloop.IntroloopPlayer.DefaultIntroloopAudio
+  type: Property
+  source:
+    id: DefaultIntroloopAudio
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 77
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nWorks like <xref href=\"UnityEngine.AudioSource.clip\" data-throw-if-not-resolved=\"false\"></xref> property. You can set this to any <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref>\nfor it to be used when you call <xref href=\"E7.Introloop.IntroloopPlayer.Play\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"E7.Introloop.IntroloopPlayer.Play(System.Single%2cSystem.Single)\" data-throw-if-not-resolved=\"false\"></xref> next.\n"
+  example: []
+  syntax:
+    content: public IntroloopAudio DefaultIntroloopAudio { get; set; }
+    parameters: []
+    return:
+      type: E7.Introloop.IntroloopAudio
+    content.vb: Public Property DefaultIntroloopAudio As IntroloopAudio
+  overload: E7.Introloop.IntroloopPlayer.DefaultIntroloopAudio*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopPlayer.PlayOnAwake
+  commentId: P:E7.Introloop.IntroloopPlayer.PlayOnAwake
+  id: PlayOnAwake
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: PlayOnAwake
+  nameWithType: IntroloopPlayer.PlayOnAwake
+  fullName: E7.Introloop.IntroloopPlayer.PlayOnAwake
+  type: Property
+  source:
+    id: PlayOnAwake
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 87
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nWorks like <xref href=\"UnityEngine.AudioSource.playOnAwake\" data-throw-if-not-resolved=\"false\"></xref>, play the connected <xref href=\"E7.Introloop.IntroloopPlayer.DefaultIntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref>\nautomatically on <code>Awake</code>.\n"
+  example: []
+  syntax:
+    content: public bool PlayOnAwake { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property PlayOnAwake As Boolean
+  overload: E7.Introloop.IntroloopPlayer.PlayOnAwake*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopPlayer.TemplateSource
+  commentId: P:E7.Introloop.IntroloopPlayer.TemplateSource
+  id: TemplateSource
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: TemplateSource
+  nameWithType: IntroloopPlayer.TemplateSource
+  fullName: E7.Introloop.IntroloopPlayer.TemplateSource
+  type: Property
+  source:
+    id: TemplateSource
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 109
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\n<p>\n    When it would spawn 4 <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref> for the first time on <code>Start()</code>, read out the\n    fields from this <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref> reference and copy them to all 4. Assigning this after\n    it had already spawned underlying 4 <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref> has no effect.\n</p>\n<p>\n    To apply this template again after <code>Start()</code>, use <xref href=\"E7.Introloop.IntroloopPlayer.ApplyAudioSource(UnityEngine.AudioSource)\" data-throw-if-not-resolved=\"false\"></xref>.\n    The argument could be this <xref href=\"E7.Introloop.IntroloopPlayer.TemplateSource\" data-throw-if-not-resolved=\"false\"></xref> or any other <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref>.\n</p>\n"
+  remarks: "\nThe <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref> does not need to be <see cref=\"!:MonoBehaviour.enabled\"></see> since it just\nneed to read the fields out for copy. Also it does not need to be anywhere on the scene,\nit can come from a prefab with <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref> in your project.\n"
+  example: []
+  syntax:
+    content: public AudioSource TemplateSource { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.AudioSource
+    content.vb: Public Property TemplateSource As AudioSource
+  overload: E7.Introloop.IntroloopPlayer.TemplateSource*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopPlayer.InternalAudioSources
+  commentId: P:E7.Introloop.IntroloopPlayer.InternalAudioSources
+  id: InternalAudioSources
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: InternalAudioSources
+  nameWithType: IntroloopPlayer.InternalAudioSources
+  fullName: E7.Introloop.IntroloopPlayer.InternalAudioSources
+  type: Property
+  source:
+    id: InternalAudioSources
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 142
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nIf you wish to do something that affects all 4 <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref> that Introloop utilize at once,\ndo a <code>foreach</code> on this property.\n"
+  remarks: "\nYou should not use this in <code>Awake</code>, as Introloop might still\nnot yet spawn the <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<AudioSource> InternalAudioSources { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{UnityEngine.AudioSource}
+    content.vb: Public ReadOnly Property InternalAudioSources As IEnumerable(Of AudioSource)
+  overload: E7.Introloop.IntroloopPlayer.InternalAudioSources*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: E7.Introloop.IntroloopPlayer.Instance
+  commentId: P:E7.Introloop.IntroloopPlayer.Instance
+  id: Instance
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: IntroloopPlayer.Instance
+  fullName: E7.Introloop.IntroloopPlayer.Instance
+  type: Property
+  source:
+    id: Instance
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 176
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\n<p>\n    Get a convenient singleton instance of <xref href=\"E7.Introloop.IntroloopPlayer\" data-throw-if-not-resolved=\"false\"></xref> from anywhere in your code.\n    It has <code>DontDestroyOnLoad</code> applied.\n</p>\n<p>\n    Before calling this <strong>for the first time</strong>, call <xref href=\"E7.Introloop.IntroloopPlayer.SetSingletonInstanceTemplateSource(UnityEngine.AudioSource)\" data-throw-if-not-resolved=\"false\"></xref>\n    first to setup its <xref href=\"E7.Introloop.IntroloopPlayer.TemplateSource\" data-throw-if-not-resolved=\"false\"></xref> from script. (It does not exist until runtime, you\n    cannot setup the template ahead of time unlike non-singleton instances.)\n</p>\n"
+  example: []
+  syntax:
+    content: public static IntroloopPlayer Instance { get; }
+    parameters: []
+    return:
+      type: E7.Introloop.IntroloopPlayer
+    content.vb: Public Shared ReadOnly Property Instance As IntroloopPlayer
+  overload: E7.Introloop.IntroloopPlayer.Instance*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: E7.Introloop.IntroloopPlayer.OnApplicationPause(System.Boolean)
+  commentId: M:E7.Introloop.IntroloopPlayer.OnApplicationPause(System.Boolean)
+  id: OnApplicationPause(System.Boolean)
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: OnApplicationPause(Boolean)
+  nameWithType: IntroloopPlayer.OnApplicationPause(Boolean)
+  fullName: E7.Introloop.IntroloopPlayer.OnApplicationPause(System.Boolean)
+  type: Method
+  source:
+    id: OnApplicationPause
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 240
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\n<p>\n    This is a dirty workaround for the bug in 2019.1+ where on game minimize or\n<xref href=\"UnityEngine.AudioListener\" data-throw-if-not-resolved=\"false\"></xref> pause, all <xref href=\"UnityEngine.AudioSource.SetScheduledEndTime(System.Double)\" data-throw-if-not-resolved=\"false\"></xref> will be lost.\n</p>\n<p>\n    I confirmed it is not a problem in 2018.4 LTS.\n    The ideal fix is to call Pause just before the game goes to minimize then\n    Resume after we comeback to reschedule.\n</p>\n<p>\n    However at this callback Pause does not work, as all audio are already on its way to pausing.\n    So an another approach is that we will remember the time just before the pause, and the play again\n    after coming back using that time. The Seek method can be used instead of Play here so you don&apos;t have to specify the\n    previous audio.\n</p>\n<p>\n    Please see : https://forum.unity.com/threads/introloop-easily-play-looping-music-with-intro-section-v4-0-0-2019.378370/#post-4793741\n    Track the case here : https://fogbugz.unity3d.com/default.asp?1151637_4i53coq9v07qctp1\n</p>\n"
+  example: []
+  syntax:
+    content: public void OnApplicationPause(bool paused)
+    parameters:
+    - id: paused
+      type: System.Boolean
+    content.vb: Public Sub OnApplicationPause(paused As Boolean)
+  overload: E7.Introloop.IntroloopPlayer.OnApplicationPause*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopPlayer.Play(System.Single,System.Single)
+  commentId: M:E7.Introloop.IntroloopPlayer.Play(System.Single,System.Single)
+  id: Play(System.Single,System.Single)
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: Play(Single, Single)
+  nameWithType: IntroloopPlayer.Play(Single, Single)
+  fullName: E7.Introloop.IntroloopPlayer.Play(System.Single, System.Single)
+  type: Method
+  source:
+    id: Play
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 455
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nPlay <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref> asset currently assigned to <xref href=\"E7.Introloop.IntroloopPlayer.DefaultIntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  remarks: "\n<p>\n    It applies <xref href=\"E7.Introloop.IntroloopAudio.Volume\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"E7.Introloop.IntroloopAudio.Pitch\" data-throw-if-not-resolved=\"false\"></xref>\n    to the underlying <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref>.\n</p>\n<p>\n    If an another <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref> is playing on this player,\n    it could cross-fade between the two if <code data-dev-comment-type=\"paramref\" class=\"paramref\">fadeLengthSeconds</code> is provided.\n    The faded out audio will be unloaded automatically once the fade is finished.\n</p>\n"
+  example: []
+  syntax:
+    content: public void Play(float fadeLengthSeconds = 0F, float startTime = 0F)
+    parameters:
+    - id: fadeLengthSeconds
+      type: System.Single
+      description: "\nFade in/out length to use in seconds.\n<ul><li></li><li></li></ul>\nThe audio will be unloaded only after it had fade out completely.\n"
+    - id: startTime
+      type: System.Single
+      description: "\n<p>\n    Specify starting point in time instead of starting from the beginning.\n</p>\n<p>\n    The time you specify here will be converted to &quot;play head time&quot;, Introloop will make the play head\n    at the point in time as if you had played for this amount of time before starting.\n</p>\n<p>\n    Since <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref> conceptually has infinite length, any number that is over looping boundary\n    will be wrapped over to the intro boundary in the calculation. (Except that if the audio is non-looping)\n</p>\n<p>\n    The time specified here is <strong>not</strong> taking <xref href=\"E7.Introloop.IntroloopAudio.Pitch\" data-throw-if-not-resolved=\"false\"></xref> into account.\n    It&apos;s an elapsed time as if <xref href=\"E7.Introloop.IntroloopAudio.Pitch\" data-throw-if-not-resolved=\"false\"></xref> is 1.\n</p>\n"
+    content.vb: Public Sub Play(fadeLengthSeconds As Single = 0F, startTime As Single = 0F)
+  overload: E7.Introloop.IntroloopPlayer.Play*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: "\nThrown when <xref href=\"E7.Introloop.IntroloopPlayer.DefaultIntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref> was not assigned.\n"
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio,System.Single,System.Single)
+  commentId: M:E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio,System.Single,System.Single)
+  id: Play(E7.Introloop.IntroloopAudio,System.Single,System.Single)
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: Play(IntroloopAudio, Single, Single)
+  nameWithType: IntroloopPlayer.Play(IntroloopAudio, Single, Single)
+  fullName: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio, System.Single, System.Single)
+  type: Method
+  source:
+    id: Play
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 511
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nPlay any <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref> asset with the argument <code data-dev-comment-type=\"paramref\" class=\"paramref\">introloopAudio</code>,\nregardless of <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref> asset assigned in <xref href=\"E7.Introloop.IntroloopPlayer.DefaultIntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  remarks: "\n<p>\n    It applies <xref href=\"E7.Introloop.IntroloopAudio.Volume\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"E7.Introloop.IntroloopAudio.Pitch\" data-throw-if-not-resolved=\"false\"></xref>\n    to the underlying <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref>.\n</p>\n<p>\n    If an another <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref> is playing on this player,\n    it could cross-fade between the two if <code data-dev-comment-type=\"paramref\" class=\"paramref\">fadeLengthSeconds</code> is provided.\n    The faded out audio will be unloaded automatically once the fade is finished.\n</p>\n"
+  example: []
+  syntax:
+    content: public void Play(IntroloopAudio introloopAudio, float fadeLengthSeconds = 0F, float startTime = 0F)
+    parameters:
+    - id: introloopAudio
+      type: E7.Introloop.IntroloopAudio
+      description: "\nA reference to <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref> asset file to play.\n"
+    - id: fadeLengthSeconds
+      type: System.Single
+      description: "\nFade in/out length to use in seconds.\n<ul><li></li><li></li></ul>\nThe audio will be unloaded only after it had fade out completely.\n"
+    - id: startTime
+      type: System.Single
+      description: "\n<p>\n    Specify starting point in time instead of starting from the beginning.\n</p>\n<p>\n    The time you specify here will be converted to &quot;play head time&quot;, Introloop will make the play head\n    at the point in time as if you had played for this amount of time before starting.\n</p>\n<p>\n    Since <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref> conceptually has infinite length, any number that is over looping boundary\n    will be wrapped over to the intro boundary in the calculation. (Except that if the audio is non-looping)\n</p>\n<p>\n    The time specified here is <strong>not</strong> taking <xref href=\"E7.Introloop.IntroloopAudio.Pitch\" data-throw-if-not-resolved=\"false\"></xref> into account.\n    It&apos;s an elapsed time as if <xref href=\"E7.Introloop.IntroloopAudio.Pitch\" data-throw-if-not-resolved=\"false\"></xref> is 1.\n</p>\n"
+    content.vb: Public Sub Play(introloopAudio As IntroloopAudio, fadeLengthSeconds As Single = 0F, startTime As Single = 0F)
+  overload: E7.Introloop.IntroloopPlayer.Play*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when <code data-dev-comment-type="paramref" class="paramref">introloopAudio</code> is `null`.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio)
+  commentId: M:E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio)
+  id: Play(E7.Introloop.IntroloopAudio)
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: Play(IntroloopAudio)
+  nameWithType: IntroloopPlayer.Play(IntroloopAudio)
+  fullName: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio)
+  type: Method
+  source:
+    id: Play
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 534
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nSimilar to <xref href=\"E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio%2cSystem.Single%2cSystem.Single)\" data-throw-if-not-resolved=\"false\"></xref> overload, but has only a single\nargument so it is able to receive calls from <xref href=\"UnityEngine.Events.UnityEvent\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public void Play(IntroloopAudio introloopAudio)
+    parameters:
+    - id: introloopAudio
+      type: E7.Introloop.IntroloopAudio
+    content.vb: Public Sub Play(introloopAudio As IntroloopAudio)
+  overload: E7.Introloop.IntroloopPlayer.Play*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopPlayer.Play
+  commentId: M:E7.Introloop.IntroloopPlayer.Play
+  id: Play
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: Play()
+  nameWithType: IntroloopPlayer.Play()
+  fullName: E7.Introloop.IntroloopPlayer.Play()
+  type: Method
+  source:
+    id: Play
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 543
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nSimilar to <xref href=\"E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio%2cSystem.Single%2cSystem.Single)\" data-throw-if-not-resolved=\"false\"></xref> overload, but has no\noptional arguments so it is able to receive calls from <xref href=\"UnityEngine.Events.UnityEvent\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public void Play()
+    content.vb: Public Sub Play
+  overload: E7.Introloop.IntroloopPlayer.Play*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopPlayer.Seek(System.Single)
+  commentId: M:E7.Introloop.IntroloopPlayer.Seek(System.Single)
+  id: Seek(System.Single)
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: Seek(Single)
+  nameWithType: IntroloopPlayer.Seek(Single)
+  fullName: E7.Introloop.IntroloopPlayer.Seek(System.Single)
+  type: Method
+  source:
+    id: Seek
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 581
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nMove the play head of the currently playing audio to anywhere in terms of elapsed time.\n<ul><li></li><li></li></ul>\n"
+  remarks: "\n<p>\n    An internal implementation is not actually a seek, but a completely new\n<xref href=\"E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio%2cSystem.Single%2cSystem.Single)\" data-throw-if-not-resolved=\"false\"></xref> with the previous <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref>.\n</p>\n<p>\n    This is why you cannot seek while in pause, as it actually does a new play for you.\n    It is handy because it doesn&apos;t require you to remember and specify that audio again.\n</p>\n"
+  example: []
+  syntax:
+    content: public void Seek(float elapsedTime)
+    parameters:
+    - id: elapsedTime
+      type: System.Single
+      description: "\n<p>\n    Introloop will make the play head at the point in time as if you had played for this amount\n    of time before starting.\n</p>\n<p>\n    The time you specify here will be converted to &quot;play head time&quot;, Introloop will make the play head\n    at the point in time as if you had played for this amount of time before starting.\n</p>\n<p>\n    Since <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref> conceptually has infinite length, any number that is over looping boundary\n    will be wrapped over to the intro boundary in the calculation. (Except that if the audio is non-looping)\n    The time specified here is <strong>not</strong> taking <xref href=\"E7.Introloop.IntroloopAudio.Pitch\" data-throw-if-not-resolved=\"false\"></xref> into account.\n    It&apos;s an elapsed time as if <xref href=\"E7.Introloop.IntroloopAudio.Pitch\" data-throw-if-not-resolved=\"false\"></xref> is 1.\n</p>\n"
+    content.vb: Public Sub Seek(elapsedTime As Single)
+  overload: E7.Introloop.IntroloopPlayer.Seek*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopPlayer.Stop
+  commentId: M:E7.Introloop.IntroloopPlayer.Stop
+  id: Stop
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: IntroloopPlayer.Stop()
+  fullName: E7.Introloop.IntroloopPlayer.Stop()
+  type: Method
+  source:
+    id: Stop
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 596
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nStop the currently playing <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref> immediately and unload it from memory.\n"
+  example: []
+  syntax:
+    content: public void Stop()
+    content.vb: Public Sub Stop
+  overload: E7.Introloop.IntroloopPlayer.Stop*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopPlayer.Stop(System.Single)
+  commentId: M:E7.Introloop.IntroloopPlayer.Stop(System.Single)
+  id: Stop(System.Single)
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: Stop(Single)
+  nameWithType: IntroloopPlayer.Stop(Single)
+  fullName: E7.Introloop.IntroloopPlayer.Stop(System.Single)
+  type: Method
+  source:
+    id: Stop
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 617
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nFading out to stop the currently playing <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref>, and unload it from memory\nonce it is completely faded out.\n"
+  example: []
+  syntax:
+    content: public void Stop(float fadeLengthSeconds)
+    parameters:
+    - id: fadeLengthSeconds
+      type: System.Single
+      description: "\nFade out length to use in seconds.\n<ul><li></li><li></li></ul>\n"
+    content.vb: Public Sub Stop(fadeLengthSeconds As Single)
+  overload: E7.Introloop.IntroloopPlayer.Stop*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopPlayer.Pause
+  commentId: M:E7.Introloop.IntroloopPlayer.Pause
+  id: Pause
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: Pause()
+  nameWithType: IntroloopPlayer.Pause()
+  fullName: E7.Introloop.IntroloopPlayer.Pause()
+  type: Method
+  source:
+    id: Pause
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 636
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nPause the currently playing <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref> immediately without unloading.\nCall <xref href=\"E7.Introloop.IntroloopPlayer.Resume(System.Single)\" data-throw-if-not-resolved=\"false\"></xref> to continue playing.\n"
+  example: []
+  syntax:
+    content: public void Pause()
+    content.vb: Public Sub Pause
+  overload: E7.Introloop.IntroloopPlayer.Pause*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopPlayer.Pause(System.Single)
+  commentId: M:E7.Introloop.IntroloopPlayer.Pause(System.Single)
+  id: Pause(System.Single)
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: Pause(Single)
+  nameWithType: IntroloopPlayer.Pause(Single)
+  fullName: E7.Introloop.IntroloopPlayer.Pause(System.Single)
+  type: Method
+  source:
+    id: Pause
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 659
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nFading out to pause the currently playing <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref> without unloading.\nCall <xref href=\"E7.Introloop.IntroloopPlayer.Resume(System.Single)\" data-throw-if-not-resolved=\"false\"></xref> to continue playing.\n"
+  example: []
+  syntax:
+    content: public void Pause(float fadeLengthSeconds)
+    parameters:
+    - id: fadeLengthSeconds
+      type: System.Single
+      description: "\nFade out length to use in seconds.\n<ul><li></li><li></li></ul>\n"
+    content.vb: Public Sub Pause(fadeLengthSeconds As Single)
+  overload: E7.Introloop.IntroloopPlayer.Pause*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopPlayer.Resume(System.Single)
+  commentId: M:E7.Introloop.IntroloopPlayer.Resume(System.Single)
+  id: Resume(System.Single)
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: Resume(Single)
+  nameWithType: IntroloopPlayer.Resume(Single)
+  fullName: E7.Introloop.IntroloopPlayer.Resume(System.Single)
+  type: Method
+  source:
+    id: Resume
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 693
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nResume playing of previously paused (<xref href=\"E7.Introloop.IntroloopPlayer.Pause(System.Single)\" data-throw-if-not-resolved=\"false\"></xref>) <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref>.\nIf currently not pausing, it does nothing.\n"
+  remarks: "\nNote that if it is currently &quot;fading to pause&quot;, the state is not considered paused\nyet so you can&apos;t resume in that time.\n"
+  example: []
+  syntax:
+    content: public void Resume(float fadeLengthSeconds = 0F)
+    parameters:
+    - id: fadeLengthSeconds
+      type: System.Single
+      description: "\nFade out length to use in seconds.\n<ul><li></li><li></li></ul>\n"
+    content.vb: Public Sub Resume(fadeLengthSeconds As Single = 0F)
+  overload: E7.Introloop.IntroloopPlayer.Resume*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopPlayer.Preload(E7.Introloop.IntroloopAudio)
+  commentId: M:E7.Introloop.IntroloopPlayer.Preload(E7.Introloop.IntroloopAudio)
+  id: Preload(E7.Introloop.IntroloopAudio)
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: Preload(IntroloopAudio)
+  nameWithType: IntroloopPlayer.Preload(IntroloopAudio)
+  fullName: E7.Introloop.IntroloopPlayer.Preload(E7.Introloop.IntroloopAudio)
+  type: Method
+  source:
+    id: Preload
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 754
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nAn experimental feature in the case that you really want the audio to start\nin an instant you call <xref href=\"E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio%2cSystem.Single%2cSystem.Single)\" data-throw-if-not-resolved=\"false\"></xref>. You must use the same\n<xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref> that you preload in the next play.\n"
+  remarks: "\n<p>\n    By normally using <xref href=\"E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio%2cSystem.Single%2cSystem.Single)\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"E7.Introloop.IntroloopPlayer.Stop(System.Single)\" data-throw-if-not-resolved=\"false\"></xref>\n    it loads the audio the moment you called <xref href=\"E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio%2cSystem.Single%2cSystem.Single)\" data-throw-if-not-resolved=\"false\"></xref>.\n    Introloop waits for an audio to load before playing with a coroutine.\n</p>\n<p>\n    (Only if you have <xref href=\"UnityEngine.AudioClip.loadInBackground\" data-throw-if-not-resolved=\"false\"></xref> in the import settings.\n    Otherwise, <xref href=\"E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio%2cSystem.Single%2cSystem.Single)\" data-throw-if-not-resolved=\"false\"></xref> will be a blocking call.)\n</p>\n<p>\n    Introloop can&apos;t guarantee that the playback will be instant,\n    but your game can continue while it is loading. By using this method before actually calling\n<xref href=\"E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio%2cSystem.Single%2cSystem.Single)\" data-throw-if-not-resolved=\"false\"></xref> it will instead be instant.\n</p>\n<p>\n    This function is special even songs with <xref href=\"UnityEngine.AudioClip.loadInBackground\" data-throw-if-not-resolved=\"false\"></xref>\n    can be loaded in a blocking fashion. (You can put <xref href=\"E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio%2cSystem.Single%2cSystem.Single)\" data-throw-if-not-resolved=\"false\"></xref> immediately\n    in the next line expecting a fully loaded audio.)\n</p>\n<p>\n    However be aware that memory is managed less efficiently in the following case :\n    Normally Introloop immediately unloads the previous track to minimize memory.\n    But if you use <xref href=\"E7.Introloop.IntroloopPlayer.Preload(E7.Introloop.IntroloopAudio)\" data-throw-if-not-resolved=\"false\"></xref> then did not call\n<xref href=\"E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio%2cSystem.Single%2cSystem.Single)\" data-throw-if-not-resolved=\"false\"></xref> with the same <xref href=\"E7.Introloop.IntroloopAudio\" data-throw-if-not-resolved=\"false\"></xref> afterwards,\nthe loaded memory will be unmanaged.\n</p>\n<p>\n    (Just like if you tick <xref href=\"UnityEngine.AudioClip.preloadAudioData\" data-throw-if-not-resolved=\"false\"></xref> on your clip and have them\n    in a hierarchy somewhere, then did not use it.)\n</p>\n<p>\n    Does not work with <xref href=\"UnityEngine.AudioClipLoadType.Streaming\" data-throw-if-not-resolved=\"false\"></xref> audio loading type.\n</p>\n"
+  example: []
+  syntax:
+    content: public void Preload(IntroloopAudio introloopAudio)
+    parameters:
+    - id: introloopAudio
+      type: E7.Introloop.IntroloopAudio
+    content.vb: Public Sub Preload(introloopAudio As IntroloopAudio)
+  overload: E7.Introloop.IntroloopPlayer.Preload*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopPlayer.GetPlayheadTime
+  commentId: M:E7.Introloop.IntroloopPlayer.GetPlayheadTime
+  id: GetPlayheadTime
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: GetPlayheadTime()
+  nameWithType: IntroloopPlayer.GetPlayheadTime()
+  fullName: E7.Introloop.IntroloopPlayer.GetPlayheadTime()
+  type: Method
+  source:
+    id: GetPlayheadTime
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 783
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nThis interpretation of a play time could decrease when it goes over\nlooping boundary back to intro boundary. Conceptually Introloop audio has infinite length,\nso this time is a bit different from normal sense.\n"
+  remarks: "\n<p>\n    Think as it as not &quot;elapsed time&quot; but rather the position of the actual playhead,\n    expressed in time as if the pitch is 1.\n</p>\n<p>\n    For example with pitch enabled, the play head will move slowly,\n    and so the time returned from this method respect that slower play head.\n</p>\n<p>\n    It is usable with <xref href=\"E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio%2cSystem.Single%2cSystem.Single)\" data-throw-if-not-resolved=\"false\"></xref> as a start time\n    to &quot;restore&quot; the play from remembered time. With only 1 <xref href=\"E7.Introloop.IntroloopPlayer\" data-throw-if-not-resolved=\"false\"></xref> you can stop and\n    unload previous song then continue later after reloading it.\n</p>\n<p>\n    Common use case includes battle music which resumes the field music afterwards.\n    If the battle is memory consuming unloading the field music could help.\n</p>\n"
+  example: []
+  syntax:
+    content: public float GetPlayheadTime()
+    return:
+      type: System.Single
+    content.vb: Public Function GetPlayheadTime As Single
+  overload: E7.Introloop.IntroloopPlayer.GetPlayheadTime*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopPlayer.SetMixerGroup(UnityEngine.Audio.AudioMixerGroup)
+  commentId: M:E7.Introloop.IntroloopPlayer.SetMixerGroup(UnityEngine.Audio.AudioMixerGroup)
+  id: SetMixerGroup(UnityEngine.Audio.AudioMixerGroup)
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: SetMixerGroup(AudioMixerGroup)
+  nameWithType: IntroloopPlayer.SetMixerGroup(AudioMixerGroup)
+  fullName: E7.Introloop.IntroloopPlayer.SetMixerGroup(UnityEngine.Audio.AudioMixerGroup)
+  type: Method
+  source:
+    id: SetMixerGroup
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 791
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nAssign a different audio mixer group to all underlying <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public void SetMixerGroup(AudioMixerGroup audioMixerGroup)
+    parameters:
+    - id: audioMixerGroup
+      type: UnityEngine.Audio.AudioMixerGroup
+    content.vb: Public Sub SetMixerGroup(audioMixerGroup As AudioMixerGroup)
+  overload: E7.Introloop.IntroloopPlayer.SetMixerGroup*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopPlayer.SetSingletonInstanceTemplateSource(UnityEngine.AudioSource)
+  commentId: M:E7.Introloop.IntroloopPlayer.SetSingletonInstanceTemplateSource(UnityEngine.AudioSource)
+  id: SetSingletonInstanceTemplateSource(UnityEngine.AudioSource)
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: SetSingletonInstanceTemplateSource(AudioSource)
+  nameWithType: IntroloopPlayer.SetSingletonInstanceTemplateSource(AudioSource)
+  fullName: E7.Introloop.IntroloopPlayer.SetSingletonInstanceTemplateSource(UnityEngine.AudioSource)
+  type: Method
+  source:
+    id: SetSingletonInstanceTemplateSource
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 814
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nCall this before the first use of <xref href=\"E7.Introloop.IntroloopPlayer.Instance\" data-throw-if-not-resolved=\"false\"></xref> to have the singleton instance\ncopy <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref> fields from <code data-dev-comment-type=\"paramref\" class=\"paramref\">templateSource</code>.\n"
+  remarks: "\n<p>\n    Singleton instance is convenient but you cannot pre-connect <xref href=\"E7.Introloop.IntroloopPlayer.TemplateSource\" data-throw-if-not-resolved=\"false\"></xref> like\n    a regular instance because it does not exist until runtime.\n</p>\n<p>\n    If you had already used the singleton instance before calling this, you can still call\n<xref href=\"E7.Introloop.IntroloopPlayer.ApplyAudioSource(UnityEngine.AudioSource)\" data-throw-if-not-resolved=\"false\"></xref> on the singleton instance to apply different\nsettings of <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref>.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void SetSingletonInstanceTemplateSource(AudioSource templateSource)
+    parameters:
+    - id: templateSource
+      type: UnityEngine.AudioSource
+    content.vb: Public Shared Sub SetSingletonInstanceTemplateSource(templateSource As AudioSource)
+  overload: E7.Introloop.IntroloopPlayer.SetSingletonInstanceTemplateSource*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: E7.Introloop.IntroloopPlayer.ApplyAudioSource(UnityEngine.AudioSource)
+  commentId: M:E7.Introloop.IntroloopPlayer.ApplyAudioSource(UnityEngine.AudioSource)
+  id: ApplyAudioSource(UnityEngine.AudioSource)
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: ApplyAudioSource(AudioSource)
+  nameWithType: IntroloopPlayer.ApplyAudioSource(AudioSource)
+  fullName: E7.Introloop.IntroloopPlayer.ApplyAudioSource(UnityEngine.AudioSource)
+  type: Method
+  source:
+    id: ApplyAudioSource
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 831
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\n<p>\n    Copy fields from <code data-dev-comment-type=\"paramref\" class=\"paramref\">applyFrom</code> to all 4 underlying <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref>.\n    Make it as if they had <code data-dev-comment-type=\"paramref\" class=\"paramref\">applyFrom</code> as a <xref href=\"E7.Introloop.IntroloopPlayer.TemplateSource\" data-throw-if-not-resolved=\"false\"></xref> from\n    the beginning. (Or you can think this method as a way to late-assign a <xref href=\"E7.Introloop.IntroloopPlayer.TemplateSource\" data-throw-if-not-resolved=\"false\"></xref>.)\n</p>\n"
+  remarks: "\nThe <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref> does not need to be <see cref=\"!:MonoBehaviour.enabled\"></see> since it just\nneed to read the fields out for copy. Also it does not need to be anywhere on the scene,\nit can come from a prefab with <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref> in your project.\n"
+  example: []
+  syntax:
+    content: public void ApplyAudioSource(AudioSource applyFrom)
+    parameters:
+    - id: applyFrom
+      type: UnityEngine.AudioSource
+    content.vb: Public Sub ApplyAudioSource(applyFrom As AudioSource)
+  overload: E7.Introloop.IntroloopPlayer.ApplyAudioSource*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack1
+  commentId: M:E7.Introloop.IntroloopPlayer.GetDebugStringsTrack1
+  id: GetDebugStringsTrack1
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: GetDebugStringsTrack1()
+  nameWithType: IntroloopPlayer.GetDebugStringsTrack1()
+  fullName: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack1()
+  type: Method
+  source:
+    id: GetDebugStringsTrack1
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 881
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nEach player contains 4 <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref>, this method\nreturns the current information of the first pair for debugging purpose.\n"
+  example: []
+  syntax:
+    content: public string[] GetDebugStringsTrack1()
+    return:
+      type: System.String[]
+    content.vb: Public Function GetDebugStringsTrack1 As String()
+  overload: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack1*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack2
+  commentId: M:E7.Introloop.IntroloopPlayer.GetDebugStringsTrack2
+  id: GetDebugStringsTrack2
+  parent: E7.Introloop.IntroloopPlayer
+  langs:
+  - csharp
+  - vb
+  name: GetDebugStringsTrack2()
+  nameWithType: IntroloopPlayer.GetDebugStringsTrack2()
+  fullName: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack2()
+  type: Method
+  source:
+    id: GetDebugStringsTrack2
+    path: /Users/Sargon/Documents/Unity Projects/Asset Store/Introloop/Assets/Introloop/Runtime/IntroloopPlayer.cs
+    startLine: 890
+  assemblies:
+  - E7.Introloop
+  namespace: E7.Introloop
+  summary: "\nEach player contains 4 <xref href=\"UnityEngine.AudioSource\" data-throw-if-not-resolved=\"false\"></xref>, this method\nreturns the current information of the second pair for debugging purpose.\n"
+  example: []
+  syntax:
+    content: public string[] GetDebugStringsTrack2()
+    return:
+      type: System.String[]
+    content.vb: Public Function GetDebugStringsTrack2 As String()
+  overload: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack2*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: UnityEngine.AudioSource
+  commentId: T:UnityEngine.AudioSource
+  parent: UnityEngine
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: UnityEngine.AudioSource
+- uid: E7.Introloop
+  commentId: N:E7.Introloop
+  name: E7.Introloop
+  nameWithType: E7.Introloop
+  fullName: E7.Introloop
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.AudioSource.clip
+  commentId: P:UnityEngine.AudioSource.clip
+  isExternal: true
+- uid: E7.Introloop.IntroloopAudio
+  commentId: T:E7.Introloop.IntroloopAudio
+  parent: E7.Introloop
+  name: IntroloopAudio
+  nameWithType: IntroloopAudio
+  fullName: E7.Introloop.IntroloopAudio
+- uid: E7.Introloop.IntroloopPlayer.Play
+  commentId: M:E7.Introloop.IntroloopPlayer.Play
+  parent: E7.Introloop.IntroloopPlayer
+  name: Play()
+  nameWithType: IntroloopPlayer.Play()
+  fullName: E7.Introloop.IntroloopPlayer.Play()
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.Play
+    name: Play
+    nameWithType: IntroloopPlayer.Play
+    fullName: E7.Introloop.IntroloopPlayer.Play
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.Play
+    name: Play
+    nameWithType: IntroloopPlayer.Play
+    fullName: E7.Introloop.IntroloopPlayer.Play
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.Play(System.Single,System.Single)
+  commentId: M:E7.Introloop.IntroloopPlayer.Play(System.Single,System.Single)
+  parent: E7.Introloop.IntroloopPlayer
+  isExternal: true
+  name: Play(Single, Single)
+  nameWithType: IntroloopPlayer.Play(Single, Single)
+  fullName: E7.Introloop.IntroloopPlayer.Play(System.Single, System.Single)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.Play(System.Single,System.Single)
+    name: Play
+    nameWithType: IntroloopPlayer.Play
+    fullName: E7.Introloop.IntroloopPlayer.Play
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.Play(System.Single,System.Single)
+    name: Play
+    nameWithType: IntroloopPlayer.Play
+    fullName: E7.Introloop.IntroloopPlayer.Play
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.DefaultIntroloopAudio*
+  commentId: Overload:E7.Introloop.IntroloopPlayer.DefaultIntroloopAudio
+  name: DefaultIntroloopAudio
+  nameWithType: IntroloopPlayer.DefaultIntroloopAudio
+  fullName: E7.Introloop.IntroloopPlayer.DefaultIntroloopAudio
+- uid: E7.Introloop.IntroloopPlayer
+  commentId: T:E7.Introloop.IntroloopPlayer
+  parent: E7.Introloop
+  name: IntroloopPlayer
+  nameWithType: IntroloopPlayer
+  fullName: E7.Introloop.IntroloopPlayer
+- uid: UnityEngine.AudioSource.playOnAwake
+  commentId: P:UnityEngine.AudioSource.playOnAwake
+  isExternal: true
+- uid: E7.Introloop.IntroloopPlayer.DefaultIntroloopAudio
+  commentId: P:E7.Introloop.IntroloopPlayer.DefaultIntroloopAudio
+  parent: E7.Introloop.IntroloopPlayer
+  name: DefaultIntroloopAudio
+  nameWithType: IntroloopPlayer.DefaultIntroloopAudio
+  fullName: E7.Introloop.IntroloopPlayer.DefaultIntroloopAudio
+- uid: E7.Introloop.IntroloopPlayer.PlayOnAwake*
+  commentId: Overload:E7.Introloop.IntroloopPlayer.PlayOnAwake
+  name: PlayOnAwake
+  nameWithType: IntroloopPlayer.PlayOnAwake
+  fullName: E7.Introloop.IntroloopPlayer.PlayOnAwake
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: E7.Introloop.IntroloopPlayer.ApplyAudioSource(UnityEngine.AudioSource)
+  commentId: M:E7.Introloop.IntroloopPlayer.ApplyAudioSource(UnityEngine.AudioSource)
+  parent: E7.Introloop.IntroloopPlayer
+  isExternal: true
+  name: ApplyAudioSource(AudioSource)
+  nameWithType: IntroloopPlayer.ApplyAudioSource(AudioSource)
+  fullName: E7.Introloop.IntroloopPlayer.ApplyAudioSource(UnityEngine.AudioSource)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.ApplyAudioSource(UnityEngine.AudioSource)
+    name: ApplyAudioSource
+    nameWithType: IntroloopPlayer.ApplyAudioSource
+    fullName: E7.Introloop.IntroloopPlayer.ApplyAudioSource
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: UnityEngine.AudioSource
+    name: AudioSource
+    nameWithType: AudioSource
+    fullName: UnityEngine.AudioSource
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.ApplyAudioSource(UnityEngine.AudioSource)
+    name: ApplyAudioSource
+    nameWithType: IntroloopPlayer.ApplyAudioSource
+    fullName: E7.Introloop.IntroloopPlayer.ApplyAudioSource
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: UnityEngine.AudioSource
+    name: AudioSource
+    nameWithType: AudioSource
+    fullName: UnityEngine.AudioSource
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.TemplateSource
+  commentId: P:E7.Introloop.IntroloopPlayer.TemplateSource
+  parent: E7.Introloop.IntroloopPlayer
+  name: TemplateSource
+  nameWithType: IntroloopPlayer.TemplateSource
+  fullName: E7.Introloop.IntroloopPlayer.TemplateSource
+- uid: E7.Introloop.IntroloopPlayer.TemplateSource*
+  commentId: Overload:E7.Introloop.IntroloopPlayer.TemplateSource
+  name: TemplateSource
+  nameWithType: IntroloopPlayer.TemplateSource
+  fullName: E7.Introloop.IntroloopPlayer.TemplateSource
+- uid: E7.Introloop.IntroloopPlayer.InternalAudioSources*
+  commentId: Overload:E7.Introloop.IntroloopPlayer.InternalAudioSources
+  name: InternalAudioSources
+  nameWithType: IntroloopPlayer.InternalAudioSources
+  fullName: E7.Introloop.IntroloopPlayer.InternalAudioSources
+- uid: System.Collections.Generic.IEnumerable{UnityEngine.AudioSource}
+  commentId: T:System.Collections.Generic.IEnumerable{UnityEngine.AudioSource}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<AudioSource>
+  nameWithType: IEnumerable<AudioSource>
+  fullName: System.Collections.Generic.IEnumerable<UnityEngine.AudioSource>
+  nameWithType.vb: IEnumerable(Of AudioSource)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of UnityEngine.AudioSource)
+  name.vb: IEnumerable(Of AudioSource)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: UnityEngine.AudioSource
+    name: AudioSource
+    nameWithType: AudioSource
+    fullName: UnityEngine.AudioSource
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: UnityEngine.AudioSource
+    name: AudioSource
+    nameWithType: AudioSource
+    fullName: UnityEngine.AudioSource
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: E7.Introloop.IntroloopPlayer.SetSingletonInstanceTemplateSource(UnityEngine.AudioSource)
+  commentId: M:E7.Introloop.IntroloopPlayer.SetSingletonInstanceTemplateSource(UnityEngine.AudioSource)
+  isExternal: true
+- uid: E7.Introloop.IntroloopPlayer.Instance*
+  commentId: Overload:E7.Introloop.IntroloopPlayer.Instance
+  name: Instance
+  nameWithType: IntroloopPlayer.Instance
+  fullName: E7.Introloop.IntroloopPlayer.Instance
+- uid: UnityEngine.AudioListener
+  commentId: T:UnityEngine.AudioListener
+  isExternal: true
+- uid: UnityEngine.AudioSource.SetScheduledEndTime(System.Double)
+  commentId: M:UnityEngine.AudioSource.SetScheduledEndTime(System.Double)
+  isExternal: true
+- uid: E7.Introloop.IntroloopPlayer.OnApplicationPause*
+  commentId: Overload:E7.Introloop.IntroloopPlayer.OnApplicationPause
+  name: OnApplicationPause
+  nameWithType: IntroloopPlayer.OnApplicationPause
+  fullName: E7.Introloop.IntroloopPlayer.OnApplicationPause
+- uid: E7.Introloop.IntroloopAudio.Volume
+  commentId: P:E7.Introloop.IntroloopAudio.Volume
+  isExternal: true
+- uid: E7.Introloop.IntroloopAudio.Pitch
+  commentId: P:E7.Introloop.IntroloopAudio.Pitch
+  isExternal: true
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+- uid: E7.Introloop.IntroloopPlayer.Play*
+  commentId: Overload:E7.Introloop.IntroloopPlayer.Play
+  name: Play
+  nameWithType: IntroloopPlayer.Play
+  fullName: E7.Introloop.IntroloopPlayer.Play
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio,System.Single,System.Single)
+  commentId: M:E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio,System.Single,System.Single)
+  parent: E7.Introloop.IntroloopPlayer
+  isExternal: true
+  name: Play(IntroloopAudio, Single, Single)
+  nameWithType: IntroloopPlayer.Play(IntroloopAudio, Single, Single)
+  fullName: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio, System.Single, System.Single)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio,System.Single,System.Single)
+    name: Play
+    nameWithType: IntroloopPlayer.Play
+    fullName: E7.Introloop.IntroloopPlayer.Play
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: E7.Introloop.IntroloopAudio
+    name: IntroloopAudio
+    nameWithType: IntroloopAudio
+    fullName: E7.Introloop.IntroloopAudio
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.Play(E7.Introloop.IntroloopAudio,System.Single,System.Single)
+    name: Play
+    nameWithType: IntroloopPlayer.Play
+    fullName: E7.Introloop.IntroloopPlayer.Play
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: E7.Introloop.IntroloopAudio
+    name: IntroloopAudio
+    nameWithType: IntroloopAudio
+    fullName: E7.Introloop.IntroloopAudio
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: UnityEngine.Events.UnityEvent
+  commentId: T:UnityEngine.Events.UnityEvent
+  isExternal: true
+- uid: E7.Introloop.IntroloopPlayer.Seek*
+  commentId: Overload:E7.Introloop.IntroloopPlayer.Seek
+  name: Seek
+  nameWithType: IntroloopPlayer.Seek
+  fullName: E7.Introloop.IntroloopPlayer.Seek
+- uid: E7.Introloop.IntroloopPlayer.Stop*
+  commentId: Overload:E7.Introloop.IntroloopPlayer.Stop
+  name: Stop
+  nameWithType: IntroloopPlayer.Stop
+  fullName: E7.Introloop.IntroloopPlayer.Stop
+- uid: E7.Introloop.IntroloopPlayer.Resume(System.Single)
+  commentId: M:E7.Introloop.IntroloopPlayer.Resume(System.Single)
+  parent: E7.Introloop.IntroloopPlayer
+  isExternal: true
+  name: Resume(Single)
+  nameWithType: IntroloopPlayer.Resume(Single)
+  fullName: E7.Introloop.IntroloopPlayer.Resume(System.Single)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.Resume(System.Single)
+    name: Resume
+    nameWithType: IntroloopPlayer.Resume
+    fullName: E7.Introloop.IntroloopPlayer.Resume
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.Resume(System.Single)
+    name: Resume
+    nameWithType: IntroloopPlayer.Resume
+    fullName: E7.Introloop.IntroloopPlayer.Resume
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.Pause*
+  commentId: Overload:E7.Introloop.IntroloopPlayer.Pause
+  name: Pause
+  nameWithType: IntroloopPlayer.Pause
+  fullName: E7.Introloop.IntroloopPlayer.Pause
+- uid: E7.Introloop.IntroloopPlayer.Pause(System.Single)
+  commentId: M:E7.Introloop.IntroloopPlayer.Pause(System.Single)
+  parent: E7.Introloop.IntroloopPlayer
+  isExternal: true
+  name: Pause(Single)
+  nameWithType: IntroloopPlayer.Pause(Single)
+  fullName: E7.Introloop.IntroloopPlayer.Pause(System.Single)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.Pause(System.Single)
+    name: Pause
+    nameWithType: IntroloopPlayer.Pause
+    fullName: E7.Introloop.IntroloopPlayer.Pause
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.Pause(System.Single)
+    name: Pause
+    nameWithType: IntroloopPlayer.Pause
+    fullName: E7.Introloop.IntroloopPlayer.Pause
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: E7.Introloop.IntroloopPlayer.Resume*
+  commentId: Overload:E7.Introloop.IntroloopPlayer.Resume
+  name: Resume
+  nameWithType: IntroloopPlayer.Resume
+  fullName: E7.Introloop.IntroloopPlayer.Resume
+- uid: E7.Introloop.IntroloopPlayer.Stop(System.Single)
+  commentId: M:E7.Introloop.IntroloopPlayer.Stop(System.Single)
+  parent: E7.Introloop.IntroloopPlayer
+  isExternal: true
+  name: Stop(Single)
+  nameWithType: IntroloopPlayer.Stop(Single)
+  fullName: E7.Introloop.IntroloopPlayer.Stop(System.Single)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.Stop(System.Single)
+    name: Stop
+    nameWithType: IntroloopPlayer.Stop
+    fullName: E7.Introloop.IntroloopPlayer.Stop
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.Stop(System.Single)
+    name: Stop
+    nameWithType: IntroloopPlayer.Stop
+    fullName: E7.Introloop.IntroloopPlayer.Stop
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: UnityEngine.AudioClip.loadInBackground
+  commentId: P:UnityEngine.AudioClip.loadInBackground
+  isExternal: true
+- uid: E7.Introloop.IntroloopPlayer.Preload(E7.Introloop.IntroloopAudio)
+  commentId: M:E7.Introloop.IntroloopPlayer.Preload(E7.Introloop.IntroloopAudio)
+  parent: E7.Introloop.IntroloopPlayer
+  name: Preload(IntroloopAudio)
+  nameWithType: IntroloopPlayer.Preload(IntroloopAudio)
+  fullName: E7.Introloop.IntroloopPlayer.Preload(E7.Introloop.IntroloopAudio)
+  spec.csharp:
+  - uid: E7.Introloop.IntroloopPlayer.Preload(E7.Introloop.IntroloopAudio)
+    name: Preload
+    nameWithType: IntroloopPlayer.Preload
+    fullName: E7.Introloop.IntroloopPlayer.Preload
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: E7.Introloop.IntroloopAudio
+    name: IntroloopAudio
+    nameWithType: IntroloopAudio
+    fullName: E7.Introloop.IntroloopAudio
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: E7.Introloop.IntroloopPlayer.Preload(E7.Introloop.IntroloopAudio)
+    name: Preload
+    nameWithType: IntroloopPlayer.Preload
+    fullName: E7.Introloop.IntroloopPlayer.Preload
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: E7.Introloop.IntroloopAudio
+    name: IntroloopAudio
+    nameWithType: IntroloopAudio
+    fullName: E7.Introloop.IntroloopAudio
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: UnityEngine.AudioClip.preloadAudioData
+  commentId: P:UnityEngine.AudioClip.preloadAudioData
+  isExternal: true
+- uid: UnityEngine.AudioClipLoadType.Streaming
+  commentId: F:UnityEngine.AudioClipLoadType.Streaming
+  isExternal: true
+- uid: E7.Introloop.IntroloopPlayer.Preload*
+  commentId: Overload:E7.Introloop.IntroloopPlayer.Preload
+  name: Preload
+  nameWithType: IntroloopPlayer.Preload
+  fullName: E7.Introloop.IntroloopPlayer.Preload
+- uid: E7.Introloop.IntroloopPlayer.GetPlayheadTime*
+  commentId: Overload:E7.Introloop.IntroloopPlayer.GetPlayheadTime
+  name: GetPlayheadTime
+  nameWithType: IntroloopPlayer.GetPlayheadTime
+  fullName: E7.Introloop.IntroloopPlayer.GetPlayheadTime
+- uid: E7.Introloop.IntroloopPlayer.SetMixerGroup*
+  commentId: Overload:E7.Introloop.IntroloopPlayer.SetMixerGroup
+  name: SetMixerGroup
+  nameWithType: IntroloopPlayer.SetMixerGroup
+  fullName: E7.Introloop.IntroloopPlayer.SetMixerGroup
+- uid: UnityEngine.Audio.AudioMixerGroup
+  commentId: T:UnityEngine.Audio.AudioMixerGroup
+  parent: UnityEngine.Audio
+  isExternal: true
+  name: AudioMixerGroup
+  nameWithType: AudioMixerGroup
+  fullName: UnityEngine.Audio.AudioMixerGroup
+- uid: UnityEngine.Audio
+  commentId: N:UnityEngine.Audio
+  isExternal: true
+  name: UnityEngine.Audio
+  nameWithType: UnityEngine.Audio
+  fullName: UnityEngine.Audio
+- uid: E7.Introloop.IntroloopPlayer.Instance
+  commentId: P:E7.Introloop.IntroloopPlayer.Instance
+  isExternal: true
+- uid: E7.Introloop.IntroloopPlayer.SetSingletonInstanceTemplateSource*
+  commentId: Overload:E7.Introloop.IntroloopPlayer.SetSingletonInstanceTemplateSource
+  name: SetSingletonInstanceTemplateSource
+  nameWithType: IntroloopPlayer.SetSingletonInstanceTemplateSource
+  fullName: E7.Introloop.IntroloopPlayer.SetSingletonInstanceTemplateSource
+- uid: E7.Introloop.IntroloopPlayer.ApplyAudioSource*
+  commentId: Overload:E7.Introloop.IntroloopPlayer.ApplyAudioSource
+  name: ApplyAudioSource
+  nameWithType: IntroloopPlayer.ApplyAudioSource
+  fullName: E7.Introloop.IntroloopPlayer.ApplyAudioSource
+- uid: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack1*
+  commentId: Overload:E7.Introloop.IntroloopPlayer.GetDebugStringsTrack1
+  name: GetDebugStringsTrack1
+  nameWithType: IntroloopPlayer.GetDebugStringsTrack1
+  fullName: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack1
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack2*
+  commentId: Overload:E7.Introloop.IntroloopPlayer.GetDebugStringsTrack2
+  name: GetDebugStringsTrack2
+  nameWithType: IntroloopPlayer.GetDebugStringsTrack2
+  fullName: E7.Introloop.IntroloopPlayer.GetDebugStringsTrack2
