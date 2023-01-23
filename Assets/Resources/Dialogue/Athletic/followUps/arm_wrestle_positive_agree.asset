@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: arm_wrestle_positive_agree
   m_EditorClassIdentifier: 
   heartsGained: 1
-  text: Rise to the challenge!
+  text: Yes!
   speech:
   - isPlayer: 1
     text: As long as you don't mind the taste of defeat!
