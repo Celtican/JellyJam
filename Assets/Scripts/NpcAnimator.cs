@@ -16,7 +16,7 @@ public class NpcAnimator : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
-        string[] nameArray = PlayerTraits.Instance != null ? maleNames :
+        string[] nameArray = PlayerTraits.Instance == null ? maleNames :
             PlayerTraits.Instance.prefersFemales ? femaleNames : maleNames;
         randomName = nameArray[Random.Range(0, nameArray.Length)];
     }
