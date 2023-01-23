@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 163618041495844332}
   - component: {fileID: 163618041495844331}
   - component: {fileID: 163618041495844334}
+  - component: {fileID: 8663255388100847590}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -129,6 +130,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4fc631240a4f07a0040d7971e216ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8663255388100847590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163618041495844330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fe5a5db52e6452bbb7ad31a9402d50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &239731648605026449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -180,6 +193,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6223665645355336561, guid: a504e7d4585772848a44d8f7eed04117, type: 3}
+      propertyPath: voiceAudioSource
+      value: 
+      objectReference: {fileID: 163618041495844331}
     - target: {fileID: 6223665645355336563, guid: a504e7d4585772848a44d8f7eed04117, type: 3}
       propertyPath: m_Name
       value: GeneratedCharacter
