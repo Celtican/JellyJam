@@ -34,13 +34,13 @@ public class PlayerTraitSelection : MonoBehaviour
         switch (positiveTraitSelected)
         {
             case 0:
-                textMeshProUGUI.text = "Choose your first liked Trait";
+                textMeshProUGUI.text = "Choose two things that describe you!";
                 break;
             case 1:
-                textMeshProUGUI.text = "Choose your second liked Trait";
+                textMeshProUGUI.text = "Choose two things that describe you!";
                 break;
             case 2:
-                textMeshProUGUI.text = "Choose your disliked Trait";
+                textMeshProUGUI.text = "Choose one thing that you aren't!";
                 positiveTraitSelectionDone = true;
                 break;
         }
@@ -89,11 +89,7 @@ public class PlayerTraitSelection : MonoBehaviour
             }
             positiveTraitSelected++;
         }
-        
-    }
-    public void DecreaseTrait(Button button)
-    {
-        if (positiveTraitSelectionDone == true)
+        else
         {
             selectedTraitName = button.GetComponentInChildren<TextMeshProUGUI>().text;
             switch (selectedTraitName)

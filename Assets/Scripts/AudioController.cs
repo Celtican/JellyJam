@@ -31,7 +31,8 @@ public class AudioController : MonoBehaviour
     public void PlayAudio(Audio audio)
     {
         audioSource.volume = audio.volume + Random.Range(-audio.randomVolume, audio.randomVolume);
-        audioSource.pitch = audio.pitch + Random.Range(-audio.randomPitch, audio.randomPitch);
+        // audioSource.pitch = audio.pitch + Random.Range(-audio.randomPitch, audio.randomPitch);
+        audioSource.pitch = 1; // do I like it? nah. is it a jam? ya.
         audioSource.PlayOneShot(audio.clip);
     }
 

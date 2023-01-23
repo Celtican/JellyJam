@@ -242,6 +242,7 @@ GameObject:
   - component: {fileID: 8284774579914268988}
   - component: {fileID: 8284774579914268989}
   - component: {fileID: 8284774579914268986}
+  - component: {fileID: 695044724976380806}
   m_Layer: 5
   m_Name: Heart
   m_TagString: Untagged
@@ -328,3 +329,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &695044724976380806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8284774579914268984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69944cca558f4f24b989219da4807acc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  growAudio:
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    randomVolume: 0
+    randomPitch: 0
+  emptyAudio:
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    randomVolume: 0
+    randomPitch: 0
