@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 using static Traits;
+using Random = UnityEngine.Random;
 
 
 [Serializable]
@@ -15,6 +16,15 @@ public class TraitsList : MonoBehaviour
     [FormerlySerializedAs("Romantic")] public Trait romantic;
     [FormerlySerializedAs("Funny")] public Trait funny;
     [FormerlySerializedAs("AnimalLover")] public Trait animalLover;
+
+    public void Randomize()
+    {
+        athletic.value = Random.Range(1, 10);
+        nerdy.value = Random.Range(1, 10);
+        romantic.value = Random.Range(1, 10);
+        funny.value = Random.Range(1, 10);
+        animalLover.value = Random.Range(1, 10);
+    }
 
     public Trait GetTraitOfType(Traits.Type type)
     {
