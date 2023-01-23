@@ -17,6 +17,13 @@ public class TraitsList : MonoBehaviour
     [FormerlySerializedAs("Funny")] public Trait funny;
     [FormerlySerializedAs("AnimalLover")] public Trait animalLover;
 
+    public bool isNpc;
+
+    private void Start()
+    {
+        if (isNpc) Randomize();
+    }
+
     public void Randomize()
     {
         athletic.value = Random.Range(1, 10);

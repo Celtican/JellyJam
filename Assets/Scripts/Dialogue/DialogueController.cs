@@ -21,7 +21,7 @@ public class DialogueController : MonoBehaviour
     public GameObject npcPrefab;
     public Vector3 npcSpawnPosition;
     private NpcAnimator npcAnimator;
-    private NpcTraits npcTraits;
+    private TraitsList npcTraits;
 
     public List<DialogueList> npcEnterDialogues;
     public List<DialogueList> npcDepartDialogues;
@@ -140,7 +140,7 @@ public class DialogueController : MonoBehaviour
                 Traits.Type associatedTrait = potentialDialogue[i].associatedTrait;
                 if (associatedTrait == Traits.Type.None) continue;
 
-                bool npcEnjoys = npcTraits.traitsList.GetTraitOfType(associatedTrait).value >= 5.5f;
+                bool npcEnjoys = npcTraits.GetTraitOfType(associatedTrait).value >= 5.5f;
                 if (npcEnjoys != potentialDialogue[i].npcEnjoysTrait) potentialDialogue.RemoveAt(i);
             }
 
@@ -301,7 +301,7 @@ public class DialogueController : MonoBehaviour
         public override void Start()
         {
             Instance.npcAnimator = Instantiate(Instance.npcPrefab).GetComponent<NpcAnimator>();
-            Instance.npcTraits = Instance.npcAnimator.GetComponent<NpcTraits>();
+            Instance.npcTraits = Instance.npcAnimator.GetComponent<TraitsList>();
             Instance.npcAnimator.transform.position = Instance.npcSpawnPosition;
             HeartController.Instance.ResetHearts();
         }

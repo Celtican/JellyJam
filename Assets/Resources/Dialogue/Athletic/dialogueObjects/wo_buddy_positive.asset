@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2acb1a43bc146b5a43e35b59842bda2, type: 3}
   m_Name: wo_buddy_positive
   m_EditorClassIdentifier: 
+  associatedTrait: 1
+  npcEnjoysTrait: 1
   heartsGained: 0
   speech:
   - isPlayer: 1
