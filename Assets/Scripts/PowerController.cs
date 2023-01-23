@@ -64,7 +64,7 @@ public class PowerController : MonoBehaviour
         bool npcLikes = DialogueController.Instance.npcTraits.GetTraitOfType(randomTrait).value > 5;
         foreach (TMP_Text tmpText in mindReading.GetComponentsInChildren<TMP_Text>())
         {
-            tmpText.text = DialogueController.Instance.npcAnimator.randomName + " " + (npcLikes ? " likes " : " dislikes ") + traitName + "!";
+            tmpText.text = DialogueController.Instance.npcAnimator.randomName + (npcLikes ? " likes " : " dislikes ") + traitName + "!";
         }
     }
 
