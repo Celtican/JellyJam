@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Romantic1_followup_negative_disagree
   m_EditorClassIdentifier: 
   heartsGained: -1
-  text: That's unfortunate
+  text: Unfortunate
   speech:
   - isPlayer: 1
     text: How unfortunate.
