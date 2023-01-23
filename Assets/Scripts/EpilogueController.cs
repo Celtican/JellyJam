@@ -2,6 +2,7 @@
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EpilogueController : MonoBehaviour
 {
@@ -85,6 +86,11 @@ public class EpilogueController : MonoBehaviour
     public float textSpeed = 20f;
     private float timeSinceStarted = 0;
 
+    public SpriteRenderer spriteRenderer;
+    public Sprite badEndingSprite;
+    public Sprite neutralEndingSprite;
+    public Sprite goodEndingSprite;
+
     private void Start()
     {
         if (dateName == "") musicAlone.SetActive(true);
@@ -94,12 +100,15 @@ public class EpilogueController : MonoBehaviour
             {
                 case >= 0.75f:
                     musicHarmony.SetActive(true);
+                    spriteRenderer.sprite = goodEndingSprite;
                     break;
                 case >= 0.5f:
                     musicNeutral.SetActive(true);
+                    spriteRenderer.sprite = neutralEndingSprite;
                     break;
                 default:
                     musicDiscord.SetActive(true);
+                    spriteRenderer.sprite = badEndingSprite;
                     break;
             }
         }
@@ -117,5 +126,10 @@ public class EpilogueController : MonoBehaviour
         {
             tmpText.text = epilogueText;
         }
+    }
+
+    public void SetScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
