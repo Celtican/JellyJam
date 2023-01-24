@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4fc631240a4f07a0040d7971e216ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomName: 
   maleNames:
   - Abdul
   - Carson
@@ -288,6 +289,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: GeneratedCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 6223665646494910704, guid: a504e7d4585772848a44d8f7eed04117, type: 3}
+      propertyPath: feminineList.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223665646494910704, guid: a504e7d4585772848a44d8f7eed04117, type: 3}
+      propertyPath: feminineList.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: b2c0316aebbe39643941a4b041f9bd2a, type: 3}
+    - target: {fileID: 6223665646494910704, guid: a504e7d4585772848a44d8f7eed04117, type: 3}
+      propertyPath: feminineList.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: 72c0de708043416469ec07dd889ed27a, type: 3}
+    - target: {fileID: 6223665646494910704, guid: a504e7d4585772848a44d8f7eed04117, type: 3}
+      propertyPath: feminineList.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1ef9ca186424dc9498e0c0a41ca57e21, type: 3}
+    - target: {fileID: 6223665646494910704, guid: a504e7d4585772848a44d8f7eed04117, type: 3}
+      propertyPath: feminineList.Array.data[10]
+      value: 
+      objectReference: {fileID: 21300000, guid: 88b201dd4635a3b4ab1be7fb11e9a659, type: 3}
+    - target: {fileID: 6223665646494910704, guid: a504e7d4585772848a44d8f7eed04117, type: 3}
+      propertyPath: feminineList.Array.data[11]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9c90bfeeab6a05648a0588b042f56e57, type: 3}
+    - target: {fileID: 6223665646494910704, guid: a504e7d4585772848a44d8f7eed04117, type: 3}
+      propertyPath: feminineList.Array.data[12]
+      value: 
+      objectReference: {fileID: 21300000, guid: b4f9cfc4eaeea2e4f993e8d99cfbaf66, type: 3}
+    - target: {fileID: 6223665646494910704, guid: a504e7d4585772848a44d8f7eed04117, type: 3}
+      propertyPath: feminineList.Array.data[13]
+      value: 
+      objectReference: {fileID: 21300000, guid: c660619941bd9694dbd512e9fddd0301, type: 3}
+    - target: {fileID: 6223665646494910704, guid: a504e7d4585772848a44d8f7eed04117, type: 3}
+      propertyPath: feminineList.Array.data[14]
+      value: 
+      objectReference: {fileID: 21300000, guid: e6390d337faa1694794cf9db63647706, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a504e7d4585772848a44d8f7eed04117, type: 3}
 --- !u!4 &6128647319302732769 stripped
